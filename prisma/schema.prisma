@@ -1,0 +1,303 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  LEARNER
+  ADMIN
+  SUPER_ADMIN
+}
+
+enum PaymentMethod {
+  QR
+  USDT
+}
+
+enum PaymentStatus {
+  PENDING
+  UNDER_REVIEW
+  CONFIRMED
+  REJECTED
+  FAILED
+  EXPIRED
+  REFUNDED
+}
+
+enum CourseStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum LessonType {
+  VIDEO
+  PDF
+  TEXT
+  QUIZ
+  PROJECT
+}
+
+enum ProjectStatus {
+  NOT_SUBMITTED
+  SUBMITTED
+  UNDER_REVIEW
+  APPROVED
+  NEEDS_REVISION
+}
+
+enum RewardLedgerType {
+  REFERRAL_BONUS
+  REDEMPTION
+  ADMIN_ADJUSTMENT
+}
+
+enum RewardRedemptionStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  FULFILLED
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String
+  email         String?   @unique
+  countryCode   String?
+  phoneE164     String?   @unique
+  postalCode    String?
+  postalCode    String?
+  passwordHash  String
+  role          UserRole  @default(LEARNER)
+  emailVerified DateTime?
+  isActive      Boolean   @default(true)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  referralCode  String?   @unique
+  referredById  String?
+
+  payments     Payment[]
+  entitlement  Entitlement?
+  progress     LessonProgress[]
+  quizAttempts QuizAttempt[]
+  submissions  ProjectSubmission[]
+  referrer     User?               @relation("UserReferrals", fields: [referredById], references: [id], onDelete: SetNull)
+  referrals    User[]              @relation("UserReferrals")
+  rewardLedger RewardLedger[]
+  redemptions  RewardRedemption[]
+}
+
+model Payment {
+  id     String        @id @default(cuid())
+  userId String
+  method PaymentMethod
+  status PaymentStatus @default(PENDING)
+
+  amount   Decimal @db.Decimal(18, 8)
+  currency String  @default("USD")
+
+  network           String?
+  tokenContract     String?
+  transactionRef    String? @unique
+  providerReference String? @unique
+
+  proofUrl       String?
+  payerReference String?
+  adminNote      String?
+  verifiedBy     String?
+  verifiedAt     DateTime?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user        User         @relation(fields: [userId], references: [id])
+  entitlement Entitlement?
+
+  @@index([userId, status])
+  @@index([status, createdAt])
+}
+
+model Entitlement {
+  id        String    @id @default(cuid())
+  userId    String    @unique
+  paymentId String    @unique
+  grantedAt DateTime  @default(now())
+  revokedAt DateTime?
+  reason    String?
+
+  user    User    @relation(fields: [userId], references: [id])
+  payment Payment @relation(fields: [paymentId], references: [id])
+}
+
+model RewardLedger {
+  id             String           @id @default(cuid())
+  userId         String
+  points         Int
+  type           RewardLedgerType
+  description    String
+  referredUserId String?          @unique
+  paymentId      String?          @unique
+  redemptionId   String?          @unique
+  createdAt      DateTime         @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt])
+}
+
+model RewardRedemption {
+  id         String                 @id @default(cuid())
+  userId     String
+  points     Int
+  benefit    String
+  note       String?
+  status     RewardRedemptionStatus @default(PENDING)
+  adminNote  String?
+  reviewedBy String?
+  reviewedAt DateTime?
+  createdAt  DateTime               @default(now())
+  updatedAt  DateTime               @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, status])
+  @@index([status, createdAt])
+}
+
+model Course {
+  id          String       @id @default(cuid())
+  title       String
+  slug        String       @unique
+  description String
+  thumbnail   String?
+  status      CourseStatus @default(DRAFT)
+  sortOrder   Int          @default(0)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  modules CourseModule[]
+}
+
+model CourseModule {
+  id        String @id @default(cuid())
+  title     String
+  sortOrder Int    @default(0)
+  courseId  String
+
+  course  Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  lessons Lesson[]
+}
+
+model Lesson {
+  id          String     @id @default(cuid())
+  title       String
+  type        LessonType
+  contentUrl  String?
+  textContent String?
+  durationSec Int?
+  sortOrder   Int        @default(0)
+  isPublished Boolean    @default(false)
+  moduleId    String
+
+  module    CourseModule     @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+  progress  LessonProgress[]
+  questions QuizQuestion[]
+  projects  Project[]
+}
+
+model LessonProgress {
+  id          String    @id @default(cuid())
+  userId      String
+  lessonId    String
+  completedAt DateTime?
+  updatedAt   DateTime  @updatedAt
+
+  user   User   @relation(fields: [userId], references: [id])
+  lesson Lesson @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, lessonId])
+}
+
+model QuizQuestion {
+  id            String  @id @default(cuid())
+  lessonId      String
+  question      String
+  options       Json
+  correctAnswer String
+  explanation   String?
+  sortOrder     Int     @default(0)
+
+  lesson  Lesson       @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  answers QuizAnswer[]
+}
+
+model QuizAttempt {
+  id          String   @id @default(cuid())
+  userId      String
+  score       Int
+  total       Int
+  completedAt DateTime @default(now())
+
+  user    User         @relation(fields: [userId], references: [id])
+  answers QuizAnswer[]
+}
+
+model QuizAnswer {
+  id         String  @id @default(cuid())
+  attemptId  String
+  questionId String
+  answer     String
+  isCorrect  Boolean
+
+  attempt  QuizAttempt  @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  question QuizQuestion @relation(fields: [questionId], references: [id])
+
+  @@unique([attemptId, questionId])
+}
+
+model Project {
+  id           String    @id @default(cuid())
+  lessonId     String
+  title        String
+  instructions String
+  dueDate      DateTime?
+  createdAt    DateTime  @default(now())
+
+  lesson      Lesson              @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  submissions ProjectSubmission[]
+}
+
+model ProjectSubmission {
+  id          String        @id @default(cuid())
+  userId      String
+  projectId   String
+  contentUrl  String?
+  notes       String?
+  status      ProjectStatus @default(SUBMITTED)
+  feedback    String?
+  submittedAt DateTime      @default(now())
+  reviewedAt  DateTime?
+
+  user    User    @relation(fields: [userId], references: [id])
+  project Project @relation(fields: [projectId], references: [id])
+
+  @@index([projectId, status])
+  @@index([userId, submittedAt])
+}
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  actorId    String?
+  action     String
+  entityType String
+  entityId   String?
+  metadata   Json?
+  createdAt  DateTime @default(now())
+
+  @@index([entityType, entityId])
+  @@index([createdAt])
+}

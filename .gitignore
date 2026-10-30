@@ -39,3 +39,33 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/src/generated/prisma
+
+# Local backups and temporary project files
+/backups/
+/ui-backup-*/
+/ui-patch-package/
+/ui-review/
+/digital-world-ui-patch/
+*.bak
+*.backup
+*.backup-*
+*.before-*
+*.pre-*
+*.broken-*
+*.corrupted-*
+*.downline-backup-*
+*.premium-backup
+*.ui-backup
+*.zip
+*.xlsx
+~$*
+/tsc-auth-check.txt
+/.gitignore.before-deployment.bak
+
+# Local patch utilities
+/Apply-DigitalWorld-UI-Patch.ps1
+
+# Generated Prisma Client
+/src/generated/prisma/

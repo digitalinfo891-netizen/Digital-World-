@@ -70,7 +70,6 @@ model User {
   countryCode   String?
   phoneE164     String?   @unique
   postalCode    String?
-  postalCode    String?
   passwordHash  String
   role          UserRole  @default(LEARNER)
   emailVerified DateTime?

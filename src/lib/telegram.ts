@@ -1,11 +1,11 @@
 ﻿import "server-only";
 
 export async function sendTelegramAlert(message: string): Promise<void> {
-  const token = process.env.TELEGRAM_BOT_TOKEN;
-  const chatId = process.env.TELEGRAM_GROUP_CHAT_ID;
+  const token = process.env.TELEGRAM_BOT_TOKEN?.trim();
+  const chatId = process.env.TELEGRAM_GROUP_CHAT_ID?.trim();
 
   if (!token || !chatId) {
-    console.warn("[Telegram] Alert skipped: credentials are not configured.");
+    console.error("[Telegram] Missing bot token or group chat ID.");
     return;
   }
 
@@ -21,15 +21,27 @@ export async function sendTelegramAlert(message: string): Promise<void> {
           disable_web_page_preview: true,
         }),
         cache: "no-store",
-        signal: AbortSignal.timeout(8000),
+        signal: AbortSignal.timeout(10000),
       },
     );
 
-    if (!response.ok) {
-      console.error(`[Telegram] Delivery failed (HTTP ${response.status}).`);
+    const result = await response.json().catch(() => null);
+
+    if (!response.ok || result?.ok !== true) {
+      console.error("[Telegram] Delivery failed:", {
+        status: response.status,
+        description: result?.description || "Unknown Telegram API error",
+        errorCode: result?.error_code || null,
+      });
+      return;
     }
-  } catch {
-    console.error("[Telegram] Delivery failed; application operation is unaffected.");
+
+    console.log("[Telegram] Message delivered successfully.");
+  } catch (error) {
+    console.error(
+      "[Telegram] Delivery error:",
+      error instanceof Error ? error.message : "Unknown error",
+    );
   }
 }
 

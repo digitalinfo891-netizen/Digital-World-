@@ -1,4 +1,4 @@
-import { randomBytes } from "node:crypto";
+﻿import { randomBytes } from "node:crypto";
 import { NextRequest, NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import { z } from "zod";
@@ -113,8 +113,9 @@ export async function POST(request: NextRequest) {
     });
 
     if (existingPhone) {
+      console.warn("[REGISTER DIAGNOSTIC] Duplicate phone detected.");
       return NextResponse.json(
-        { error: "Unable to register with these details. Try logging in instead." },
+        { error: "This mobile number is already registered. Please log in or use Forgot Password to access your account." },
         { status: 409 },
       );
     }
@@ -126,8 +127,9 @@ export async function POST(request: NextRequest) {
       });
 
       if (existingEmail) {
+        console.warn("[REGISTER DIAGNOSTIC] Duplicate email detected.");
         return NextResponse.json(
-          { error: "Unable to register with these details. Try logging in instead." },
+          { error: "This mobile number is already registered. Please log in or use Forgot Password to access your account." },
           { status: 409 },
         );
       }
@@ -186,7 +188,7 @@ export async function POST(request: NextRequest) {
     });
 
     const alertLines = [
-      "🟢 DIGITAL WORLD — NEW REGISTRATION",
+      "ðŸŸ¢ DIGITAL WORLD â€” NEW REGISTRATION",
       "",
       `Name: ${user.name}`,
       `Mobile: ${user.phoneE164}`,
@@ -197,7 +199,7 @@ export async function POST(request: NextRequest) {
       `Time: ${telegramTimestamp()}`,
     ];
 
-    void sendTelegramAlert(alertLines.join("\n"));
+    await sendTelegramAlert(alertLines.join("\n"));
 
     if (referrerId) {
       try {
@@ -206,8 +208,8 @@ export async function POST(request: NextRequest) {
           select: { name: true, referralCode: true },
         });
 
-        void sendTelegramAlert([
-          "👥 DIGITAL WORLD — NEW REFERRAL REGISTRATION",
+        await sendTelegramAlert([
+          "ðŸ‘¥ DIGITAL WORLD â€” NEW REFERRAL REGISTRATION",
           "",
           `New member: ${user.name}`,
           `Sponsor: ${referrer?.name || "Existing referrer"}`,
@@ -249,3 +251,6 @@ export async function POST(request: NextRequest) {
     );
   }
 }
+
+
+

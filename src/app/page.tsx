@@ -1,6 +1,7 @@
 ﻿import Image from "next/image";
 import Link from "next/link";
 import ThemeToggle from "@/components/theme/ThemeToggle";
+import MobileNav from "@/components/MobileNav";
 import {
   ArrowRight,
   BookOpen,
@@ -101,6 +102,8 @@ export default function HomePage() {
               <span className="brand-caption">LEARN. SKILL. GROW. EARN.</span>
             </span>
           </Link>
+
+          <MobileNav />
 
           <div className="nav-links">
             <Link className="nav-link nav-active" href="/">Home</Link>
@@ -347,5 +350,6 @@ export default function HomePage() {
     </main>
   );
 }
+
 
 

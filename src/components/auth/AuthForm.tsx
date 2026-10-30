@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
@@ -9,13 +9,13 @@ import {
   type CountryCode,
 } from "libphonenumber-js";
 
-const regionNames = new Intl.DisplayNames(["en"], { type: "region" });
+const regionNames = null;
 
 const countries = getCountries()
   .map((country) => ({
     country,
     code: `+${getCountryCallingCode(country)}`,
-    name: regionNames.of(country) ?? country,
+    name: country,
   }))
   .sort((a, b) => {
     if (a.country === "IN") return -1;
@@ -23,6 +23,33 @@ const countries = getCountries()
     return a.name.localeCompare(b.name);
   });
 
+
+function CountryPicker({
+  selectedCountry,
+  onSelect,
+  inputClass,
+}: {
+  selectedCountry: CountryCode;
+  onSelect: (country: CountryCode) => void;
+  inputClass: string;
+}) {
+  return (
+    <select
+      id="countryCode"
+      name="countryCode"
+      value={selectedCountry}
+      onChange={(e) => onSelect(e.target.value as CountryCode)}
+      className={`${inputClass} block min-h-[52px] w-full`}
+      autoComplete="country"
+    >
+      {countries.map((country) => (
+        <option key={country.country} value={country.country}>
+          {country.name} ({country.code})
+        </option>
+      ))}
+    </select>
+  );
+}
 export default function AuthForm({
   mode,
 }: {
@@ -32,7 +59,6 @@ export default function AuthForm({
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
   const [selectedCountry, setSelectedCountry] = useState<CountryCode>("IN");
-  const [mounted, setMounted] = useState(false);
   const countryCode = `+${getCountryCallingCode(selectedCountry)}`;
   const [phone, setPhone] = useState("");
   const [postalCode, setPostalCode] = useState("");
@@ -43,12 +69,7 @@ export default function AuthForm({
   const [busy, setBusy] = useState(false);
   const register = mode === "register";
   const isIndia = selectedCountry === "IN";
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  useEffect(() => {
+useEffect(() => {
     if (!register) return;
     const params = new URLSearchParams(window.location.search);
     const referral = params.get("ref");
@@ -214,18 +235,7 @@ export default function AuthForm({
         <label htmlFor="countryCode" className="mb-2 block text-sm font-semibold text-slate-700">
           Country / Region
         </label>
-        <select
-          id="countryCode"
-          value={selectedCountry}
-          onChange={(e) => setSelectedCountry(e.target.value as CountryCode)}
-          className={inputClass}
-        >
-          {mounted && countries.map((country) => (
-            <option key={country.country} value={country.country}>
-              {country.name} ({country.code})
-            </option>
-          ))}
-        </select>
+        <CountryPicker selectedCountry={selectedCountry} onSelect={setSelectedCountry} inputClass={inputClass} />
       </div>
 
       <div>
@@ -329,9 +339,36 @@ export default function AuthForm({
       </div>
 
       {error && (
-        <p role="alert" className="rounded-xl border border-red-200 bg-red-50 p-3 text-sm text-red-700">
-          {error}
-        </p>
+        <div
+          role="alert"
+          aria-live="assertive"
+          className="rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-800"
+        >
+          <div className="flex items-start gap-3">
+            <span className="text-lg leading-none" aria-hidden="true">!</span>
+            <div className="min-w-0 flex-1">
+              <p className="font-bold">
+                {error.toLowerCase().includes("already registered")
+                  ? "Mobile number already registered"
+                  : "Unable to continue"}
+              </p>
+              <p className="mt-1 leading-6">
+                {error}
+              </p>
+              {register && error.toLowerCase().includes("already registered") && (
+                <p className="mt-3">
+                  Already have an account?{" "}
+                  <Link
+                    href="/login"
+                    className="font-bold text-emerald-800 underline underline-offset-2"
+                  >
+                    Sign in here
+                  </Link>
+                </p>
+              )}
+            </div>
+          </div>
+        </div>
       )}
 
       <button
@@ -354,3 +391,7 @@ export default function AuthForm({
     </form>
   );
 }
+
+
+
+

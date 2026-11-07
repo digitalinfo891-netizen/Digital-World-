@@ -6678,3 +6678,2078 @@ html:not(.dark) body .benefit-list > .benefit-item:nth-child(3) {
     background-color: transparent !important;
 }
 
+/* =====================================================
+   DIGITAL WORLD — POST LOGIN SHARED THEME
+===================================================== */
+
+.dw-dashboard-shell {
+  min-height: 100vh;
+  color: #172033;
+  background: linear-gradient(
+    120deg,
+    #5b9cf5 0%,
+    #667eea 48%,
+    #895cf6 100%
+  );
+  background-attachment: fixed;
+}
+
+.dark .dw-dashboard-shell {
+  color: #f8fafc;
+  background: linear-gradient(
+    120deg,
+    #0c1730 0%,
+    #171b46 50%,
+    #321b63 100%
+  );
+  background-attachment: fixed;
+}
+
+.dw-dashboard-sidebar {
+  background: rgba(255, 255, 255, 0.96);
+  border-color: rgba(255, 255, 255, 0.65);
+}
+
+.dark .dw-dashboard-sidebar {
+  background: #101f35;
+  border-color: #263653;
+}
+
+.dw-dashboard-header {
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.dark .dw-dashboard-header {
+  background: rgba(16, 31, 53, 0.96);
+  border-color: #263653;
+}
+
+.dw-dashboard-content {
+  min-height: calc(100vh - 76px);
+  color: #172033;
+  background: transparent;
+}
+
+.dark .dw-dashboard-content {
+  color: #f8fafc;
+}
+
+.dw-dashboard-content h1,
+.dw-dashboard-content h2,
+.dw-dashboard-content h3 {
+  color: #172033;
+}
+
+.dark .dw-dashboard-content h1,
+.dark .dw-dashboard-content h2,
+.dark .dw-dashboard-content h3 {
+  color: #ffffff;
+}
+
+.dw-dashboard-content .dw-description {
+  color: #334155;
+}
+
+.dark .dw-dashboard-content .dw-description {
+  color: #e2e8f0;
+}
+
+.dw-dashboard-card {
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 18px;
+  box-shadow: 0 14px 32px rgba(35, 45, 110, 0.16);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dw-dashboard-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(35, 45, 110, 0.22);
+}
+
+.dark .dw-dashboard-card {
+  border-color: rgba(148, 163, 184, 0.25);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Sidebar account information */
+.dw-dashboard-profile {
+  background: linear-gradient(135deg, #dbeafe, #ede9fe);
+  color: #172033;
+}
+
+.dark .dw-dashboard-profile {
+  background: linear-gradient(135deg, #183b70, #422b78);
+  color: #ffffff;
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  .dw-dashboard-content {
+    min-height: calc(100vh - 76px);
+  }
+
+  .dw-dashboard-card:hover {
+    transform: none;
+  }
+}
+
+/* END POST LOGIN SHARED THEME */
+
+
+/* Dashboard page background and description correction */
+.dw-dashboard-content > main {
+  background: transparent !important;
+  color: #172033;
+}
+
+.dark .dw-dashboard-content > main {
+  color: #f8fafc;
+}
+
+.dw-dashboard-content .dashboard-description {
+  color: #334155 !important;
+}
+
+.dark .dw-dashboard-content .dashboard-description {
+  color: #e2e8f0 !important;
+}
+
+
+/* =========================================================
+   DIGITAL WORLD DASHBOARD - FINAL TEXT CONTRAST FIX
+   Keep the blue/purple banner and pastel workspace gradients
+========================================================= */
+
+/* Main dashboard background */
+html body .dw-dashboard-content > main {
+  background: transparent !important;
+}
+
+/* Welcome banner: white text in both themes */
+html body .dw-dashboard-content .welcome-banner,
+html body .dw-dashboard-content .welcome-banner h1,
+html body .dw-dashboard-content .welcome-banner h2,
+html body .dw-dashboard-content .welcome-banner p,
+html body .dw-dashboard-content .welcome-banner span:not(.dashboard-banner-button),
+html body .dw-dashboard-content .welcome-banner label {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Account status panel */
+html body .dw-dashboard-content .welcome-banner .account-status-panel,
+html body .dw-dashboard-content .welcome-banner .account-status-panel p {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Preserve the white primary button with blue text */
+html body .dw-dashboard-content .welcome-banner a.bg-white,
+html body .dw-dashboard-content .welcome-banner a.bg-white * {
+  background-color: #ffffff !important;
+  color: #243b9b !important;
+  -webkit-text-fill-color: #243b9b !important;
+}
+
+/* Preserve transparent secondary button */
+html body .dw-dashboard-content .welcome-banner a.border {
+  color: #ffffff !important;
+  border-color: rgba(255,255,255,.65) !important;
+}
+
+html body .dw-dashboard-content .welcome-banner a.border * {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Workspace heading and description on the gradient */
+html body .dw-dashboard-content .dashboard-description {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Light pastel cards: dark readable text in BOTH themes */
+html body .dw-dashboard-content .dashboard-cards > article {
+  color: #172554 !important;
+}
+
+html body .dw-dashboard-content .dashboard-cards > article h2,
+html body .dw-dashboard-content .dashboard-cards > article h3 {
+  color: #14213d !important;
+  -webkit-text-fill-color: #14213d !important;
+}
+
+html body .dw-dashboard-content .dashboard-cards > article p {
+  color: #263b57 !important;
+  -webkit-text-fill-color: #263b57 !important;
+}
+
+html body .dw-dashboard-content .dashboard-cards > article span {
+  color: #334155;
+}
+
+/* Keep action links readable */
+html body .dw-dashboard-content .dashboard-cards > article a {
+  color: #1e40af !important;
+  -webkit-text-fill-color: #1e40af !important;
+}
+
+/* Keep blue action buttons white */
+html body .dw-dashboard-content .dashboard-cards > article a.bg-blue-700,
+html body .dw-dashboard-content .dashboard-cards > article a.bg-blue-700 * {
+  background-color: #1d4ed8 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Reward and payment status boxes retain their own contrast */
+html body .dw-dashboard-content .dashboard-cards > article .bg-slate-50,
+html body .dw-dashboard-content .dashboard-cards > article .bg-blue-50 {
+  color: #1e293b !important;
+}
+
+html body .dw-dashboard-content .dashboard-cards > article .bg-slate-50 *,
+html body .dw-dashboard-content .dashboard-cards > article .bg-blue-50 * {
+  color: #1e293b !important;
+}
+
+/* End dashboard contrast correction */
+
+/* =========================================================
+   DIGITAL WORLD - THEME RESPONSIVE DASHBOARD COLORS
+========================================================= */
+
+/* LIGHT MODE */
+html:not(.dark) body .dw-dashboard-shell {
+  background: linear-gradient(
+    125deg,
+    #dbeafe 0%,
+    #e0e7ff 48%,
+    #ede9fe 100%
+  ) !important;
+}
+
+html:not(.dark) body .dw-dashboard-content {
+  background: transparent !important;
+}
+
+html:not(.dark) body .dw-dashboard-content .welcome-banner {
+  background: linear-gradient(
+    120deg,
+    #243b9b 0%,
+    #4f46e5 55%,
+    #7047d3 100%
+  ) !important;
+}
+
+/* DARK MODE */
+html.dark body .dw-dashboard-shell {
+  background: linear-gradient(
+    125deg,
+    #071426 0%,
+    #111b3d 48%,
+    #251448 100%
+  ) !important;
+}
+
+html.dark body .dw-dashboard-content {
+  background: transparent !important;
+}
+
+html.dark body .dw-dashboard-content .welcome-banner {
+  background: linear-gradient(
+    120deg,
+    #101f46 0%,
+    #25245f 52%,
+    #45216f 100%
+  ) !important;
+  border: 1px solid rgba(167, 139, 250, 0.25) !important;
+  box-shadow: 0 24px 65px rgba(0, 0, 0, 0.38) !important;
+}
+
+/* Dark mode account status panel */
+html.dark body .dw-dashboard-content .account-status-panel {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.20) !important;
+}
+
+/* Keep dashboard cards unchanged */
+html body .dw-dashboard-content .dashboard-cards > article {
+  border-radius: 18px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+/* END THEME RESPONSIVE DASHBOARD COLORS */
+
+/* =====================================================
+   DIGITAL WORLD - FINAL LIGHT MODE DASHBOARD PALETTE
+   Dark mode intentionally unchanged
+===================================================== */
+
+html:not(.dark) body .dw-dashboard-shell {
+    background: linear-gradient(
+        135deg,
+        #e8f2ff 0%,
+        #edf1ff 50%,
+        #f1edff 100%
+    ) !important;
+}
+
+/* LEFT SIDEBAR - LIGHT BLUE */
+html:not(.dark) body .dw-dashboard-shell > aside {
+    background: linear-gradient(
+        180deg,
+        #dcecff 0%,
+        #e8f1ff 55%,
+        #e4eaff 100%
+    ) !important;
+    border-color: #c5d8f5 !important;
+}
+
+/* Sidebar logo area */
+html:not(.dark) body .dw-dashboard-shell > aside > div > div:first-child {
+    background: rgba(255,255,255,0.48) !important;
+    border-color: #c5d8f5 !important;
+}
+
+/* Sidebar text */
+html:not(.dark) body .dw-dashboard-shell > aside a,
+html:not(.dark) body .dw-dashboard-shell > aside p {
+    color: #243b63 !important;
+}
+
+/* Sidebar navigation hover */
+html:not(.dark) body .dw-dashboard-shell > aside nav a:not([aria-current="page"]):hover {
+    background: rgba(255,255,255,0.75) !important;
+    color: #2446ad !important;
+}
+
+/* Active navigation remains blue */
+html:not(.dark) body .dw-dashboard-shell > aside nav a[aria-current="page"] {
+    background: linear-gradient(
+        110deg,
+        #3157d5,
+        #526fe8
+    ) !important;
+    color: #ffffff !important;
+}
+
+/* Sidebar profile box */
+html:not(.dark) body .dw-dashboard-shell > aside > div > div:last-child > div {
+    background: rgba(255,255,255,0.72) !important;
+    border: 1px solid #d3e2fa !important;
+}
+
+/* TOP HEADER - PALE BLUE */
+html:not(.dark) body .dw-dashboard-shell header {
+    background: rgba(239,246,255,0.96) !important;
+    border-color: #d4e2f5 !important;
+    color: #172554 !important;
+}
+
+/* MAIN DASHBOARD - SOFT LAVENDER BLUE */
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content {
+    background: linear-gradient(
+        135deg,
+        #eef4ff 0%,
+        #f1efff 55%,
+        #f5f0ff 100%
+    ) !important;
+    color: #172554 !important;
+}
+
+/* Main dashboard headings */
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content h1,
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content h2,
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content h3 {
+    color: #172554;
+}
+
+/* Main dashboard descriptions */
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content p {
+    color: #475569;
+}
+
+/* Welcome banner retains rich blue-purple gradient */
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content .welcome-banner {
+    background: linear-gradient(
+        120deg,
+        #243b9b 0%,
+        #4f46e5 55%,
+        #7047d3 100%
+    ) !important;
+}
+
+/* Keep welcome banner text white */
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content .welcome-banner h1,
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content .welcome-banner h2,
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content .welcome-banner h3,
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content .welcome-banner p,
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content .welcome-banner span {
+    color: #ffffff !important;
+}
+
+/* END LIGHT MODE DASHBOARD PALETTE */
+
+
+/* =====================================================
+   DIGITAL WORLD - LIGHT MODE REVERSED PALETTE
+===================================================== */
+
+/* MAIN SHELL */
+html:not(.dark) body .dw-dashboard-shell {
+    background: linear-gradient(
+        135deg,
+        #eaf3ff 0%,
+        #edf1ff 55%,
+        #f2edff 100%
+    ) !important;
+}
+
+/* SIDEBAR - DARK NAVY BLUE */
+html:not(.dark) body .dw-dashboard-shell aside {
+    background: linear-gradient(
+        180deg,
+        #102b52 0%,
+        #173d70 55%,
+        #213f78 100%
+    ) !important;
+    border-color: #294c7c !important;
+}
+
+/* Sidebar logo header */
+html:not(.dark) body .dw-dashboard-shell aside > div > div:first-child {
+    background: rgba(8, 25, 51, 0.35) !important;
+    border-color: rgba(255,255,255,0.14) !important;
+}
+
+/* Sidebar text and icons */
+html:not(.dark) body .dw-dashboard-shell aside nav,
+html:not(.dark) body .dw-dashboard-shell aside nav p,
+html:not(.dark) body .dw-dashboard-shell aside > div > div a,
+html:not(.dark) body .dw-dashboard-shell aside > div > div p {
+    color: #f1f5ff !important;
+}
+
+html:not(.dark) body .dw-dashboard-shell aside nav a:not([aria-current="page"]) {
+    color: #e2ecff !important;
+}
+
+/* Sidebar hover */
+html:not(.dark) body .dw-dashboard-shell aside nav a:not([aria-current="page"]):hover {
+    background: rgba(255,255,255,0.12) !important;
+    color: #ffffff !important;
+}
+
+/* Active sidebar link */
+html:not(.dark) body .dw-dashboard-shell aside nav a[aria-current="page"] {
+    background: linear-gradient(
+        110deg,
+        #2563eb,
+        #4f73ee
+    ) !important;
+    color: #ffffff !important;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.22) !important;
+}
+
+/* Sidebar profile */
+html:not(.dark) body .dw-dashboard-shell aside > div > div:last-child > div {
+    background: rgba(255,255,255,0.10) !important;
+    border: 1px solid rgba(255,255,255,0.18) !important;
+}
+
+html:not(.dark) body .dw-dashboard-shell aside > div > div:last-child > div * {
+    color: #ffffff !important;
+}
+
+/* Sidebar separators */
+html:not(.dark) body .dw-dashboard-shell aside nav .border-t,
+html:not(.dark) body .dw-dashboard-shell aside nav .border-b {
+    border-color: rgba(255,255,255,0.16) !important;
+}
+
+/* TOP HEADER - LIGHT BLUE WHITE */
+html:not(.dark) body .dw-dashboard-shell header {
+    background: rgba(241,247,255,0.97) !important;
+    border-color: #d4e3f8 !important;
+    color: #172554 !important;
+}
+
+/* DASHBOARD CONTENT - LIGHT BLUE GRADIENT */
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content {
+    background: linear-gradient(
+        135deg,
+        #dcecff 0%,
+        #e8efff 48%,
+        #eee8ff 100%
+    ) !important;
+    color: #172554 !important;
+}
+
+/* Dashboard text */
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content h1,
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content h2,
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content h3 {
+    color: #172554 !important;
+}
+
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content p {
+    color: #334766 !important;
+}
+
+/* END LIGHT MODE REVERSED PALETTE */
+
+
+/* =====================================================
+   DIGITAL WORLD - MATCHING BLUE LIGHT THEME
+===================================================== */
+
+/* Sidebar: rich Digital World blue */
+html:not(.dark) body .dw-dashboard-shell aside {
+    background: linear-gradient(
+        145deg,
+        #2446ad 0%,
+        #3157d5 55%,
+        #526fe8 100%
+    ) !important;
+    border-color: rgba(255,255,255,0.18) !important;
+}
+
+/* Sidebar logo section */
+html:not(.dark) body .dw-dashboard-shell aside > div > div:first-child {
+    background: rgba(24,52,139,0.28) !important;
+    border-color: rgba(255,255,255,0.18) !important;
+}
+
+/* Sidebar text and icons */
+html:not(.dark) body .dw-dashboard-shell aside,
+html:not(.dark) body .dw-dashboard-shell aside p,
+html:not(.dark) body .dw-dashboard-shell aside a,
+html:not(.dark) body .dw-dashboard-shell aside svg {
+    color: #ffffff !important;
+}
+
+/* Navigation hover */
+html:not(.dark) body .dw-dashboard-shell aside nav a:not([aria-current="page"]):hover {
+    background: rgba(255,255,255,0.16) !important;
+    color: #ffffff !important;
+}
+
+/* Active navigation */
+html:not(.dark) body .dw-dashboard-shell aside nav a[aria-current="page"] {
+    background: linear-gradient(
+        110deg,
+        #1745c4,
+        #4779ff
+    ) !important;
+    color: #ffffff !important;
+    box-shadow: 0 6px 18px rgba(20,40,110,0.25) !important;
+}
+
+/* Profile box */
+html:not(.dark) body .dw-dashboard-shell aside > div > div:last-child > div {
+    background: rgba(255,255,255,0.13) !important;
+    border: 1px solid rgba(255,255,255,0.25) !important;
+}
+
+html:not(.dark) body .dw-dashboard-shell aside > div > div:last-child > div * {
+    color: #ffffff !important;
+}
+
+/* Header */
+html:not(.dark) body .dw-dashboard-shell header {
+    background: #f2f7ff !important;
+    border-color: #d6e5ff !important;
+}
+
+/* Dashboard background: lighter matching blue */
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content {
+    background: linear-gradient(
+        135deg,
+        #d8e8ff 0%,
+        #e5edff 50%,
+        #eeeaff 100%
+    ) !important;
+    color: #172554 !important;
+}
+
+/* Dashboard headings and descriptions */
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content h1,
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content h2,
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content h3 {
+    color: #172554 !important;
+}
+
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content p {
+    color: #334766 !important;
+}
+
+/* Preserve the existing welcome banner */
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content .welcome-banner {
+    background: linear-gradient(
+        120deg,
+        #243b9b,
+        #4f46e5,
+        #7047d3
+    ) !important;
+}
+
+/* END MATCHING BLUE LIGHT THEME */
+
+
+/* =====================================================
+   DIGITAL WORLD - FINAL LIGHT MODE DASHBOARD COLORS
+===================================================== */
+
+/* SIDEBAR - RICH BLUE */
+html:not(.dark) .dw-dashboard-shell aside {
+    background: linear-gradient(145deg, #2446ad, #3157d5 55%, #526fe8) !important;
+    border-color: rgba(255,255,255,.22) !important;
+}
+
+/* Sidebar brand area */
+html:not(.dark) .dw-dashboard-shell aside > div > div:first-child {
+    background: rgba(20,45,130,.25) !important;
+    border-color: rgba(255,255,255,.2) !important;
+}
+
+/* ALL SIDEBAR TEXT */
+html:not(.dark) .dw-dashboard-shell aside nav p,
+html:not(.dark) .dw-dashboard-shell aside nav a,
+html:not(.dark) .dw-dashboard-shell aside nav a *,
+html:not(.dark) .dw-dashboard-shell aside > div > div:first-child a,
+html:not(.dark) .dw-dashboard-shell aside > div > div:first-child a *,
+html:not(.dark) .dw-dashboard-shell aside > div > div:last-child a,
+html:not(.dark) .dw-dashboard-shell aside > div > div:last-child a *,
+html:not(.dark) .dw-dashboard-shell aside > div > div:last-child p {
+    color: #ffffff !important;
+}
+
+/* Sidebar navigation hover */
+html:not(.dark) .dw-dashboard-shell aside nav a:not([aria-current="page"]):hover {
+    background: rgba(255,255,255,.16) !important;
+}
+
+/* Active navigation */
+html:not(.dark) .dw-dashboard-shell aside nav a[aria-current="page"] {
+    background: linear-gradient(110deg, #1745c4, #4779ff) !important;
+    color: #ffffff !important;
+}
+
+/* Sidebar profile */
+html:not(.dark) .dw-dashboard-shell aside > div > div:last-child > div {
+    background: rgba(255,255,255,.13) !important;
+    border-color: rgba(255,255,255,.25) !important;
+}
+
+html:not(.dark) .dw-dashboard-shell aside > div > div:last-child > div * {
+    color: #ffffff !important;
+}
+
+/* HEADER - SAME BLUE AS SIDEBAR */
+html:not(.dark) .dw-dashboard-shell header {
+    background: linear-gradient(110deg, #2446ad, #3157d5 55%, #526fe8) !important;
+    border-color: rgba(255,255,255,.2) !important;
+}
+
+html:not(.dark) .dw-dashboard-shell header p,
+html:not(.dark) .dw-dashboard-shell header span {
+    color: #ffffff !important;
+}
+
+html:not(.dark) .dw-dashboard-shell header button {
+    border-color: rgba(255,255,255,.45) !important;
+}
+
+/* DASHBOARD BACKGROUND - LIGHT BLUE */
+html:not(.dark) .dw-dashboard-shell .dw-dashboard-content,
+html:not(.dark) .dw-dashboard-shell main {
+    background: linear-gradient(
+        135deg,
+        #dcecff 0%,
+        #e8f1ff 52%,
+        #eeeaff 100%
+    ) !important;
+    color: #172554 !important;
+}
+
+/* WELCOME BOX - LIGHT BLUE GRADIENT */
+html:not(.dark) .dw-dashboard-shell .welcome-banner {
+    background: linear-gradient(
+        120deg,
+        #c6dcff 0%,
+        #d9e5ff 52%,
+        #e5dfff 100%
+    ) !important;
+    border: 1px solid rgba(255,255,255,.75) !important;
+    box-shadow: 0 20px 50px rgba(49,87,213,.14) !important;
+    color: #172554 !important;
+}
+
+/* Welcome box headings and text */
+html:not(.dark) .dw-dashboard-shell .welcome-banner h1,
+html:not(.dark) .dw-dashboard-shell .welcome-banner h2,
+html:not(.dark) .dw-dashboard-shell .welcome-banner h3,
+html:not(.dark) .dw-dashboard-shell .welcome-banner p {
+    color: #172554 !important;
+}
+
+/* Account status panel */
+html:not(.dark) .dw-dashboard-shell .welcome-banner .account-status-panel {
+    background: rgba(255,255,255,.48) !important;
+    border-color: rgba(49,87,213,.20) !important;
+    color: #172554 !important;
+}
+
+html:not(.dark) .dw-dashboard-shell .welcome-banner .account-status-panel p {
+    color: #334766 !important;
+}
+
+/* Welcome buttons */
+html:not(.dark) .dw-dashboard-shell .welcome-banner a.bg-white {
+    background: #ffffff !important;
+    color: #2446ad !important;
+}
+
+html:not(.dark) .dw-dashboard-shell .welcome-banner a.border {
+    border-color: #5275cf !important;
+    color: #2446ad !important;
+}
+
+/* Workspace headings */
+html:not(.dark) .dw-dashboard-shell .dw-dashboard-content h1,
+html:not(.dark) .dw-dashboard-shell .dw-dashboard-content h2,
+html:not(.dark) .dw-dashboard-shell .dw-dashboard-content h3 {
+    color: #172554;
+}
+
+/* Workspace descriptions */
+html:not(.dark) .dw-dashboard-shell .dw-dashboard-content p {
+    color: #334766;
+}
+
+/* Preserve existing pastel dashboard cards */
+html:not(.dark) .dw-dashboard-shell .dashboard-cards > * {
+    color: #172554;
+}
+
+/* END FINAL LIGHT MODE DASHBOARD COLORS */
+
+/* Header matches sidebar gradient in light mode */
+html:not(.dark) .dw-dashboard-shell header {
+    background: linear-gradient(
+        120deg,
+        #2446ad 0%,
+        #3157d5 55%,
+        #526fe8 100%
+    ) !important;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Header text */
+html:not(.dark) .dw-dashboard-shell header,
+html:not(.dark) .dw-dashboard-shell header p,
+html:not(.dark) .dw-dashboard-shell header span {
+    color: #ffffff !important;
+}
+
+/* Header buttons */
+html:not(.dark) .dw-dashboard-shell header button {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+}
+
+html:not(.dark) .dw-dashboard-shell header button:hover {
+    background: rgba(255, 255, 255, 0.22) !important;
+}
+
+/* =========================================================
+   DIGITAL WORLD - FINAL LIGHT THEME CORRECTION
+   Sidebar and header: matching blue gradient
+   Dashboard and welcome panel: light blue
+========================================================= */
+
+html:not(.dark) .dw-dashboard-shell .dw-dashboard-sidebar,
+html:not(.dark) .dw-dashboard-shell aside {
+    background: linear-gradient(
+        135deg,
+        #2446ad 0%,
+        #3157d5 55%,
+        #526fe8 100%
+    ) !important;
+    color: #ffffff !important;
+}
+
+/* Sidebar text and icons */
+html:not(.dark) .dw-dashboard-shell .dw-dashboard-sidebar *,
+html:not(.dark) .dw-dashboard-shell aside nav a,
+html:not(.dark) .dw-dashboard-shell aside nav a *,
+html:not(.dark) .dw-dashboard-shell aside > div > div:first-child *,
+html:not(.dark) .dw-dashboard-shell aside > div > div:last-child * {
+    color: #ffffff !important;
+}
+
+/* Sidebar active item */
+html:not(.dark) .dw-dashboard-shell aside nav a[aria-current="page"] {
+    background: linear-gradient(110deg, #1745c4, #4779ff) !important;
+    color: #ffffff !important;
+}
+
+/* Header - use the actual DashboardShell class */
+html:not(.dark) .dw-dashboard-shell .dw-dashboard-header {
+    background: linear-gradient(
+        110deg,
+        #2446ad 0%,
+        #3157d5 55%,
+        #526fe8 100%
+    ) !important;
+    border-color: rgba(255,255,255,.22) !important;
+    color: #ffffff !important;
+}
+
+/* Header text and icons */
+html:not(.dark) .dw-dashboard-shell .dw-dashboard-header,
+html:not(.dark) .dw-dashboard-shell .dw-dashboard-header * {
+    color: #ffffff !important;
+}
+
+/* Header controls */
+html:not(.dark) .dw-dashboard-shell .dw-dashboard-header button {
+    color: #ffffff !important;
+    background: rgba(255,255,255,.12) !important;
+    border: 1px solid rgba(255,255,255,.45) !important;
+}
+
+html:not(.dark) .dw-dashboard-shell .dw-dashboard-header button:hover {
+    background: rgba(255,255,255,.23) !important;
+}
+
+/* Main dashboard background */
+html:not(.dark) .dw-dashboard-shell .dw-dashboard-content,
+html:not(.dark) .dw-dashboard-shell .dw-dashboard-content > main {
+    background: linear-gradient(
+        135deg,
+        #dcecff 0%,
+        #e8f1ff 52%,
+        #f0f4ff 100%
+    ) !important;
+    color: #172554 !important;
+}
+
+/* Welcome panel - light blue gradient */
+html:not(.dark) .dw-dashboard-shell .welcome-banner {
+    background: linear-gradient(
+        120deg,
+        #c6dcff 0%,
+        #d9e8ff 52%,
+        #e9eaff 100%
+    ) !important;
+    border: 1px solid #ffffff !important;
+    box-shadow: 0 18px 45px rgba(49,87,213,.13) !important;
+    color: #172554 !important;
+}
+
+/* Welcome panel text */
+html:not(.dark) .dw-dashboard-shell .welcome-banner h1,
+html:not(.dark) .dw-dashboard-shell .welcome-banner h2,
+html:not(.dark) .dw-dashboard-shell .welcome-banner h3,
+html:not(.dark) .dw-dashboard-shell .welcome-banner p,
+html:not(.dark) .dw-dashboard-shell .welcome-banner span,
+html:not(.dark) .dw-dashboard-shell .welcome-banner label {
+    color: #172554 !important;
+    -webkit-text-fill-color: #172554 !important;
+}
+
+/* Account status panel */
+html:not(.dark) .dw-dashboard-shell .welcome-banner .account-status-panel {
+    background: rgba(255,255,255,.72) !important;
+    border: 1px solid rgba(49,87,213,.18) !important;
+    color: #172554 !important;
+}
+
+html:not(.dark) .dw-dashboard-shell .welcome-banner .account-status-panel * {
+    color: #172554 !important;
+    -webkit-text-fill-color: #172554 !important;
+}
+
+/* Welcome panel buttons */
+html:not(.dark) .dw-dashboard-shell .welcome-banner a.bg-white {
+    background: #ffffff !important;
+    color: #2446ad !important;
+    -webkit-text-fill-color: #2446ad !important;
+}
+
+html:not(.dark) .dw-dashboard-shell .welcome-banner a.border {
+    background: rgba(255,255,255,.25) !important;
+    border-color: #5275cf !important;
+    color: #2446ad !important;
+}
+
+/* Keep pastel workspace cards readable */
+html:not(.dark) .dw-dashboard-shell .dashboard-cards > article {
+    color: #172554 !important;
+}
+
+html:not(.dark) .dw-dashboard-shell .dashboard-cards > article h2,
+html:not(.dark) .dw-dashboard-shell .dashboard-cards > article h3 {
+    color: #14213d !important;
+}
+
+html:not(.dark) .dw-dashboard-shell .dashboard-cards > article p {
+    color: #263b57 !important;
+}
+
+/* Dark mode remains unchanged */
+
+
+/* =========================================================
+   DIGITAL WORLD - WELCOME BANNER LIGHT COLOR FIX
+========================================================= */
+
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content .welcome-banner {
+    background: linear-gradient(
+        120deg,
+        #f8fbff 0%,
+        #edf5ff 50%,
+        #f4f0ff 100%
+    ) !important;
+
+    border: 1px solid #dbe7f8 !important;
+    box-shadow: 0 12px 35px rgba(30, 64, 175, 0.08) !important;
+    color: #172554 !important;
+}
+
+/* Welcome banner headings */
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content .welcome-banner h1,
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content .welcome-banner h2,
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content .welcome-banner h3 {
+    color: #172554 !important;
+    -webkit-text-fill-color: #172554 !important;
+}
+
+/* Welcome banner descriptions and labels */
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content .welcome-banner p,
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content .welcome-banner span,
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content .welcome-banner label {
+    color: #334766 !important;
+    -webkit-text-fill-color: #334766 !important;
+}
+
+/* Account status panel */
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content .welcome-banner .account-status-panel {
+    background: #ffffff !important;
+    border: 1px solid #dbe7f8 !important;
+    color: #172554 !important;
+}
+
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content .welcome-banner .account-status-panel * {
+    color: #172554 !important;
+    -webkit-text-fill-color: #172554 !important;
+}
+
+/* Primary welcome button */
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content .welcome-banner a.bg-white {
+    background: #2446ad !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Secondary welcome button */
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content .welcome-banner a.border {
+    background: #ffffff !important;
+    border: 1px solid #b8cbea !important;
+    color: #2446ad !important;
+    -webkit-text-fill-color: #2446ad !important;
+}
+
+/* Keep button icons readable */
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content .welcome-banner a svg {
+    color: inherit !important;
+}
+
+
+/* =========================================================
+   DIGITAL WORLD - TWO-COLOR DASHBOARD GRADIENTS
+   Both Light and Dark Themes
+========================================================= */
+
+/* LIGHT THEME - Main dashboard background */
+html:not(.dark) .dw-dashboard-shell .dw-dashboard-content {
+    background: linear-gradient(
+        125deg,
+        #b8d5ff 0%,
+        #e4d9ff 100%
+    ) !important;
+}
+
+/* LIGHT THEME - Welcome banner */
+html:not(.dark) .dw-dashboard-shell .welcome-banner {
+    background: linear-gradient(
+        120deg,
+        #f5f9ff 0%,
+        #dce9ff 100%
+    ) !important;
+    border: 1px solid #c7d9f5 !important;
+    color: #172554 !important;
+}
+
+html:not(.dark) .dw-dashboard-shell .welcome-banner h1,
+html:not(.dark) .dw-dashboard-shell .welcome-banner h2,
+html:not(.dark) .dw-dashboard-shell .welcome-banner h3 {
+    color: #172554 !important;
+    -webkit-text-fill-color: #172554 !important;
+}
+
+html:not(.dark) .dw-dashboard-shell .welcome-banner p,
+html:not(.dark) .dw-dashboard-shell .welcome-banner span {
+    color: #334766 !important;
+    -webkit-text-fill-color: #334766 !important;
+}
+
+/* LIGHT THEME - Workspace cards: retain individual colors */
+html:not(.dark) .dw-dashboard-shell .dashboard-cards > article:nth-child(4n+1) {
+    background: linear-gradient(135deg, #b8d4ff, #e0ecff) !important;
+}
+
+html:not(.dark) .dw-dashboard-shell .dashboard-cards > article:nth-child(4n+2) {
+    background: linear-gradient(135deg, #c9c2ff, #e9ddff) !important;
+}
+
+html:not(.dark) .dw-dashboard-shell .dashboard-cards > article:nth-child(4n+3) {
+    background: linear-gradient(135deg, #f5c9df, #ffe3ed) !important;
+}
+
+html:not(.dark) .dw-dashboard-shell .dashboard-cards > article:nth-child(4n+4) {
+    background: linear-gradient(135deg, #ffe18a, #fff1c2) !important;
+}
+
+/* LIGHT THEME - Card text */
+html:not(.dark) .dw-dashboard-shell .dashboard-cards > article {
+    color: #172554 !important;
+    border: 1px solid rgba(49, 70, 130, .12) !important;
+    box-shadow: 0 8px 22px rgba(31, 55, 110, .12) !important;
+}
+
+html:not(.dark) .dw-dashboard-shell .dashboard-cards > article h2,
+html:not(.dark) .dw-dashboard-shell .dashboard-cards > article h3,
+html:not(.dark) .dw-dashboard-shell .dashboard-cards > article p,
+html:not(.dark) .dw-dashboard-shell .dashboard-cards > article span {
+    color: #172554 !important;
+}
+
+/* DARK THEME - Strong two-color dashboard background */
+html.dark .dw-dashboard-shell .dw-dashboard-content {
+    background: linear-gradient(
+        125deg,
+        #101b3b 0%,
+        #263f8e 100%
+    ) !important;
+}
+
+/* DARK THEME - Welcome banner */
+html.dark .dw-dashboard-shell .welcome-banner {
+    background: linear-gradient(
+        120deg,
+        #172b59 0%,
+        #302b78 100%
+    ) !important;
+    border: 1px solid rgba(148, 163, 255, .25) !important;
+    color: #f8faff !important;
+}
+
+html.dark .dw-dashboard-shell .welcome-banner h1,
+html.dark .dw-dashboard-shell .welcome-banner h2,
+html.dark .dw-dashboard-shell .welcome-banner h3,
+html.dark .dw-dashboard-shell .welcome-banner p,
+html.dark .dw-dashboard-shell .welcome-banner span {
+    color: #f8faff !important;
+    -webkit-text-fill-color: #f8faff !important;
+}
+
+/* DARK THEME - Workspace cards: richer versions of existing colors */
+html.dark .dw-dashboard-shell .dashboard-cards > article:nth-child(4n+1) {
+    background: linear-gradient(135deg, #244b82, #315f9d) !important;
+}
+
+html.dark .dw-dashboard-shell .dashboard-cards > article:nth-child(4n+2) {
+    background: linear-gradient(135deg, #493d83, #65519c) !important;
+}
+
+html.dark .dw-dashboard-shell .dashboard-cards > article:nth-child(4n+3) {
+    background: linear-gradient(135deg, #793d68, #995476) !important;
+}
+
+html.dark .dw-dashboard-shell .dashboard-cards > article:nth-child(4n+4) {
+    background: linear-gradient(135deg, #80602c, #a17b38) !important;
+}
+
+/* DARK THEME - Card text and borders */
+html.dark .dw-dashboard-shell .dashboard-cards > article {
+    color: #ffffff !important;
+    border: 1px solid rgba(255,255,255,.16) !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,.20) !important;
+}
+
+html.dark .dw-dashboard-shell .dashboard-cards > article h2,
+html.dark .dw-dashboard-shell .dashboard-cards > article h3,
+html.dark .dw-dashboard-shell .dashboard-cards > article p,
+html.dark .dw-dashboard-shell .dashboard-cards > article span {
+    color: #ffffff !important;
+}
+
+/* Smooth theme transitions */
+.dw-dashboard-shell .dw-dashboard-content,
+.dw-dashboard-shell .welcome-banner,
+.dw-dashboard-shell .dashboard-cards > article {
+    transition: background .3s ease, color .3s ease, box-shadow .3s ease;
+}
+
+
+/* =========================================================
+   DARK MODE - FIX TEXT VISIBILITY INSIDE DASHBOARD CARDS
+========================================================= */
+
+/* Main dashboard card text */
+html.dark .dw-dashboard-shell .dashboard-cards > article,
+html.dark .dw-dashboard-shell .dashboard-cards > article h1,
+html.dark .dw-dashboard-shell .dashboard-cards > article h2,
+html.dark .dw-dashboard-shell .dashboard-cards > article h3,
+html.dark .dw-dashboard-shell .dashboard-cards > article p,
+html.dark .dw-dashboard-shell .dashboard-cards > article span,
+html.dark .dw-dashboard-shell .dashboard-cards > article label {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Light-colored inner panels inside dark cards */
+html.dark .dw-dashboard-shell .dashboard-cards > article [class*="bg-white"],
+html.dark .dw-dashboard-shell .dashboard-cards > article [class*="bg-slate-50"],
+html.dark .dw-dashboard-shell .dashboard-cards > article [class*="bg-gray-50"],
+html.dark .dw-dashboard-shell .dashboard-cards > article [class*="bg-blue-50"],
+html.dark .dw-dashboard-shell .dashboard-cards > article [class*="bg-indigo-50"],
+html.dark .dw-dashboard-shell .dashboard-cards > article [class*="bg-neutral-50"] {
+    color: #172554 !important;
+}
+
+/* All text inside light inner panels */
+html.dark .dw-dashboard-shell .dashboard-cards > article [class*="bg-white"] *,
+html.dark .dw-dashboard-shell .dashboard-cards > article [class*="bg-slate-50"] *,
+html.dark .dw-dashboard-shell .dashboard-cards > article [class*="bg-gray-50"] *,
+html.dark .dw-dashboard-shell .dashboard-cards > article [class*="bg-blue-50"] *,
+html.dark .dw-dashboard-shell .dashboard-cards > article [class*="bg-indigo-50"] *,
+html.dark .dw-dashboard-shell .dashboard-cards > article [class*="bg-neutral-50"] * {
+    color: #172554 !important;
+    -webkit-text-fill-color: #172554 !important;
+}
+
+/* Referral code and payment information */
+html.dark .dw-dashboard-shell .dashboard-cards input,
+html.dark .dw-dashboard-shell .dashboard-cards textarea,
+html.dark .dw-dashboard-shell .dashboard-cards select {
+    color: #172554 !important;
+    -webkit-text-fill-color: #172554 !important;
+}
+
+/* Placeholders */
+html.dark .dw-dashboard-shell .dashboard-cards input::placeholder,
+html.dark .dw-dashboard-shell .dashboard-cards textarea::placeholder {
+    color: #64748b !important;
+    opacity: 1 !important;
+}
+
+/* Keep dark card links readable */
+html.dark .dw-dashboard-shell .dashboard-cards > article a {
+    color: #ffffff !important;
+}
+
+/* Preserve dark card gradients and borders */
+html.dark .dw-dashboard-shell .dashboard-cards > article {
+    border-color: rgba(255,255,255,.18) !important;
+}
+
+
+/* =========================================================
+   DARK MODE - FIX TEXT VISIBILITY INSIDE DASHBOARD CARDS
+========================================================= */
+
+/* Main dashboard card text */
+html.dark .dw-dashboard-shell .dashboard-cards > article,
+html.dark .dw-dashboard-shell .dashboard-cards > article h1,
+html.dark .dw-dashboard-shell .dashboard-cards > article h2,
+html.dark .dw-dashboard-shell .dashboard-cards > article h3,
+html.dark .dw-dashboard-shell .dashboard-cards > article p,
+html.dark .dw-dashboard-shell .dashboard-cards > article span,
+html.dark .dw-dashboard-shell .dashboard-cards > article label {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Light-colored inner panels inside dark cards */
+html.dark .dw-dashboard-shell .dashboard-cards > article [class*="bg-white"],
+html.dark .dw-dashboard-shell .dashboard-cards > article [class*="bg-slate-50"],
+html.dark .dw-dashboard-shell .dashboard-cards > article [class*="bg-gray-50"],
+html.dark .dw-dashboard-shell .dashboard-cards > article [class*="bg-blue-50"],
+html.dark .dw-dashboard-shell .dashboard-cards > article [class*="bg-indigo-50"],
+html.dark .dw-dashboard-shell .dashboard-cards > article [class*="bg-neutral-50"] {
+    color: #172554 !important;
+}
+
+/* All text inside light inner panels */
+html.dark .dw-dashboard-shell .dashboard-cards > article [class*="bg-white"] *,
+html.dark .dw-dashboard-shell .dashboard-cards > article [class*="bg-slate-50"] *,
+html.dark .dw-dashboard-shell .dashboard-cards > article [class*="bg-gray-50"] *,
+html.dark .dw-dashboard-shell .dashboard-cards > article [class*="bg-blue-50"] *,
+html.dark .dw-dashboard-shell .dashboard-cards > article [class*="bg-indigo-50"] *,
+html.dark .dw-dashboard-shell .dashboard-cards > article [class*="bg-neutral-50"] * {
+    color: #172554 !important;
+    -webkit-text-fill-color: #172554 !important;
+}
+
+/* Referral code and payment information */
+html.dark .dw-dashboard-shell .dashboard-cards input,
+html.dark .dw-dashboard-shell .dashboard-cards textarea,
+html.dark .dw-dashboard-shell .dashboard-cards select {
+    color: #172554 !important;
+    -webkit-text-fill-color: #172554 !important;
+}
+
+/* Placeholders */
+html.dark .dw-dashboard-shell .dashboard-cards input::placeholder,
+html.dark .dw-dashboard-shell .dashboard-cards textarea::placeholder {
+    color: #64748b !important;
+    opacity: 1 !important;
+}
+
+/* Keep dark card links readable */
+html.dark .dw-dashboard-shell .dashboard-cards > article a {
+    color: #ffffff !important;
+}
+
+/* Preserve dark card gradients and borders */
+html.dark .dw-dashboard-shell .dashboard-cards > article {
+    border-color: rgba(255,255,255,.18) !important;
+}
+
+
+/* =========================================================
+   DIGITAL WORLD - FINAL DARK MODE TEXT VISIBILITY FIX
+========================================================= */
+
+/* SIDEBAR: force readable text throughout */
+html.dark .dw-dashboard-shell .dw-dashboard-sidebar,
+html.dark .dw-dashboard-shell aside {
+    color: #ffffff !important;
+}
+
+html.dark .dw-dashboard-shell .dw-dashboard-sidebar *,
+html.dark .dw-dashboard-shell aside * {
+    color: #ffffff !important;
+}
+
+/* Sidebar profile card */
+html.dark .dw-dashboard-shell aside [class*="rounded"] {
+    color: #ffffff !important;
+}
+
+html.dark .dw-dashboard-shell aside [class*="rounded"] * {
+    color: #ffffff !important;
+}
+
+/* Profile card background */
+html.dark .dw-dashboard-shell aside [class*="rounded"][class*="bg-"] {
+    background: rgba(255,255,255,.12) !important;
+    border-color: rgba(255,255,255,.25) !important;
+}
+
+/* DASHBOARD: main card text */
+html.dark .dw-dashboard-shell .dashboard-cards > article {
+    color: #ffffff !important;
+}
+
+html.dark .dw-dashboard-shell .dashboard-cards > article h1,
+html.dark .dw-dashboard-shell .dashboard-cards > article h2,
+html.dark .dw-dashboard-shell .dashboard-cards > article h3,
+html.dark .dw-dashboard-shell .dashboard-cards > article p,
+html.dark .dw-dashboard-shell .dashboard-cards > article span,
+html.dark .dw-dashboard-shell .dashboard-cards > article label,
+html.dark .dw-dashboard-shell .dashboard-cards > article strong,
+html.dark .dw-dashboard-shell .dashboard-cards > article small {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Inner notification panels with light backgrounds */
+html.dark .dw-dashboard-shell .dashboard-cards > article > div,
+html.dark .dw-dashboard-shell .dashboard-cards > article div[class*="bg-white"],
+html.dark .dw-dashboard-shell .dashboard-cards > article div[class*="bg-slate"],
+html.dark .dw-dashboard-shell .dashboard-cards > article div[class*="bg-gray"],
+html.dark .dw-dashboard-shell .dashboard-cards > article div[class*="bg-blue-50"],
+html.dark .dw-dashboard-shell .dashboard-cards > article div[class*="bg-indigo-50"] {
+    color: #172554 !important;
+}
+
+/* Ensure notification panel descendants are readable */
+html.dark .dw-dashboard-shell .dashboard-cards > article div[class*="bg-white"] *,
+html.dark .dw-dashboard-shell .dashboard-cards > article div[class*="bg-slate"] *,
+html.dark .dw-dashboard-shell .dashboard-cards > article div[class*="bg-gray"] *,
+html.dark .dw-dashboard-shell .dashboard-cards > article div[class*="bg-blue-50"] *,
+html.dark .dw-dashboard-shell .dashboard-cards > article div[class*="bg-indigo-50"] * {
+    color: #172554 !important;
+    -webkit-text-fill-color: #172554 !important;
+}
+
+/* Links and buttons inside cards */
+html.dark .dw-dashboard-shell .dashboard-cards > article a,
+html.dark .dw-dashboard-shell .dashboard-cards > article button {
+    color: #ffffff !important;
+}
+
+/* Light action buttons retain dark readable text */
+html.dark .dw-dashboard-shell .dashboard-cards > article button[class*="bg-white"],
+html.dark .dw-dashboard-shell .dashboard-cards > article a[class*="bg-white"] {
+    color: #172554 !important;
+    -webkit-text-fill-color: #172554 !important;
+}
+
+/* Referral code panel */
+html.dark .dw-dashboard-shell .dashboard-cards input,
+html.dark .dw-dashboard-shell .dashboard-cards textarea {
+    background: #f1f5ff !important;
+    color: #172554 !important;
+    -webkit-text-fill-color: #172554 !important;
+}
+
+/* Keep the dark gradient cards */
+html.dark .dw-dashboard-shell .dashboard-cards > article {
+    border-color: rgba(255,255,255,.2) !important;
+}
+
+
+/* =========================================================
+   DIGITAL WORLD - DARK MODE INNER PANEL TEXT FIX
+   Keep dark gradient cards; use dark text on light inner panels.
+========================================================= */
+
+html.dark .dw-dashboard-shell .dashboard-cards > article :is(
+  [class*="bg-white"],
+  [class*="bg-slate-50"],
+  [class*="bg-gray-50"],
+  [class*="bg-blue-50"],
+  [class*="bg-indigo-50"],
+  [class*="bg-emerald-50"],
+  [class*="bg-green-50"],
+  [class*="bg-amber-50"],
+  [class*="bg-yellow-50"],
+  [class*="bg-neutral-50"]
+) {
+  color: #172554 !important;
+  -webkit-text-fill-color: #172554 !important;
+}
+
+html.dark .dw-dashboard-shell .dashboard-cards > article :is(
+  [class*="bg-white"],
+  [class*="bg-slate-50"],
+  [class*="bg-gray-50"],
+  [class*="bg-blue-50"],
+  [class*="bg-indigo-50"],
+  [class*="bg-emerald-50"],
+  [class*="bg-green-50"],
+  [class*="bg-amber-50"],
+  [class*="bg-yellow-50"],
+  [class*="bg-neutral-50"]
+) * {
+  color: #172554 !important;
+  -webkit-text-fill-color: #172554 !important;
+}
+
+/* Preserve white text on dark gradient card content */
+html.dark .dw-dashboard-shell .dashboard-cards > article > h3,
+html.dark .dw-dashboard-shell .dashboard-cards > article > p:not([class*="bg-"]),
+html.dark .dw-dashboard-shell .dashboard-cards > article > span {
+  color: #ffffff !important;
+}
+
+/* Sidebar readability remains unchanged */
+html.dark .dw-dashboard-shell .dw-dashboard-sidebar {
+  color: #ffffff;
+}
+
+
+/* Dashboard role badge - dark mode contrast fix */
+html.dark .dw-dashboard-shell .dashboard-cards ~ * {
+  color: inherit;
+}
+
+html.dark .dw-dashboard-shell .dashboard-cards {
+  color: #ffffff;
+}
+
+html.dark .dw-dashboard-shell span.rounded-full.bg-white {
+  background: #dbeafe !important;
+  color: #172554 !important;
+  -webkit-text-fill-color: #172554 !important;
+  border-color: #93c5fd !important;
+}
+
+
+
+/* ==========================================================
+   DIGITAL WORLD — REFERRAL & REWARDS PREMIUM THEME
+   Isolated page styles. Does not modify dashboard cards.
+========================================================== */
+
+.dw-rewards-page,
+.dw-referral-page,
+.dw-redeem-page {
+    min-height: calc(100vh - 76px);
+    padding: 30px clamp(16px, 3vw, 42px) 52px !important;
+    background: transparent !important;
+    color: #172554;
+}
+
+/* Premium page headers */
+.dw-rewards-page > header,
+.dw-referral-page > header,
+.dw-redeem-page > header {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.24) !important;
+    border-radius: 26px !important;
+    background: linear-gradient(115deg,#2446ad 0%,#3157d5 48%,#7047d3 100%) !important;
+    padding: clamp(25px,4vw,42px) !important;
+    box-shadow: 0 18px 42px rgba(36,70,173,.20) !important;
+    color: #fff !important;
+}
+
+.dw-rewards-page > header::after,
+.dw-referral-page > header::after,
+.dw-redeem-page > header::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 260px;
+    height: 260px;
+    right: -80px;
+    top: -130px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.12);
+    box-shadow: 0 0 0 35px rgba(255,255,255,.035),
+                0 0 0 75px rgba(255,255,255,.025);
+}
+
+.dw-rewards-page > header h1,
+.dw-referral-page > header h1,
+.dw-redeem-page > header h1 {
+    color: #fff !important;
+    font-size: clamp(28px,4vw,42px) !important;
+    font-weight: 850 !important;
+    letter-spacing: -.035em;
+}
+
+.dw-rewards-page > header p,
+.dw-referral-page > header p,
+.dw-redeem-page > header p {
+    color: rgba(255,255,255,.88) !important;
+}
+
+/* Main content panels */
+.dw-rewards-page > section,
+.dw-referral-page > section,
+.dw-redeem-page > section {
+    margin-top: 25px !important;
+    border: 1px solid rgba(148,163,184,.20) !important;
+    border-radius: 23px !important;
+    background: rgba(255,255,255,.94) !important;
+    padding: clamp(18px,2.5vw,30px) !important;
+    box-shadow: 0 12px 35px rgba(31,55,105,.075) !important;
+    backdrop-filter: blur(14px);
+    transition: box-shadow .25s ease, transform .25s ease;
+}
+
+.dw-rewards-page > section h2,
+.dw-referral-page > section h2,
+.dw-redeem-page > section h2 {
+    color: #172554 !important;
+    font-weight: 800 !important;
+    letter-spacing: -.025em;
+}
+
+.dw-rewards-page > section p,
+.dw-referral-page > section p,
+.dw-redeem-page > section p {
+    color: #475569;
+}
+
+/* Referral statistics and nested cards */
+.dw-rewards-page section > div > div,
+.dw-referral-page section > div > div {
+    border-radius: 17px;
+}
+
+.dw-rewards-page section [class*="rounded-xl"],
+.dw-referral-page section [class*="rounded-xl"] {
+    transition: border-color .2s ease, box-shadow .2s ease,
+                transform .2s ease;
+}
+
+.dw-rewards-page section [class*="rounded-xl"]:hover,
+.dw-referral-page section [class*="rounded-xl"]:hover {
+    border-color: rgba(49,87,213,.35);
+}
+
+/* Referral member cards */
+.dw-rewards-page section [class*="grid"] > *,
+.dw-referral-page section [class*="grid"] > * {
+    min-width: 0;
+}
+
+/* Redemption form */
+.dw-redeem-page input,
+.dw-redeem-page textarea,
+.dw-redeem-page select {
+    width: 100%;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 13px !important;
+    background: #fff !important;
+    color: #172554 !important;
+    padding: 13px 15px !important;
+    outline: none;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.dw-redeem-page input:focus,
+.dw-redeem-page textarea:focus,
+.dw-redeem-page select:focus {
+    border-color: #3157d5 !important;
+    box-shadow: 0 0 0 4px rgba(49,87,213,.12) !important;
+}
+
+.dw-redeem-page input::placeholder,
+.dw-redeem-page textarea::placeholder {
+    color: #94a3b8 !important;
+}
+
+.dw-redeem-page button[type="submit"] {
+    border: 0 !important;
+    border-radius: 13px !important;
+    background: linear-gradient(110deg,#2446ad,#3157d5 55%,#7047d3) !important;
+    color: #fff !important;
+    font-weight: 750 !important;
+    padding: 13px 22px !important;
+    box-shadow: 0 8px 20px rgba(49,87,213,.22);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.dw-redeem-page button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(49,87,213,.30);
+}
+
+/* Internal links and navigation */
+.dw-rewards-page > a,
+.dw-referral-page > a,
+.dw-redeem-page > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #2446ad !important;
+    font-weight: 750;
+    transition: color .2s ease;
+}
+
+.dw-rewards-page > a:hover,
+.dw-referral-page > a:hover,
+.dw-redeem-page > a:hover {
+    color: #7047d3 !important;
+}
+
+/* Dark mode */
+html.dark .dw-rewards-page,
+html.dark .dw-referral-page,
+html.dark .dw-redeem-page {
+    color: #f1f5f9 !important;
+}
+
+html.dark .dw-rewards-page > section,
+html.dark .dw-referral-page > section,
+html.dark .dw-redeem-page > section {
+    background: rgba(15,23,42,.91) !important;
+    border-color: rgba(148,163,184,.19) !important;
+    box-shadow: 0 15px 40px rgba(0,0,0,.20) !important;
+}
+
+html.dark .dw-rewards-page > section h2,
+html.dark .dw-referral-page > section h2,
+html.dark .dw-redeem-page > section h2 {
+    color: #f8fafc !important;
+}
+
+html.dark .dw-rewards-page > section p,
+html.dark .dw-referral-page > section p,
+html.dark .dw-redeem-page > section p {
+    color: #cbd5e1;
+}
+
+html.dark .dw-rewards-page section [class*="bg-white"],
+html.dark .dw-referral-page section [class*="bg-white"],
+html.dark .dw-redeem-page section [class*="bg-white"] {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+}
+
+html.dark .dw-redeem-page input,
+html.dark .dw-redeem-page textarea,
+html.dark .dw-redeem-page select {
+    background: #111c32 !important;
+    color: #f8fafc !important;
+    border-color: #475569 !important;
+}
+
+html.dark .dw-redeem-page input::placeholder,
+html.dark .dw-redeem-page textarea::placeholder {
+    color: #94a3b8 !important;
+}
+
+html.dark .dw-rewards-page > a,
+html.dark .dw-referral-page > a,
+html.dark .dw-redeem-page > a {
+    color: #a5b4fc !important;
+}
+
+/* Responsive refinement */
+@media (max-width: 640px) {
+    .dw-rewards-page,
+    .dw-referral-page,
+    .dw-redeem-page {
+        padding: 18px 13px 32px !important;
+    }
+
+    .dw-rewards-page > header,
+    .dw-referral-page > header,
+    .dw-redeem-page > header {
+        border-radius: 20px !important;
+        padding: 23px 19px !important;
+    }
+
+    .dw-rewards-page > section,
+    .dw-referral-page > section,
+    .dw-redeem-page > section {
+        border-radius: 18px !important;
+        padding: 17px !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dw-rewards-page *,
+    .dw-referral-page *,
+    .dw-redeem-page * {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+/* END DIGITAL WORLD REWARDS THEME */
+
+/* ==========================================================
+   DIGITAL WORLD — REWARDS THEME CORRECTION
+========================================================== */
+
+.dw-page-theme-toggle-row {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 0 12px;
+    position: relative;
+    z-index: 20;
+}
+
+.dw-page-theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border: 1px solid rgba(148,163,184,.28);
+    border-radius: 14px;
+    background: rgba(255,255,255,.88);
+    box-shadow: 0 5px 18px rgba(15,23,42,.08);
+    backdrop-filter: blur(12px);
+}
+
+html.dark .dw-page-theme-toggle {
+    background: rgba(15,23,42,.88);
+    border-color: rgba(148,163,184,.25);
+}
+
+/* All page heroes, including the nested Redemption hero */
+.dw-rewards-page header,
+.dw-referral-page header,
+.dw-redeem-page header {
+    background: linear-gradient(
+        115deg,
+        #2446ad 0%,
+        #3157d5 48%,
+        #7047d3 100%
+    ) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255,255,255,.20) !important;
+    box-shadow: 0 16px 38px rgba(36,70,173,.20) !important;
+}
+
+.dw-rewards-page header h1,
+.dw-referral-page header h1,
+.dw-redeem-page header h1 {
+    color: #ffffff !important;
+}
+
+.dw-rewards-page header p,
+.dw-referral-page header p,
+.dw-redeem-page header p {
+    color: rgba(255,255,255,.90) !important;
+}
+
+/* Redemption page's nested content panels */
+.dw-redeem-page > div > div > section,
+.dw-redeem-page > div > section {
+    background: rgba(255,255,255,.96) !important;
+    border-color: rgba(148,163,184,.24) !important;
+    box-shadow: 0 12px 35px rgba(31,55,105,.075) !important;
+}
+
+.dw-redeem-page section h2,
+.dw-redeem-page section h3 {
+    color: #172554;
+}
+
+html.dark .dw-redeem-page > div > div > section,
+html.dark .dw-redeem-page > div > section {
+    background: rgba(15,23,42,.94) !important;
+    border-color: rgba(148,163,184,.20) !important;
+    box-shadow: 0 15px 40px rgba(0,0,0,.22) !important;
+}
+
+html.dark .dw-redeem-page section h2,
+html.dark .dw-redeem-page section h3 {
+    color: #f8fafc !important;
+}
+
+html.dark .dw-redeem-page section p {
+    color: #cbd5e1;
+}
+
+html.dark .dw-redeem-page section [class*="bg-slate-50"] {
+    background: #1e293b !important;
+    border-color: #334155 !important;
+}
+
+@media (max-width: 640px) {
+    .dw-page-theme-toggle-row {
+        margin-bottom: 10px;
+    }
+}
+
+/* END REWARDS THEME CORRECTION */
+
+/* =====================================================
+   DIGITAL WORLD - FINAL REWARDS THEME AND TOGGLE FIX
+===================================================== */
+
+.dw-page-theme-toggle-row {
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    width: 100%;
+    margin: 0 0 14px !important;
+    position: relative;
+    z-index: 30;
+}
+
+.dw-page-theme-toggle {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border: 1px solid #dbe3f2;
+    border-radius: 14px;
+    background: rgba(255,255,255,.95);
+    box-shadow: 0 5px 18px rgba(15,23,42,.09);
+}
+
+.dw-theme-toggle {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 40px;
+    padding: 9px 14px !important;
+    border: 0 !important;
+    border-radius: 10px !important;
+    background: linear-gradient(110deg,#2446ad,#3157d5 55%,#7047d3) !important;
+    color: #fff !important;
+    font-size: 13px !important;
+    font-weight: 750 !important;
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.dw-theme-toggle:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 14px rgba(49,87,213,.25);
+}
+
+.dw-theme-toggle:disabled {
+    opacity: .75;
+    cursor: wait;
+}
+
+/* Consistent hero banner on every page */
+.dw-rewards-page header,
+.dw-referral-page header,
+.dw-redeem-page header {
+    background: linear-gradient(
+        115deg,
+        #2446ad 0%,
+        #3157d5 48%,
+        #7047d3 100%
+    ) !important;
+    color: #fff !important;
+    border: 1px solid rgba(255,255,255,.22) !important;
+}
+
+.dw-rewards-page header h1,
+.dw-referral-page header h1,
+.dw-redeem-page header h1,
+.dw-rewards-page header p,
+.dw-referral-page header p,
+.dw-redeem-page header p {
+    color: #fff !important;
+}
+
+/* Correct Back to Dashboard link */
+.dw-rewards-page > a,
+.dw-referral-page > a,
+.dw-redeem-page > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #2446ad !important;
+    font-weight: 750;
+    text-decoration: none;
+    margin-bottom: 4px;
+}
+
+.dw-rewards-page > a:hover,
+.dw-referral-page > a:hover,
+.dw-redeem-page > a:hover {
+    color: #7047d3 !important;
+}
+
+/* Dark theme */
+html.dark .dw-page-theme-toggle {
+    background: #172554;
+    border-color: #334155;
+}
+
+html.dark .dw-rewards-page > a,
+html.dark .dw-referral-page > a,
+html.dark .dw-redeem-page > a {
+    color: #c4b5fd !important;
+}
+
+html.dark .dw-rewards-page > section,
+html.dark .dw-referral-page > section,
+html.dark .dw-redeem-page > section {
+    background: #111c32 !important;
+    border-color: #334155 !important;
+    color: #f8fafc !important;
+}
+
+html.dark .dw-rewards-page > section h2,
+html.dark .dw-referral-page > section h2,
+html.dark .dw-redeem-page > section h2 {
+    color: #f8fafc !important;
+}
+
+html.dark .dw-rewards-page > section p,
+html.dark .dw-referral-page > section p,
+html.dark .dw-redeem-page > section p {
+    color: #cbd5e1;
+}
+
+html.dark .dw-redeem-page input,
+html.dark .dw-redeem-page textarea,
+html.dark .dw-redeem-page select {
+    background: #0f172a !important;
+    border-color: #475569 !important;
+    color: #f8fafc !important;
+}
+
+@media(max-width:640px) {
+    .dw-page-theme-toggle-row {
+        margin-bottom: 10px !important;
+    }
+
+    .dw-theme-toggle {
+        min-height: 38px;
+        padding: 8px 11px !important;
+    }
+}
+
+/* END DIGITAL WORLD FINAL REWARDS THEME */
+
+/* ==========================================================
+   DIGITAL WORLD - REFERRAL / REWARDS DARK MODE CONTRAST FIX
+========================================================== */
+
+/* Main card surfaces */
+html.dark .dw-rewards-page section [class*="bg-white"],
+html.dark .dw-rewards-page section [class*="bg-slate-50"],
+html.dark .dw-referral-page section [class*="bg-white"],
+html.dark .dw-referral-page section [class*="bg-slate-50"],
+html.dark .dw-redeem-page section [class*="bg-white"],
+html.dark .dw-redeem-page section [class*="bg-slate-50"] {
+    background-color: #1e293b !important;
+    border-color: #475569 !important;
+}
+
+/* Main headings and strong text */
+html.dark .dw-rewards-page section .text-slate-900,
+html.dark .dw-rewards-page section .text-slate-800,
+html.dark .dw-rewards-page section .text-slate-700,
+html.dark .dw-referral-page section .text-slate-900,
+html.dark .dw-referral-page section .text-slate-800,
+html.dark .dw-referral-page section .text-slate-700,
+html.dark .dw-redeem-page section .text-slate-900,
+html.dark .dw-redeem-page section .text-slate-800,
+html.dark .dw-redeem-page section .text-slate-700 {
+    color: #f8fafc !important;
+}
+
+/* Supporting text */
+html.dark .dw-rewards-page section .text-slate-600,
+html.dark .dw-rewards-page section .text-slate-500,
+html.dark .dw-referral-page section .text-slate-600,
+html.dark .dw-referral-page section .text-slate-500,
+html.dark .dw-redeem-page section .text-slate-600,
+html.dark .dw-redeem-page section .text-slate-500 {
+    color: #cbd5e1 !important;
+}
+
+/* Referral root and emerald cards */
+html.dark .dw-rewards-page section [class*="bg-emerald-50"],
+html.dark .dw-referral-page section [class*="bg-emerald-50"],
+html.dark .dw-redeem-page section [class*="bg-emerald-50"] {
+    background-color: #123b36 !important;
+    border-color: #10b981 !important;
+}
+
+html.dark .dw-rewards-page section .text-emerald-950,
+html.dark .dw-rewards-page section .text-emerald-900,
+html.dark .dw-rewards-page section .text-emerald-800,
+html.dark .dw-referral-page section .text-emerald-950,
+html.dark .dw-referral-page section .text-emerald-900,
+html.dark .dw-referral-page section .text-emerald-800,
+html.dark .dw-redeem-page section .text-emerald-950,
+html.dark .dw-redeem-page section .text-emerald-900,
+html.dark .dw-redeem-page section .text-emerald-800 {
+    color: #a7f3d0 !important;
+}
+
+/* Emerald member / level badges */
+html.dark .dw-rewards-page section [class*="bg-emerald-100"],
+html.dark .dw-referral-page section [class*="bg-emerald-100"],
+html.dark .dw-redeem-page section [class*="bg-emerald-100"] {
+    background-color: #065f46 !important;
+    border-color: #10b981 !important;
+}
+
+html.dark .dw-rewards-page section .text-emerald-700,
+html.dark .dw-referral-page section .text-emerald-700,
+html.dark .dw-redeem-page section .text-emerald-700 {
+    color: #a7f3d0 !important;
+}
+
+/* Amber reward statistics */
+html.dark .dw-rewards-page section [class*="bg-amber-50"],
+html.dark .dw-referral-page section [class*="bg-amber-50"],
+html.dark .dw-redeem-page section [class*="bg-amber-50"] {
+    background-color: #422f12 !important;
+    border-color: #a16207 !important;
+}
+
+html.dark .dw-rewards-page section .text-amber-900,
+html.dark .dw-rewards-page section .text-amber-800,
+html.dark .dw-referral-page section .text-amber-900,
+html.dark .dw-referral-page section .text-amber-800 {
+    color: #fde68a !important;
+}
+
+/* Amber badges */
+html.dark .dw-rewards-page section [class*="bg-amber-100"],
+html.dark .dw-referral-page section [class*="bg-amber-100"],
+html.dark .dw-redeem-page section [class*="bg-amber-100"] {
+    background-color: #78350f !important;
+    border-color: #b45309 !important;
+}
+
+html.dark .dw-rewards-page section .text-amber-800,
+html.dark .dw-referral-page section .text-amber-800,
+html.dark .dw-redeem-page section .text-amber-800 {
+    color: #fef3c7 !important;
+}
+
+/* Redemption status cards */
+html.dark .dw-redeem-page article {
+    background: #1e293b !important;
+    border-color: #475569 !important;
+}
+
+html.dark .dw-redeem-page article h3,
+html.dark .dw-redeem-page article p {
+    color: #e2e8f0 !important;
+}
+
+/* Redemption form fields */
+html.dark .dw-redeem-page input,
+html.dark .dw-redeem-page textarea,
+html.dark .dw-redeem-page select {
+    background-color: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #475569 !important;
+}
+
+html.dark .dw-redeem-page label {
+    color: #e2e8f0 !important;
+}
+
+/* Referral level accordion */
+html.dark .dw-rewards-page details,
+html.dark .dw-referral-page details {
+    background-color: #1e293b !important;
+    border-color: #475569 !important;
+    color: #f8fafc !important;
+}
+
+html.dark .dw-rewards-page details summary,
+html.dark .dw-referral-page details summary {
+    color: #f8fafc !important;
+}
+
+html.dark .dw-rewards-page details summary span,
+html.dark .dw-referral-page details summary span {
+    color: inherit;
+}
+
+/* Nested referral cards */
+html.dark .dw-rewards-page [class*="border-slate-"],
+html.dark .dw-referral-page [class*="border-slate-"],
+html.dark .dw-redeem-page [class*="border-slate-"] {
+    border-color: #475569 !important;
+}
+
+/* END DARK MODE CONTRAST FIX */

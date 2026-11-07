@@ -1,11 +1,10 @@
-import DashboardClickableCard from "@/components/DashboardClickableCard";
+﻿import DashboardClickableCard from "@/components/DashboardClickableCard";
 import Link from "next/link";
 import { randomBytes } from "node:crypto";
 import { requireUser } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
-import LogoutButton from "@/components/auth/LogoutButton";
 import ReferralLinkActions from "@/components/dashboard/ReferralLinkActions";
-import ThemeToggle from "@/components/theme/ThemeToggle";
+import DashboardShell from "@/components/dashboard/DashboardShell";
 export const instant = false;
 
 export default async function DashboardPage() {
@@ -118,25 +117,9 @@ export default async function DashboardPage() {
   const cardClass = "flex h-[110px] min-w-0 flex-col overflow-y-auto rounded-xl border border-slate-200 bg-gradient-to-br from-white via-blue-50/40 to-slate-50 p-3 text-slate-900 shadow-sm transition-all duration-200 hover:shadow-md [&_h3]:mt-0 [&_h3]:mb-3 [&_h3]:pl-0 [&_h3]:text-lg [&_h3]:font-bold [&_h3]:leading-6 [&_p]:leading-4";
 
   return (
-    <main className="min-h-screen bg-slate-50 text-slate-900">
-      <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/95 shadow-sm backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4">
-          <Link href="/" className="text-lg font-extrabold tracking-tight text-blue-800 sm:text-xl">
-            DIGITAL <span className="text-slate-900">WORLD</span>
-          </Link>
-          <nav className="flex items-center gap-2 sm:gap-3">
-            <ThemeToggle />
-            {isAdmin && (
-              <Link href="/admin/payments" className="rounded-lg border border-blue-700 px-3 py-2 text-xs font-bold text-blue-800 transition hover:bg-blue-50 sm:px-4 sm:text-sm">
-                Payment Verification
-              </Link>
-            )}
-            <LogoutButton />
-          </nav>
-        </div>
-      </header>
-
-      <div className="mx-auto max-w-7xl px-4 py-7 sm:px-6 sm:py-10 lg:px-8">
+    <DashboardShell userName={user.name} userEmail={user.email ?? ""} role={user.role} isAdmin={isAdmin}>
+      <main className="min-h-screen bg-slate-50 text-slate-900">
+<div className="mx-auto max-w-7xl px-4 py-7 sm:px-6 sm:py-10 lg:px-8">
         <section
           className="welcome-banner relative w-full min-w-0 rounded-3xl p-5 text-white shadow-xl sm:p-8 lg:p-10"
           style={{
@@ -186,7 +169,7 @@ export default async function DashboardPage() {
               <h2 className="text-xl font-extrabold tracking-tight sm:text-2xl">
                 Your workspace
               </h2>
-              <p className="mt-1 text-sm text-white">
+              <p className="dashboard-description mt-1 text-sm">
                 Quick access to your learning and account tools.
               </p>
             </div>
@@ -369,33 +352,6 @@ className="dashboard-cards grid grid-cols-1 items-stretch gap-3 sm:grid-cols-2 l
       </div>
             
 </main>
+    </DashboardShell>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

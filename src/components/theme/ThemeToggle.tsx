@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
@@ -14,10 +14,15 @@ export default function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <span
-        aria-hidden="true"
-        className="theme-toggle-placeholder"
-      />
+      <button
+        type="button"
+        className="theme-toggle dw-theme-toggle"
+        disabled
+        aria-label="Loading theme preference"
+      >
+        <Monitor size={17} />
+        <span>Theme</span>
+      </button>
     );
   }
 
@@ -26,19 +31,14 @@ export default function ThemeToggle() {
   return (
     <button
       type="button"
-      className="theme-toggle"
+      className="theme-toggle dw-theme-toggle"
       onClick={() => setTheme(isDark ? "light" : "dark")}
       aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
+      aria-pressed={isDark}
       title={`Switch to ${isDark ? "light" : "dark"} mode`}
     >
-      {theme === "system" ? (
-        <Monitor size={17} />
-      ) : isDark ? (
-        <Sun size={17} />
-      ) : (
-        <Moon size={17} />
-      )}
-      <span>{isDark ? "Light" : "Dark"}</span>
+      {isDark ? <Sun size={17} /> : <Moon size={17} />}
+      <span>{isDark ? "Light Mode" : "Dark Mode"}</span>
     </button>
   );
 }

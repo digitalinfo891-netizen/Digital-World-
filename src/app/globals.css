@@ -1,4 +1,4 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
 :root {
   color-scheme: light;
@@ -3370,3 +3370,3311 @@ main.min-h-screen.bg-slate-50 > section > a {
   touch-action: manipulation;
   cursor: pointer;
 }
+/* =====================================================
+   LEARN SKILLS PAGE â€” HOMEPAGE THEME MATCH
+   Scoped styles: do not affect other pages
+===================================================== */
+
+html:not(.dark) .learn-skills-page {
+  color: #172033 !important;
+  background: var(--dw-page-gradient) !important;
+}
+
+html.dark .learn-skills-page {
+  color: #f1f5f9 !important;
+  background: var(--dw-page-gradient) !important;
+}
+
+/* Keep the homepage gradient visible between sections */
+.learn-skills-page > section:not(.hero-image-section) {
+  background: transparent !important;
+}
+
+/* Section headings */
+html:not(.dark) body .learn-skills-page h1,
+html:not(.dark) body .learn-skills-page h2,
+html:not(.dark) body .learn-skills-page h3 {
+  color: #172033 !important;
+}
+
+html.dark body .learn-skills-page h1,
+html.dark body .learn-skills-page h2,
+html.dark body .learn-skills-page h3 {
+  color: #f8fafc !important;
+}
+
+/* Descriptions */
+html:not(.dark) body .learn-skills-page p {
+  color: #475569 !important;
+}
+
+html.dark body .learn-skills-page p {
+  color: #cbd5e1 !important;
+}
+
+/* Category cards */
+html:not(.dark) .learn-skills-page button.group {
+  background: rgba(255,255,255,.94) !important;
+  border-color: #dbe4f5 !important;
+  color: #172033 !important;
+}
+
+html.dark .learn-skills-page button.group {
+  background: #111a2d !important;
+  border-color: #475569 !important;
+  color: #f8fafc !important;
+}
+
+/* Learning path cards */
+html:not(.dark) .learn-skills-page article {
+  background: #ffffff !important;
+  border-color: #dbe4f5 !important;
+  color: #172033 !important;
+}
+
+html.dark .learn-skills-page article {
+  background: #111a2d !important;
+  border-color: #475569 !important;
+  color: #f8fafc !important;
+}
+
+/* Search and filter panel */
+html:not(.dark) .learn-skills-page .search-panel {
+  background: rgba(255,255,255,.85);
+}
+
+html.dark .learn-skills-page input,
+html.dark .learn-skills-page select {
+  background-color: #111a2d;
+  border-color: #475569;
+  color: #f8fafc;
+}
+
+/* Benefit cards */
+html:not(.dark) .learn-skills-page .benefit-card {
+  background: #ffffff;
+  border-color: #dbe4f5;
+  color: #172033;
+}
+
+html.dark .learn-skills-page .benefit-card {
+  background: #111a2d;
+  border-color: #475569;
+  color: #f8fafc;
+}
+
+/* Keep blue primary buttons readable */
+.learn-skills-page a.bg-\[\#3157D5\],
+.learn-skills-page button.bg-\[\#3157D5\] {
+  color: #ffffff !important;
+}
+
+/* Keep the hero image styling intact */
+.learn-skills-page .hero-image-section {
+  background: transparent !important;
+}
+
+/* END LEARN SKILLS PAGE THEME */
+
+/* =====================================================
+   LEARN SKILLS â€” FINAL LIGHT/DARK COLOR CORRECTIONS
+===================================================== */
+
+/* LIGHT MODE â€” homepage blue/violet theme */
+html:not(.dark) body .learn-skills-page {
+  color: #172033 !important;
+}
+
+html:not(.dark) body .learn-skills-page #learning-paths,
+html:not(.dark) body .learn-skills-page > section {
+  color: #172033 !important;
+}
+
+html:not(.dark) body .learn-skills-page #learning-paths .mb-9 {
+  background: rgba(255,255,255,.92) !important;
+  border-color: #dbe4f5 !important;
+}
+
+html:not(.dark) body .learn-skills-page button.group,
+html:not(.dark) body .learn-skills-page article {
+  background-color: #ffffff !important;
+  color: #172033 !important;
+  border-color: #dbe4f5 !important;
+}
+
+html:not(.dark) body .learn-skills-page article > div:first-child {
+  background: linear-gradient(135deg,#dbeafe 0%,#ede9fe 100%) !important;
+}
+
+html:not(.dark) body .learn-skills-page article > div:first-child > span {
+  color: #3157D5 !important;
+}
+
+html:not(.dark) body .learn-skills-page article h3 {
+  color: #172033 !important;
+}
+
+html:not(.dark) body .learn-skills-page article p {
+  color: #475569 !important;
+}
+
+html:not(.dark) body .learn-skills-page button.rounded-full {
+  color: #334155 !important;
+  background: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+
+html:not(.dark) body .learn-skills-page button.rounded-full.bg-\[\#3157D5\] {
+  color: #ffffff !important;
+  background: #3157D5 !important;
+}
+
+html:not(.dark) body .learn-skills-page .benefit-card {
+  background: #ffffff !important;
+  color: #172033 !important;
+  border-color: #dbe4f5 !important;
+}
+
+/* DARK MODE â€” homepage deep navy/violet theme */
+html.dark body .learn-skills-page {
+  color: #f8fafc !important;
+}
+
+html.dark body .learn-skills-page #learning-paths,
+html.dark body .learn-skills-page > section {
+  color: #f8fafc !important;
+}
+
+html.dark body .learn-skills-page #learning-paths .mb-9 {
+  background: #111a2d !important;
+  border-color: #475569 !important;
+}
+
+html.dark body .learn-skills-page button.group,
+html.dark body .learn-skills-page article {
+  background-color: #111a2d !important;
+  color: #f8fafc !important;
+  border-color: #475569 !important;
+}
+
+html.dark body .learn-skills-page button.group span,
+html.dark body .learn-skills-page article h3 {
+  color: #f8fafc !important;
+}
+
+html.dark body .learn-skills-page button.group p,
+html.dark body .learn-skills-page article p {
+  color: #cbd5e1 !important;
+}
+
+/* Dark artwork panels */
+html.dark body .learn-skills-page article > div:first-child {
+  background: linear-gradient(135deg,#172554 0%,#312e81 55%,#581c87 100%) !important;
+}
+
+html.dark body .learn-skills-page article > div:first-child > span {
+  color: #e0e7ff !important;
+}
+
+html.dark body .learn-skills-page article > div:first-child > span.bg-white,
+html.dark body .learn-skills-page article > div:first-child > span.bg-white\/90 {
+  background: #263653 !important;
+  color: #ffffff !important;
+}
+
+/* Dark filter buttons */
+html.dark body .learn-skills-page button.rounded-full {
+  color: #e2e8f0 !important;
+  background: #1e293b !important;
+  border-color: #475569 !important;
+}
+
+html.dark body .learn-skills-page button.rounded-full.bg-\[\#3157D5\] {
+  color: #ffffff !important;
+  background: #3157D5 !important;
+}
+
+/* Dark input and select controls */
+html.dark body .learn-skills-page input,
+html.dark body .learn-skills-page select {
+  color: #f8fafc !important;
+  background-color: #0f172a !important;
+  border-color: #475569 !important;
+}
+
+html.dark body .learn-skills-page input::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Dark benefits */
+html.dark body .learn-skills-page .benefit-card {
+  background: #111a2d !important;
+  color: #f8fafc !important;
+  border-color: #475569 !important;
+}
+
+/* Keep primary buttons readable in both themes */
+.learn-skills-page a.bg-\[\#3157D5\],
+.learn-skills-page button.bg-\[\#3157D5\] {
+  color: #ffffff !important;
+}
+
+/* END LEARN SKILLS FINAL COLOR CORRECTIONS */
+
+
+/* =====================================================
+   LEARN SKILLS â€” DARK CARD LABEL AND TAG FIX
+===================================================== */
+
+/* Category labels on card artwork */
+html.dark body .learn-skills-page article > div:first-child
+span.bg-white\/90 {
+  background: #263653 !important;
+  color: #ffffff !important;
+  border: 1px solid #64748b !important;
+}
+
+/* Beginner and Intermediate badges */
+html.dark body .learn-skills-page article
+span.rounded-full.bg-blue-50 {
+  background: #1e3a8a !important;
+  color: #dbeafe !important;
+}
+
+/* Self-paced badges */
+html.dark body .learn-skills-page article
+span.rounded-full.bg-slate-100 {
+  background: #334155 !important;
+  color: #f1f5f9 !important;
+}
+
+/* Topics covered tags */
+html.dark body .learn-skills-page article
+span.rounded-lg.bg-slate-50 {
+  background: #263653 !important;
+  color: #e2e8f0 !important;
+  border: 1px solid #475569 !important;
+}
+
+/* Topic heading */
+html.dark body .learn-skills-page article
+.border-t p {
+  color: #f1f5f9 !important;
+}
+
+/* Light mode â€” keep tags readable */
+html:not(.dark) body .learn-skills-page article
+span.rounded-full.bg-blue-50 {
+  background: #dbeafe !important;
+  color: #1e40af !important;
+}
+
+html:not(.dark) body .learn-skills-page article
+span.rounded-full.bg-slate-100 {
+  background: #f1f5f9 !important;
+  color: #334155 !important;
+}
+
+html:not(.dark) body .learn-skills-page article
+span.rounded-lg.bg-slate-50 {
+  background: #f1f5f9 !important;
+  color: #475569 !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+/* Keep icons visible in both themes */
+.learn-skills-page article svg {
+  opacity: 1 !important;
+}
+
+html.dark body .learn-skills-page article svg {
+  color: #e0e7ff;
+}
+
+
+/* LEARN SKILLS â€” BENEFITS SECTION COLOR FIX */
+
+/* Light theme */
+html:not(.dark) body .learn-skills-page .benefit-item {
+  background: #ffffff !important;
+  border: 1px solid #dbe4f5 !important;
+  color: #172033 !important;
+}
+
+html:not(.dark) body .learn-skills-page .benefit-item h3,
+html:not(.dark) body .learn-skills-page .benefit-item strong {
+  color: #172033 !important;
+}
+
+html:not(.dark) body .learn-skills-page .benefit-item p {
+  color: #475569 !important;
+}
+
+html:not(.dark) body .learn-skills-page .benefit-item > span {
+  color: #3157D5 !important;
+}
+
+html:not(.dark) body .learn-skills-page .benefit-item svg {
+  color: #3157D5 !important;
+  stroke: #3157D5 !important;
+}
+
+/* Dark theme */
+html.dark body .learn-skills-page .benefit-item {
+  background: #111a2d !important;
+  border: 1px solid #475569 !important;
+  color: #f8fafc !important;
+}
+
+html.dark body .learn-skills-page .benefit-item h3,
+html.dark body .learn-skills-page .benefit-item strong {
+  color: #f8fafc !important;
+}
+
+html.dark body .learn-skills-page .benefit-item p {
+  color: #cbd5e1 !important;
+}
+
+html.dark body .learn-skills-page .benefit-item > span {
+  color: #a5b4fc !important;
+}
+
+html.dark body .learn-skills-page .benefit-item svg {
+  color: #a5b4fc !important;
+  stroke: #a5b4fc !important;
+}
+
+/* Benefit icon background */
+.learn-skills-page .benefit-item > span:first-child {
+  background: #eff6ff !important;
+  border-radius: 16px;
+}
+
+html.dark body .learn-skills-page .benefit-item > span:first-child {
+  background: #263653 !important;
+}
+
+/* END BENEFITS SECTION FIX */
+
+
+/* =====================================================
+   LEARN SKILLS â€” BENEFIT CARD FINAL LAYOUT
+===================================================== */
+
+/* Three equal-width cards */
+.learn-skills-page .grid.md\:grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  align-items: stretch !important;
+}
+
+/* Independent card layout â€” no inherited flex layout */
+.learn-skills-page .learn-benefit-card {
+  display: block !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  min-height: 250px;
+  height: auto !important;
+  box-sizing: border-box !important;
+  padding: 28px !important;
+  border-radius: 18px !important;
+  overflow: visible !important;
+  text-align: left !important;
+}
+
+/* Icon */
+.learn-skills-page .learn-benefit-card > span:first-child {
+  display: flex !important;
+  width: 56px !important;
+  height: 56px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 16px !important;
+  margin: 0 0 22px 0 !important;
+}
+
+/* Number */
+.learn-skills-page .learn-benefit-card > span:nth-child(2) {
+  display: block !important;
+  margin: 0 0 8px 0 !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+}
+
+/* Heading */
+.learn-skills-page .learn-benefit-card h3 {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 0 12px 0 !important;
+  font-size: 20px !important;
+  line-height: 1.4 !important;
+  font-weight: 800 !important;
+  overflow-wrap: break-word !important;
+}
+
+/* Description â€” use full card width */
+.learn-skills-page .learn-benefit-card p {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  font-size: 14px !important;
+  line-height: 1.8 !important;
+  overflow-wrap: break-word !important;
+}
+
+/* Light theme */
+html:not(.dark) .learn-skills-page .learn-benefit-card {
+  background: #ffffff !important;
+  border: 1px solid #dbe4f5 !important;
+  color: #172033 !important;
+}
+
+html:not(.dark) .learn-skills-page .learn-benefit-card h3 {
+  color: #172033 !important;
+}
+
+html:not(.dark) .learn-skills-page .learn-benefit-card p {
+  color: #475569 !important;
+}
+
+html:not(.dark) .learn-skills-page .learn-benefit-card > span:first-child {
+  background: #eff6ff !important;
+  color: #3157D5 !important;
+}
+
+html:not(.dark) .learn-skills-page .learn-benefit-card > span:nth-child(2) {
+  color: #3157D5 !important;
+}
+
+/* Dark theme */
+html.dark .learn-skills-page .learn-benefit-card {
+  background: #111a2d !important;
+  border: 1px solid #475569 !important;
+  color: #f8fafc !important;
+}
+
+html.dark .learn-skills-page .learn-benefit-card h3 {
+  color: #f8fafc !important;
+}
+
+html.dark .learn-skills-page .learn-benefit-card p {
+  color: #cbd5e1 !important;
+}
+
+html.dark .learn-skills-page .learn-benefit-card > span:first-child {
+  background: #263653 !important;
+  color: #a5b4fc !important;
+}
+
+html.dark .learn-skills-page .learn-benefit-card > span:nth-child(2) {
+  color: #a5b4fc !important;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .learn-skills-page .grid.md\:grid-cols-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .learn-skills-page .grid.md\:grid-cols-3 {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .learn-skills-page .learn-benefit-card {
+    min-height: 0;
+    padding: 24px !important;
+  }
+}
+
+/* END BENEFIT CARD FINAL LAYOUT */
+
+
+/* =====================================================
+   LEARN SKILLS â€” FINAL COMPONENT VISIBILITY FIX
+===================================================== */
+
+/* CATEGORY EXPLORER ICONS */
+
+/* Light mode */
+html:not(.dark) body .learn-skills-page button.group > span:first-child {
+  background: #eff6ff !important;
+  color: #3157D5 !important;
+}
+
+html:not(.dark) body .learn-skills-page button.group > span:first-child svg {
+  color: #3157D5 !important;
+  stroke: #3157D5 !important;
+}
+
+/* Dark mode */
+html.dark body .learn-skills-page button.group > span:first-child {
+  background: #263653 !important;
+  color: #a5b4fc !important;
+}
+
+html.dark body .learn-skills-page button.group > span:first-child svg {
+  color: #a5b4fc !important;
+  stroke: #a5b4fc !important;
+}
+
+/* Category titles and descriptions */
+html.dark body .learn-skills-page button.group > span:nth-child(2) {
+  color: #f8fafc !important;
+}
+
+html.dark body .learn-skills-page button.group > span:nth-child(2) span {
+  color: #cbd5e1 !important;
+}
+
+/* LEARNING PATH COUNT BADGE */
+html:not(.dark) body .learn-skills-page #learning-paths
+span.inline-flex.w-fit {
+  background: #dbeafe !important;
+  color: #1e40af !important;
+}
+
+html.dark body .learn-skills-page #learning-paths
+span.inline-flex.w-fit {
+  background: #263653 !important;
+  color: #e0e7ff !important;
+}
+
+html.dark body .learn-skills-page #learning-paths
+span.inline-flex.w-fit svg {
+  color: #a5b4fc !important;
+  stroke: #a5b4fc !important;
+}
+
+/* CTA â€” CREATE ACCOUNT BUTTON */
+html body .learn-skills-page section.bg-gradient-to-r a.bg-white {
+  background: #ffffff !important;
+  color: #2446AD !important;
+  border: 1px solid #ffffff !important;
+}
+
+html body .learn-skills-page section.bg-gradient-to-r a.bg-white,
+html body .learn-skills-page section.bg-gradient-to-r a.bg-white * {
+  color: #2446AD !important;
+}
+
+/* CTA â€” LOGIN BUTTON */
+html body .learn-skills-page section.bg-gradient-to-r a.border {
+  background: transparent !important;
+  color: #ffffff !important;
+  border-color: rgba(255,255,255,.55) !important;
+}
+
+html body .learn-skills-page section.bg-gradient-to-r a.border,
+html body .learn-skills-page section.bg-gradient-to-r a.border * {
+  color: #ffffff !important;
+}
+
+/* CTA heading and supporting text */
+html body .learn-skills-page section.bg-gradient-to-r h2 {
+  color: #ffffff !important;
+}
+
+html body .learn-skills-page section.bg-gradient-to-r p {
+  color: #dbeafe !important;
+}
+
+/* END FINAL COMPONENT VISIBILITY FIX */
+
+
+/* =====================================================
+   LEARN SKILLS â€” FINAL COMPONENT VISIBILITY FIX
+===================================================== */
+
+/* CATEGORY EXPLORER ICONS */
+
+/* Light mode */
+html:not(.dark) body .learn-skills-page button.group > span:first-child {
+  background: #eff6ff !important;
+  color: #3157D5 !important;
+}
+
+html:not(.dark) body .learn-skills-page button.group > span:first-child svg {
+  color: #3157D5 !important;
+  stroke: #3157D5 !important;
+}
+
+/* Dark mode */
+html.dark body .learn-skills-page button.group > span:first-child {
+  background: #263653 !important;
+  color: #a5b4fc !important;
+}
+
+html.dark body .learn-skills-page button.group > span:first-child svg {
+  color: #a5b4fc !important;
+  stroke: #a5b4fc !important;
+}
+
+/* Category titles and descriptions */
+html.dark body .learn-skills-page button.group > span:nth-child(2) {
+  color: #f8fafc !important;
+}
+
+html.dark body .learn-skills-page button.group > span:nth-child(2) span {
+  color: #cbd5e1 !important;
+}
+
+/* LEARNING PATH COUNT BADGE */
+html:not(.dark) body .learn-skills-page #learning-paths
+span.inline-flex.w-fit {
+  background: #dbeafe !important;
+  color: #1e40af !important;
+}
+
+html.dark body .learn-skills-page #learning-paths
+span.inline-flex.w-fit {
+  background: #263653 !important;
+  color: #e0e7ff !important;
+}
+
+html.dark body .learn-skills-page #learning-paths
+span.inline-flex.w-fit svg {
+  color: #a5b4fc !important;
+  stroke: #a5b4fc !important;
+}
+
+/* CTA â€” CREATE ACCOUNT BUTTON */
+html body .learn-skills-page section.bg-gradient-to-r a.bg-white {
+  background: #ffffff !important;
+  color: #2446AD !important;
+  border: 1px solid #ffffff !important;
+}
+
+html body .learn-skills-page section.bg-gradient-to-r a.bg-white,
+html body .learn-skills-page section.bg-gradient-to-r a.bg-white * {
+  color: #2446AD !important;
+}
+
+/* CTA â€” LOGIN BUTTON */
+html body .learn-skills-page section.bg-gradient-to-r a.border {
+  background: transparent !important;
+  color: #ffffff !important;
+  border-color: rgba(255,255,255,.55) !important;
+}
+
+html body .learn-skills-page section.bg-gradient-to-r a.border,
+html body .learn-skills-page section.bg-gradient-to-r a.border * {
+  color: #ffffff !important;
+}
+
+/* CTA heading and supporting text */
+html body .learn-skills-page section.bg-gradient-to-r h2 {
+  color: #ffffff !important;
+}
+
+html body .learn-skills-page section.bg-gradient-to-r p {
+  color: #dbeafe !important;
+}
+
+/* END FINAL COMPONENT VISIBILITY FIX */
+
+
+/* LEARN SKILLS â€” FOOTER FINAL COLOR FIX */
+
+.learn-skills-page > footer {
+  background: #101f35 !important;
+  color: #ffffff !important;
+  border-top: 1px solid rgba(148,163,184,.2);
+}
+
+.learn-skills-page > footer h3,
+.learn-skills-page > footer strong,
+.learn-skills-page > footer .brand-name,
+.learn-skills-page > footer .brand-name span {
+  color: #ffffff !important;
+}
+
+.learn-skills-page > footer p,
+.learn-skills-page > footer .brand-caption {
+  color: #cbd5e1 !important;
+}
+
+.learn-skills-page > footer a {
+  color: #cbd5e1 !important;
+  transition: color .2s ease;
+}
+
+.learn-skills-page > footer a:hover {
+  color: #60a5fa !important;
+}
+
+.learn-skills-page > footer .footer-brand,
+.learn-skills-page > footer .brand {
+  color: #ffffff !important;
+}
+
+.learn-skills-page > footer .footer-cta {
+  color: #60a5fa !important;
+  font-weight: 700;
+}
+
+.learn-skills-page > footer .footer-bottom {
+  border-color: #334155 !important;
+  color: #94a3b8 !important;
+}
+
+.learn-skills-page > footer .footer-bottom * {
+  color: #94a3b8 !important;
+}
+
+/* END LEARN SKILLS FOOTER FIX */
+
+
+/* =====================================================
+   ABOUT PAGE â€” DARK THEME CONTRAST CORRECTION
+===================================================== */
+
+html.dark body .about-page > section:first-of-type {
+  background: linear-gradient(
+    125deg,
+    #0b1730 0%,
+    #171b46 52%,
+    #351b68 100%
+  ) !important;
+}
+
+/* Main hero heading and text */
+html.dark body .about-page > section:first-of-type h1 {
+  color: #ffffff !important;
+}
+
+html.dark body .about-page > section:first-of-type h1 span {
+  color: #67e8f9 !important;
+}
+
+html.dark body .about-page > section:first-of-type p {
+  color: #cbd5e1 !important;
+}
+
+/* Hero label */
+html.dark body .about-page > section:first-of-type > div span {
+  color: #dbeafe;
+}
+
+/* Outer learning journey panel */
+html.dark body .about-page > section:first-of-type .rounded-\[32px\] {
+  background: #111a2d !important;
+  border-color: #475569 !important;
+  color: #f8fafc !important;
+}
+
+/* Panel headings */
+html.dark body .about-page > section:first-of-type h2 {
+  color: #ffffff !important;
+}
+
+/* Inner blue/purple learning panel */
+html.dark body .about-page > section:first-of-type .rounded-2xl.bg-gradient-to-br {
+  background: linear-gradient(
+    135deg,
+    #1d3d91,
+    #3157D5,
+    #7438c9
+  ) !important;
+}
+
+html.dark body .about-page > section:first-of-type .rounded-2xl.bg-gradient-to-br h2,
+html.dark body .about-page > section:first-of-type .rounded-2xl.bg-gradient-to-br p,
+html.dark body .about-page > section:first-of-type .rounded-2xl.bg-gradient-to-br span {
+  color: #ffffff !important;
+}
+
+/* Small learning highlight cards */
+html.dark body .about-page > section:first-of-type .grid.grid-cols-3 > div {
+  background: #1e293b !important;
+}
+
+html.dark body .about-page > section:first-of-type .grid.grid-cols-3 > div p {
+  color: #f1f5f9 !important;
+}
+
+/* Hero buttons */
+html.dark body .about-page > section:first-of-type a {
+  color: #ffffff;
+}
+
+html.dark body .about-page > section:first-of-type a.bg-\[\#3157D5\] {
+  background: #3157D5 !important;
+  color: #ffffff !important;
+}
+
+html.dark body .about-page > section:first-of-type a.border {
+  background: #1e293b !important;
+  border-color: #64748b !important;
+  color: #ffffff !important;
+}
+
+/* Lower content sections */
+html.dark body .about-page > section:nth-of-type(2) {
+  background: #0f172a !important;
+}
+
+html.dark body .about-page > section:nth-of-type(3) {
+  background: #111a2d !important;
+}
+
+html.dark body .about-page > section:nth-of-type(2) h2,
+html.dark body .about-page > section:nth-of-type(3) h2,
+html.dark body .about-page > section:nth-of-type(3) h3 {
+  color: #f8fafc !important;
+}
+
+html.dark body .about-page > section:nth-of-type(2) p,
+html.dark body .about-page > section:nth-of-type(3) p {
+  color: #cbd5e1 !important;
+}
+
+html.dark body .about-page > section:nth-of-type(3) article {
+  background: #172338 !important;
+  border-color: #475569 !important;
+}
+
+html.dark body .about-page > section:nth-of-type(3) article h3 {
+  color: #ffffff !important;
+}
+
+/* Keep CTA readable */
+html.dark body .about-page > section.bg-gradient-to-r h2 {
+  color: #ffffff !important;
+}
+
+html.dark body .about-page > section.bg-gradient-to-r p {
+  color: #dbeafe !important;
+}
+
+/* END ABOUT PAGE DARK THEME FIX */
+
+
+/* =====================================================
+   ABOUT US â€” FINAL SECTION COLOR AND CONTRAST FIX
+===================================================== */
+
+/* LIGHT THEME â€” Story */
+html:not(.dark) body .about-page .about-story-section {
+  background: #ffffff !important;
+  color: #172033 !important;
+}
+
+html:not(.dark) body .about-page .about-story-section h2 {
+  color: #172033 !important;
+}
+
+html:not(.dark) body .about-page .about-story-section p {
+  color: #475569 !important;
+}
+
+/* LIGHT THEME â€” Values section */
+html:not(.dark) body .about-page .about-values-section {
+  background: #f8fafc !important;
+  color: #172033 !important;
+}
+
+html:not(.dark) body .about-page .about-values-section h2,
+html:not(.dark) body .about-page .about-values-section h3 {
+  color: #172033 !important;
+}
+
+html:not(.dark) body .about-page .about-values-section p {
+  color: #475569 !important;
+}
+
+html:not(.dark) body .about-page .about-values-section article {
+  background: #ffffff !important;
+  border: 1px solid #dbe4f5 !important;
+  color: #172033 !important;
+}
+
+html:not(.dark) body .about-page .about-values-section article > span {
+  background: #eff6ff !important;
+  color: #3157D5 !important;
+}
+
+html:not(.dark) body .about-page .about-values-section article svg {
+  color: #3157D5 !important;
+  stroke: #3157D5 !important;
+}
+
+/* DARK THEME â€” Story */
+html.dark body .about-page .about-story-section {
+  background: #0f172a !important;
+  color: #f8fafc !important;
+}
+
+html.dark body .about-page .about-story-section h2 {
+  color: #ffffff !important;
+}
+
+html.dark body .about-page .about-story-section p {
+  color: #cbd5e1 !important;
+}
+
+/* DARK THEME â€” Values section */
+html.dark body .about-page .about-values-section {
+  background: #111a2d !important;
+  color: #f8fafc !important;
+}
+
+html.dark body .about-page .about-values-section h2,
+html.dark body .about-page .about-values-section h3 {
+  color: #ffffff !important;
+}
+
+html.dark body .about-page .about-values-section p {
+  color: #cbd5e1 !important;
+}
+
+html.dark body .about-page .about-values-section article {
+  background: #1e293b !important;
+  border: 1px solid #475569 !important;
+  color: #f8fafc !important;
+}
+
+html.dark body .about-page .about-values-section article > span {
+  background: #263653 !important;
+  color: #a5b4fc !important;
+}
+
+html.dark body .about-page .about-values-section article svg {
+  color: #a5b4fc !important;
+  stroke: #a5b4fc !important;
+}
+
+/* CTA â€” both themes */
+html body .about-page .about-cta-section {
+  background: linear-gradient(110deg, #162b65, #3157d5) !important;
+  color: #ffffff !important;
+}
+
+html body .about-page .about-cta-section h2 {
+  color: #ffffff !important;
+}
+
+html body .about-page .about-cta-section p {
+  color: #dbeafe !important;
+}
+
+html body .about-page .about-cta-section a {
+  background: #ffffff !important;
+  color: #2446ad !important;
+  border-color: #ffffff !important;
+}
+
+html body .about-page .about-cta-section a,
+html body .about-page .about-cta-section a * {
+  color: #2446ad !important;
+}
+
+/* Hero â€” dark theme */
+html.dark body .about-page .about-hero-section {
+  background: linear-gradient(
+    125deg,
+    #0b1730 0%,
+    #171b46 52%,
+    #351b68 100%
+  ) !important;
+}
+
+html.dark body .about-page .about-hero-section h1 {
+  color: #ffffff !important;
+}
+
+html.dark body .about-page .about-hero-section h1 span {
+  color: #67e8f9 !important;
+}
+
+html.dark body .about-page .about-hero-section p {
+  color: #cbd5e1 !important;
+}
+
+/* END ABOUT US SECTION FIX */
+
+
+/* =====================================================
+   COURSES PAGE â€” LIGHT AND DARK THEME CORRECTION
+===================================================== */
+
+/* LIGHT MODE */
+html:not(.dark) body .courses-page > section:not(.hero-image-section) {
+  color: #172033 !important;
+}
+
+html:not(.dark) body .courses-page > section:not(.hero-image-section) h1,
+html:not(.dark) body .courses-page > section:not(.hero-image-section) h2,
+html:not(.dark) body .courses-page > section:not(.hero-image-section) h3 {
+  color: #172033 !important;
+}
+
+html:not(.dark) body .courses-page > section:not(.hero-image-section) p {
+  color: #475569 !important;
+}
+
+/* Main learning library panel */
+html:not(.dark) body .courses-page .rounded-\[28px\] {
+  background: rgba(255,255,255,.94) !important;
+  color: #172033 !important;
+  border-color: #dbe4f5 !important;
+}
+
+html:not(.dark) body .courses-page .rounded-\[28px\] h1,
+html:not(.dark) body .courses-page .rounded-\[28px\] h2 {
+  color: #172033 !important;
+}
+
+html:not(.dark) body .courses-page .rounded-\[28px\] p {
+  color: #475569 !important;
+}
+
+/* DARK MODE â€” page background */
+html.dark body .courses-page > section:not(.hero-image-section) {
+  background: linear-gradient(
+    125deg,
+    #0b1730 0%,
+    #171b46 55%,
+    #351b68 100%
+  ) !important;
+  color: #f8fafc !important;
+}
+
+/* Main panel */
+html.dark body .courses-page .rounded-\[28px\] {
+  background: #111a2d !important;
+  border-color: #475569 !important;
+  color: #f8fafc !important;
+}
+
+html.dark body .courses-page .rounded-\[28px\] h1,
+html.dark body .courses-page .rounded-\[28px\] h2,
+html.dark body .courses-page .rounded-\[28px\] h3 {
+  color: #ffffff !important;
+}
+
+html.dark body .courses-page .rounded-\[28px\] p {
+  color: #cbd5e1 !important;
+}
+
+/* Learning library icon */
+html.dark body .courses-page .rounded-\[28px\] .bg-blue-100 {
+  background: #263653 !important;
+  color: #a5b4fc !important;
+}
+
+/* Empty course information panel */
+html.dark body .courses-page .rounded-2xl.border {
+  background: linear-gradient(
+    120deg,
+    #172554,
+    #24205b
+  ) !important;
+  border-color: #475569 !important;
+}
+
+html.dark body .courses-page .rounded-2xl.border h2 {
+  color: #ffffff !important;
+}
+
+html.dark body .courses-page .rounded-2xl.border p {
+  color: #cbd5e1 !important;
+}
+
+/* Supporting learning cards */
+html.dark body .courses-page .max-w-4xl.mt-8 > div {
+  background: #172338 !important;
+  border-color: #475569 !important;
+}
+
+html.dark body .courses-page .max-w-4xl.mt-8 h3 {
+  color: #ffffff !important;
+}
+
+html.dark body .courses-page .max-w-4xl.mt-8 p {
+  color: #cbd5e1 !important;
+}
+
+/* Buttons */
+html body .courses-page a.bg-\[\#3157D5\] {
+  background: #3157D5 !important;
+  color: #ffffff !important;
+}
+
+html body .courses-page a.bg-\[\#3157D5\] * {
+  color: #ffffff !important;
+}
+
+/* Hero image section retains homepage appearance */
+.courses-page .hero-image-section {
+  background: transparent !important;
+}
+
+/* END COURSES PAGE THEME FIX */
+
+
+/* =====================================================
+   LEARN SKILLS â€” DARK CARD LABEL AND TAG FIX
+===================================================== */
+
+/* Category labels on card artwork */
+html.dark body .learn-skills-page article > div:first-child
+span.bg-white\/90 {
+  background: #263653 !important;
+  color: #ffffff !important;
+  border: 1px solid #64748b !important;
+}
+
+/* Beginner and Intermediate badges */
+html.dark body .learn-skills-page article
+span.rounded-full.bg-blue-50 {
+  background: #1e3a8a !important;
+  color: #dbeafe !important;
+}
+
+/* Self-paced badges */
+html.dark body .learn-skills-page article
+span.rounded-full.bg-slate-100 {
+  background: #334155 !important;
+  color: #f1f5f9 !important;
+}
+
+/* Topics covered tags */
+html.dark body .learn-skills-page article
+span.rounded-lg.bg-slate-50 {
+  background: #263653 !important;
+  color: #e2e8f0 !important;
+  border: 1px solid #475569 !important;
+}
+
+/* Topic heading */
+html.dark body .learn-skills-page article
+.border-t p {
+  color: #f1f5f9 !important;
+}
+
+/* Light mode â€” keep tags readable */
+html:not(.dark) body .learn-skills-page article
+span.rounded-full.bg-blue-50 {
+  background: #dbeafe !important;
+  color: #1e40af !important;
+}
+
+html:not(.dark) body .learn-skills-page article
+span.rounded-full.bg-slate-100 {
+  background: #f1f5f9 !important;
+  color: #334155 !important;
+}
+
+html:not(.dark) body .learn-skills-page article
+span.rounded-lg.bg-slate-50 {
+  background: #f1f5f9 !important;
+  color: #475569 !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+/* Keep icons visible in both themes */
+.learn-skills-page article svg {
+  opacity: 1 !important;
+}
+
+html.dark body .learn-skills-page article svg {
+  color: #e0e7ff;
+}
+
+
+/* =====================================================
+   COURSES PAGE â€” DEFINITIVE THEME CORRECTION
+===================================================== */
+
+/* LIGHT MODE */
+html:not(.dark) body .courses-page .courses-library-panel {
+  background: #ffffff !important;
+  border: 1px solid #e0e8f5 !important;
+  color: #172033 !important;
+}
+
+html:not(.dark) body .courses-page .courses-library-panel h1,
+html:not(.dark) body .courses-page .courses-library-panel h2,
+html:not(.dark) body .courses-page .courses-library-panel h3 {
+  color: #172033 !important;
+}
+
+html:not(.dark) body .courses-page .courses-library-panel p {
+  color: #475569 !important;
+}
+
+html:not(.dark) body .courses-page .courses-empty-state {
+  background: linear-gradient(110deg,#eff6ff,#f5f3ff) !important;
+  border-color: #dbeafe !important;
+}
+
+html:not(.dark) body .courses-page .courses-empty-icon {
+  background: #ffffff !important;
+  color: #3157D5 !important;
+}
+
+html:not(.dark) body .courses-page .courses-coming-soon {
+  background: #ffffff !important;
+  color: #475569 !important;
+}
+
+/* DARK MODE â€” MAIN PANEL */
+html.dark body .courses-page .courses-library-panel {
+  background: #111a2d !important;
+  border: 1px solid #475569 !important;
+  color: #f8fafc !important;
+  box-shadow: 0 24px 80px rgba(0,0,0,.28) !important;
+}
+
+html.dark body .courses-page .courses-library-panel h1,
+html.dark body .courses-page .courses-library-panel h2,
+html.dark body .courses-page .courses-library-panel h3 {
+  color: #ffffff !important;
+}
+
+html.dark body .courses-page .courses-library-panel p {
+  color: #cbd5e1 !important;
+}
+
+/* DARK MODE â€” EMPTY COURSE CARD */
+html.dark body .courses-page .courses-empty-state {
+  background: linear-gradient(120deg,#172554,#24205b) !important;
+  border: 1px solid #475569 !important;
+  color: #f8fafc !important;
+}
+
+html.dark body .courses-page .courses-empty-state h2 {
+  color: #ffffff !important;
+}
+
+html.dark body .courses-page .courses-empty-state p {
+  color: #cbd5e1 !important;
+}
+
+html.dark body .courses-page .courses-empty-icon {
+  background: #263653 !important;
+  color: #a5b4fc !important;
+  box-shadow: none !important;
+}
+
+html.dark body .courses-page .courses-coming-soon {
+  background: #263653 !important;
+  color: #e0e7ff !important;
+  border: 1px solid #475569 !important;
+}
+
+/* Learning library label */
+html.dark body .courses-page .courses-library-panel
+span.border-blue-200 {
+  background: #263653 !important;
+  color: #bfdbfe !important;
+  border-color: #475569 !important;
+}
+
+/* Main library icon */
+html.dark body .courses-page .courses-library-panel
+span.bg-blue-100 {
+  background: #263653 !important;
+  color: #a5b4fc !important;
+}
+
+/* Supporting learning cards */
+html.dark body .courses-page .max-w-4xl.mt-8 > div {
+  background: #172338 !important;
+  border-color: #475569 !important;
+}
+
+html.dark body .courses-page .max-w-4xl.mt-8 h3 {
+  color: #ffffff !important;
+}
+
+html.dark body .courses-page .max-w-4xl.mt-8 p {
+  color: #cbd5e1 !important;
+}
+
+/* Dashboard link */
+html.dark body .courses-page a[href="/dashboard"] {
+  color: #dbeafe !important;
+}
+
+/* Keep primary action visible */
+html body .courses-page a.bg-\[\#3157D5\],
+html body .courses-page a.bg-\[\#3157D5\] * {
+  background-color: #3157D5 !important;
+  color: #ffffff !important;
+}
+
+/* END COURSES PAGE DEFINITIVE THEME FIX */
+
+
+/* =====================================================
+   LEARN SKILLS FOOTER â€” LIGHT / DARK THEME
+===================================================== */
+
+/* LIGHT THEME */
+html:not(.dark) body .learn-skills-footer {
+  background: #ffffff !important;
+  color: #172033 !important;
+  border-top: 1px solid #e7edf3;
+}
+
+html:not(.dark) body .learn-skills-footer h3 {
+  color: #172033 !important;
+}
+
+html:not(.dark) body .learn-skills-footer p,
+html:not(.dark) body .learn-skills-footer .text-slate-400 {
+  color: #64748b !important;
+}
+
+html:not(.dark) body .learn-skills-footer a {
+  color: #475569 !important;
+}
+
+html:not(.dark) body .learn-skills-footer a:hover {
+  color: #3157D5 !important;
+}
+
+html:not(.dark) body .learn-skills-footer .brand-name {
+  color: #172033 !important;
+}
+
+html:not(.dark) body .learn-skills-footer .footer-bottom {
+  border-color: #e2e8f0 !important;
+}
+
+html:not(.dark) body .learn-skills-footer .footer-bottom * {
+  color: #64748b !important;
+}
+
+/* DARK THEME */
+html.dark body .learn-skills-footer {
+  background: #101f35 !important;
+  color: #ffffff !important;
+  border-top: 1px solid #263653;
+}
+
+html.dark body .learn-skills-footer h3 {
+  color: #ffffff !important;
+}
+
+html.dark body .learn-skills-footer p,
+html.dark body .learn-skills-footer a {
+  color: #94a3b8 !important;
+}
+
+html.dark body .learn-skills-footer a:hover {
+  color: #ffffff !important;
+}
+
+html.dark body .learn-skills-footer .brand-name {
+  color: #ffffff !important;
+}
+
+html.dark body .learn-skills-footer .footer-bottom {
+  border-color: #334155 !important;
+}
+
+html.dark body .learn-skills-footer .footer-bottom * {
+  color: #94a3b8 !important;
+}
+
+/* END LEARN SKILLS FOOTER */
+
+
+/* =====================================================
+   LEARN SKILLS FOOTER â€” LIGHT / DARK THEME
+===================================================== */
+
+/* LIGHT THEME */
+html:not(.dark) body .learn-skills-footer {
+  background: #ffffff !important;
+  color: #172033 !important;
+  border-top: 1px solid #e7edf3;
+}
+
+html:not(.dark) body .learn-skills-footer h3 {
+  color: #172033 !important;
+}
+
+html:not(.dark) body .learn-skills-footer p,
+html:not(.dark) body .learn-skills-footer .text-slate-400 {
+  color: #64748b !important;
+}
+
+html:not(.dark) body .learn-skills-footer a {
+  color: #475569 !important;
+}
+
+html:not(.dark) body .learn-skills-footer a:hover {
+  color: #3157D5 !important;
+}
+
+html:not(.dark) body .learn-skills-footer .brand-name {
+  color: #172033 !important;
+}
+
+html:not(.dark) body .learn-skills-footer .footer-bottom {
+  border-color: #e2e8f0 !important;
+}
+
+html:not(.dark) body .learn-skills-footer .footer-bottom * {
+  color: #64748b !important;
+}
+
+/* DARK THEME */
+html.dark body .learn-skills-footer {
+  background: #101f35 !important;
+  color: #ffffff !important;
+  border-top: 1px solid #263653;
+}
+
+html.dark body .learn-skills-footer h3 {
+  color: #ffffff !important;
+}
+
+html.dark body .learn-skills-footer p,
+html.dark body .learn-skills-footer a {
+  color: #94a3b8 !important;
+}
+
+html.dark body .learn-skills-footer a:hover {
+  color: #ffffff !important;
+}
+
+html.dark body .learn-skills-footer .brand-name {
+  color: #ffffff !important;
+}
+
+html.dark body .learn-skills-footer .footer-bottom {
+  border-color: #334155 !important;
+}
+
+html.dark body .learn-skills-footer .footer-bottom * {
+  color: #94a3b8 !important;
+}
+
+/* END LEARN SKILLS FOOTER */
+
+
+/* =====================================================
+   DIGITAL WORLD â€” SHARED FOOTER FOR ALL PAGES
+   Same appearance in light and dark themes
+===================================================== */
+
+html body footer.site-footer,
+html body footer.learn-skills-footer,
+html body .about-page footer,
+html body .courses-page footer {
+  background: #101f35 !important;
+  color: #ffffff !important;
+  border-top: 1px solid #263653 !important;
+  color-scheme: dark;
+}
+
+html body footer.site-footer h2,
+html body footer.site-footer h3,
+html body footer.learn-skills-footer h2,
+html body footer.learn-skills-footer h3,
+html body .about-page footer h2,
+html body .about-page footer h3,
+html body .courses-page footer h2,
+html body .courses-page footer h3 {
+  color: #ffffff !important;
+}
+
+html body footer.site-footer p,
+html body footer.learn-skills-footer p,
+html body .about-page footer p,
+html body .courses-page footer p {
+  color: #94a3b8 !important;
+}
+
+html body footer.site-footer a,
+html body footer.learn-skills-footer a,
+html body .about-page footer a,
+html body .courses-page footer a {
+  color: #cbd5e1 !important;
+  transition: color .2s ease;
+}
+
+html body footer.site-footer a:hover,
+html body footer.learn-skills-footer a:hover,
+html body .about-page footer a:hover,
+html body .courses-page footer a:hover {
+  color: #ffffff !important;
+}
+
+html body footer.site-footer .footer-bottom,
+html body footer.learn-skills-footer .footer-bottom,
+html body .about-page footer .footer-bottom,
+html body .courses-page footer .footer-bottom {
+  border-color: #334155 !important;
+}
+
+html body footer.site-footer .footer-bottom *,
+html body footer.learn-skills-footer .footer-bottom *,
+html body .about-page footer .footer-bottom *,
+html body .courses-page footer .footer-bottom * {
+  color: #94a3b8 !important;
+}
+
+/* Preserve blue brand mark */
+html body footer .brand-mark,
+html body footer .bg-\[\#3157D5\] {
+  background-color: #3157D5 !important;
+}
+
+/* END SHARED FOOTER */
+
+
+/* =====================================================
+   FINAL OVERRIDE â€” SAME FOOTER ON EVERY PAGE
+===================================================== */
+
+/* Light theme */
+html:not(.dark) body main.site-shell footer.learn-skills-footer,
+html:not(.dark) body main.site-shell footer.site-footer,
+html:not(.dark) body main.site-shell .about-page footer,
+html:not(.dark) body main.site-shell .courses-page footer {
+    background: #101f35 !important;
+    background-color: #101f35 !important;
+    color: #ffffff !important;
+    border-color: #263653 !important;
+}
+
+/* Dark theme */
+html.dark body main.site-shell footer.learn-skills-footer,
+html.dark body main.site-shell footer.site-footer,
+html.dark body main.site-shell .about-page footer,
+html.dark body main.site-shell .courses-page footer {
+    background: #101f35 !important;
+    background-color: #101f35 !important;
+    color: #ffffff !important;
+    border-color: #263653 !important;
+}
+
+/* Footer headings */
+html body main.site-shell footer.learn-skills-footer h3,
+html body main.site-shell footer.site-footer h3,
+html body main.site-shell .about-page footer h3,
+html body main.site-shell .courses-page footer h3 {
+    color: #ffffff !important;
+}
+
+/* Footer descriptions */
+html body main.site-shell footer.learn-skills-footer p,
+html body main.site-shell footer.site-footer p,
+html body main.site-shell .about-page footer p,
+html body main.site-shell .courses-page footer p {
+    color: #94a3b8 !important;
+}
+
+/* Footer links */
+html body main.site-shell footer.learn-skills-footer a,
+html body main.site-shell footer.site-footer a,
+html body main.site-shell .about-page footer a,
+html body main.site-shell .courses-page footer a {
+    color: #cbd5e1 !important;
+}
+
+html body main.site-shell footer.learn-skills-footer a:hover,
+html body main.site-shell footer.site-footer a:hover,
+html body main.site-shell .about-page footer a:hover,
+html body main.site-shell .courses-page footer a:hover {
+    color: #ffffff !important;
+}
+
+/* Footer bottom divider */
+html body main.site-shell footer.learn-skills-footer .footer-bottom,
+html body main.site-shell footer.site-footer .footer-bottom {
+    border-color: #334155 !important;
+}
+
+/* END FINAL FOOTER OVERRIDE */
+
+
+/* =====================================================
+   DIGITAL WORLD â€” ABOUT & COURSES LIGHT THEME
+   Consistent light blue page backgrounds
+===================================================== */
+
+html:not(.dark) body .about-page,
+html:not(.dark) body .courses-page {
+    background: #eef4ff !important;
+    color: #172033 !important;
+}
+
+/* ABOUT PAGE â€” all content sections */
+html:not(.dark) body .about-page .about-hero-section,
+html:not(.dark) body .about-page .about-story-section,
+html:not(.dark) body .about-page .about-values-section {
+    background: #eef4ff !important;
+    color: #172033 !important;
+}
+
+/* ABOUT PAGE â€” headings and descriptions */
+html:not(.dark) body .about-page .about-hero-section h1,
+html:not(.dark) body .about-page .about-story-section h2,
+html:not(.dark) body .about-page .about-values-section h2,
+html:not(.dark) body .about-page .about-values-section h3 {
+    color: #172033 !important;
+}
+
+html:not(.dark) body .about-page .about-hero-section p,
+html:not(.dark) body .about-page .about-story-section p,
+html:not(.dark) body .about-page .about-values-section p {
+    color: #475569 !important;
+}
+
+/* ABOUT PAGE â€” value cards remain white */
+html:not(.dark) body .about-page .about-values-section article {
+    background: #ffffff !important;
+    border-color: #dbe5f5 !important;
+    color: #172033 !important;
+    box-shadow: 0 8px 25px rgba(49, 87, 213, 0.06);
+}
+
+/* COURSES PAGE â€” all content sections except hero image */
+html:not(.dark) body .courses-page > section:not(.hero-image-section) {
+    background: #eef4ff !important;
+    color: #172033 !important;
+}
+
+/* COURSES PAGE â€” text */
+html:not(.dark) body .courses-page h1,
+html:not(.dark) body .courses-page h2,
+html:not(.dark) body .courses-page h3 {
+    color: #172033 !important;
+}
+
+html:not(.dark) body .courses-page p {
+    color: #475569 !important;
+}
+
+/* COURSES PAGE â€” main learning library panel */
+html:not(.dark) body .courses-page .courses-library-panel {
+    background: #ffffff !important;
+    border-color: #dbe5f5 !important;
+    color: #172033 !important;
+    box-shadow: 0 15px 45px rgba(49, 87, 213, 0.08);
+}
+
+/* COURSES PAGE â€” empty state */
+html:not(.dark) body .courses-page .courses-empty-state {
+    background: #f5f8ff !important;
+    border-color: #d5e3ff !important;
+}
+
+/* Preserve the blue CTA sections */
+html:not(.dark) body .about-page .about-cta-section {
+    background: linear-gradient(110deg, #162b65, #3157d5) !important;
+    color: #ffffff !important;
+}
+
+html:not(.dark) body .about-page .about-cta-section h2,
+html:not(.dark) body .about-page .about-cta-section p {
+    color: #ffffff !important;
+}
+
+/* Keep homepage-style hero image band */
+html:not(.dark) body .about-page .hero-image-section,
+html:not(.dark) body .courses-page .hero-image-section {
+    background: linear-gradient(110deg, #60a5fa, #8b5cf6) !important;
+}
+
+/* END ABOUT & COURSES LIGHT THEME */
+
+
+/* =====================================================
+   DIGITAL WORLD â€” ABOUT & COURSES LIGHT THEME
+   Consistent light blue page backgrounds
+===================================================== */
+
+html:not(.dark) body .about-page,
+html:not(.dark) body .courses-page {
+    background: #eef4ff !important;
+    color: #172033 !important;
+}
+
+/* ABOUT PAGE â€” all content sections */
+html:not(.dark) body .about-page .about-hero-section,
+html:not(.dark) body .about-page .about-story-section,
+html:not(.dark) body .about-page .about-values-section {
+    background: #eef4ff !important;
+    color: #172033 !important;
+}
+
+/* ABOUT PAGE â€” headings and descriptions */
+html:not(.dark) body .about-page .about-hero-section h1,
+html:not(.dark) body .about-page .about-story-section h2,
+html:not(.dark) body .about-page .about-values-section h2,
+html:not(.dark) body .about-page .about-values-section h3 {
+    color: #172033 !important;
+}
+
+html:not(.dark) body .about-page .about-hero-section p,
+html:not(.dark) body .about-page .about-story-section p,
+html:not(.dark) body .about-page .about-values-section p {
+    color: #475569 !important;
+}
+
+/* ABOUT PAGE â€” value cards remain white */
+html:not(.dark) body .about-page .about-values-section article {
+    background: #ffffff !important;
+    border-color: #dbe5f5 !important;
+    color: #172033 !important;
+    box-shadow: 0 8px 25px rgba(49, 87, 213, 0.06);
+}
+
+/* COURSES PAGE â€” all content sections except hero image */
+html:not(.dark) body .courses-page > section:not(.hero-image-section) {
+    background: #eef4ff !important;
+    color: #172033 !important;
+}
+
+/* COURSES PAGE â€” text */
+html:not(.dark) body .courses-page h1,
+html:not(.dark) body .courses-page h2,
+html:not(.dark) body .courses-page h3 {
+    color: #172033 !important;
+}
+
+html:not(.dark) body .courses-page p {
+    color: #475569 !important;
+}
+
+/* COURSES PAGE â€” main learning library panel */
+html:not(.dark) body .courses-page .courses-library-panel {
+    background: #ffffff !important;
+    border-color: #dbe5f5 !important;
+    color: #172033 !important;
+    box-shadow: 0 15px 45px rgba(49, 87, 213, 0.08);
+}
+
+/* COURSES PAGE â€” empty state */
+html:not(.dark) body .courses-page .courses-empty-state {
+    background: #f5f8ff !important;
+    border-color: #d5e3ff !important;
+}
+
+/* Preserve the blue CTA sections */
+html:not(.dark) body .about-page .about-cta-section {
+    background: linear-gradient(110deg, #162b65, #3157d5) !important;
+    color: #ffffff !important;
+}
+
+html:not(.dark) body .about-page .about-cta-section h2,
+html:not(.dark) body .about-page .about-cta-section p {
+    color: #ffffff !important;
+}
+
+/* Keep homepage-style hero image band */
+html:not(.dark) body .about-page .hero-image-section,
+html:not(.dark) body .courses-page .hero-image-section {
+    background: linear-gradient(110deg, #60a5fa, #8b5cf6) !important;
+}
+
+/* END ABOUT & COURSES LIGHT THEME */
+
+
+/* FINAL FIX: Courses dashboard panel â€” light theme */
+html:not(.dark) body .courses-page .courses-library-panel {
+    background: #eef4ff !important;
+    background-color: #eef4ff !important;
+    border-color: #d5e3ff !important;
+    color: #172033 !important;
+}
+
+/* Keep the dashboard content readable */
+html:not(.dark) body .courses-page .courses-library-panel h1,
+html:not(.dark) body .courses-page .courses-library-panel h2,
+html:not(.dark) body .courses-page .courses-library-panel h3 {
+    color: #172033 !important;
+}
+
+html:not(.dark) body .courses-page .courses-library-panel p {
+    color: #475569 !important;
+}
+
+/* Keep the empty-state panel slightly lighter for contrast */
+html:not(.dark) body .courses-page .courses-empty-state {
+    background: #f7f9ff !important;
+    border-color: #d5e3ff !important;
+}
+
+/* Keep the secondary account button consistent */
+html:not(.dark) body .courses-page .courses-library-panel a.border-slate-200 {
+    background: #ffffff !important;
+    color: #172033 !important;
+    border-color: #d5e3ff !important;
+}
+
+
+/* COURSES PAGE â€” MATCH HOMEPAGE LIGHT BLUE GRADIENT */
+
+html:not(.dark) body .courses-page > section {
+    background:
+      radial-gradient(
+        circle at 95% 8%,
+        rgba(96, 165, 250, 0.18),
+        transparent 30%
+      ),
+      radial-gradient(
+        circle at 5% 90%,
+        rgba(139, 92, 246, 0.10),
+        transparent 32%
+      ),
+      linear-gradient(
+        135deg,
+        #edf4ff 0%,
+        #f3f5ff 48%,
+        #e8efff 100%
+      ) !important;
+}
+
+/* Main My Courses panel */
+html:not(.dark) body .courses-page .courses-library-panel {
+    background: rgba(255, 255, 255, 0.72) !important;
+    background-color: rgba(255, 255, 255, 0.72) !important;
+    border-color: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(18px);
+}
+
+/* Supporting learning cards */
+html:not(.dark) body .courses-page .courses-empty-state {
+    background: linear-gradient(
+      110deg,
+      #f5f8ff 0%,
+      #f0f2ff 100%
+    ) !important;
+}
+
+/* Bottom three information cards */
+html:not(.dark) body .courses-page .courses-library-panel ~ div > div {
+    background: rgba(255, 255, 255, 0.72) !important;
+    border-color: #dce6fa !important;
+}
+
+/* Keep text dark and readable */
+html:not(.dark) body .courses-page h1,
+html:not(.dark) body .courses-page h2,
+html:not(.dark) body .courses-page h3 {
+    color: #172033 !important;
+}
+
+html:not(.dark) body .courses-page p {
+    color: #475569 !important;
+}
+
+
+/* =====================================================
+   FINAL COURSES GRADIENT â€” LIGHT THEME
+   Override previous solid background rules
+===================================================== */
+
+html:not(.dark) body main.site-shell.courses-page
+> section:not(.hero-image-section) {
+    background:
+        radial-gradient(
+            circle at 95% 8%,
+            rgba(96, 165, 250, 0.24) 0%,
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 5% 90%,
+            rgba(139, 92, 246, 0.16) 0%,
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #eaf2ff 0%,
+            #f0f3ff 48%,
+            #e5edff 100%
+        ) !important;
+}
+
+/* Keep the dashboard panel translucent */
+html:not(.dark) body main.site-shell.courses-page
+.courses-library-panel {
+    background: rgba(255, 255, 255, 0.70) !important;
+    background-color: rgba(255, 255, 255, 0.70) !important;
+    border: 1px solid rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(18px);
+}
+
+/* Supporting cards */
+html:not(.dark) body main.site-shell.courses-page
+.courses-empty-state {
+    background: linear-gradient(
+        110deg,
+        #f7f9ff 0%,
+        #edf1ff 100%
+    ) !important;
+}
+
+/* Dark theme remains unchanged */
+
+
+/* =====================================================
+   ABOUT PAGE â€” FULL BLUE/PURPLE HERO GRADIENT
+===================================================== */
+
+/* Apply hero gradient to the entire About page */
+html:not(.dark) body main.site-shell.about-page {
+    background: linear-gradient(
+        110deg,
+        #60a5fa 0%,
+        #7185f5 48%,
+        #8b5cf6 100%
+    ) !important;
+}
+
+/* Make content sections transparent so the main gradient shows */
+html:not(.dark) body main.site-shell.about-page > section:not(.hero-image-section) {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* Keep section headings readable */
+html:not(.dark) body main.site-shell.about-page > section h1,
+html:not(.dark) body main.site-shell.about-page > section h2,
+html:not(.dark) body main.site-shell.about-page > section h3 {
+    color: #ffffff !important;
+}
+
+/* Section descriptions */
+html:not(.dark) body main.site-shell.about-page > section p {
+    color: rgba(255, 255, 255, 0.92) !important;
+}
+
+/* Preserve white content cards */
+html:not(.dark) body main.site-shell.about-page article,
+html:not(.dark) body main.site-shell.about-page .about-card {
+    background: rgba(255, 255, 255, 0.96) !important;
+    color: #172033 !important;
+}
+
+/* Text inside white cards */
+html:not(.dark) body main.site-shell.about-page article h3,
+html:not(.dark) body main.site-shell.about-page article p,
+html:not(.dark) body main.site-shell.about-page .about-card h3,
+html:not(.dark) body main.site-shell.about-page .about-card p {
+    color: #172033 !important;
+}
+
+/* Preserve navbar and shared navy footer */
+
+
+/* ABOUT PAGE - CONTINUOUS BLUE PURPLE BACKGROUND */
+html:not(.dark) body main.site-shell.about-page {
+    background: linear-gradient(
+        110deg,
+        #60a5fa 0%,
+        #7185f5 48%,
+        #8b5cf6 100%
+    ) !important;
+}
+
+html:not(.dark) body main.site-shell.about-page
+> section:not(.hero-image-section) {
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+/* Preserve readable white information cards */
+html:not(.dark) body main.site-shell.about-page article {
+    background: rgba(255,255,255,0.96) !important;
+    color: #172033 !important;
+}
+
+/* Preserve the existing dark theme */
+
+
+/* COURSES PAGE - MATCH HERO BLUE PURPLE BACKGROUND */
+.courses-page {
+  background: linear-gradient(120deg, #60a5fa 0%, #818cf8 50%, #8b5cf6 100%) !important;
+  background-attachment: fixed !important;
+}
+
+.dark .courses-page {
+  background: linear-gradient(120deg, #0c1730 0%, #171b46 50%, #321b63 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* Keep the Courses content section transparent */
+.courses-page > section:not(.hero-image-section) {
+  background: transparent !important;
+}
+
+
+/* FINAL FIX: COURSES PAGE LIGHT THEME PANEL */
+html:not(.dark) .courses-page {
+  background: linear-gradient(
+    120deg,
+    #eaf2ff 0%,
+    #e0ebff 45%,
+    #e9e5ff 100%
+  ) !important;
+}
+
+html:not(.dark) .courses-page .courses-library-panel {
+  background: linear-gradient(
+    135deg,
+    rgba(219, 234, 254, 0.88),
+    rgba(237, 233, 254, 0.88)
+  ) !important;
+  border: 1px solid #c7d8ff !important;
+  box-shadow: 0 20px 60px rgba(49, 87, 213, 0.10) !important;
+}
+
+html.dark .courses-page {
+  background: linear-gradient(
+    120deg,
+    #0c1730 0%,
+    #171b46 50%,
+    #321b63 100%
+  ) !important;
+}
+
+html.dark .courses-page .courses-library-panel {
+  background: rgba(15, 23, 42, 0.82) !important;
+  border-color: rgba(148, 163, 184, 0.18) !important;
+}
+
+
+/* COURSES PAGE - REMOVE WHITE PANEL IN LIGHT THEME */
+html:not(.dark) body .site-shell.courses-page {
+    background: linear-gradient(
+        120deg,
+        #eaf2ff 0%,
+        #e3edff 45%,
+        #e9e5ff 100%
+    ) !important;
+    background-color: #eaf2ff !important;
+}
+
+html:not(.dark) body .site-shell.courses-page .courses-library-panel {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border-color: rgba(255,255,255,0.45) !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+}
+
+html:not(.dark) body .site-shell.courses-page .courses-empty-state {
+    background: rgba(255,255,255,0.38) !important;
+    border-color: rgba(190,210,255,0.75) !important;
+}
+
+html:not(.dark) body .site-shell.courses-page .courses-library-panel > div {
+    background-color: transparent;
+}
+
+
+/* COURSES PAGE - REMOVE WHITE PANEL IN LIGHT THEME */
+html:not(.dark) body .site-shell.courses-page {
+    background: linear-gradient(
+        120deg,
+        #eaf2ff 0%,
+        #e3edff 45%,
+        #e9e5ff 100%
+    ) !important;
+    background-color: #eaf2ff !important;
+}
+
+html:not(.dark) body .site-shell.courses-page .courses-library-panel {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border-color: rgba(255,255,255,0.45) !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+}
+
+html:not(.dark) body .site-shell.courses-page .courses-empty-state {
+    background: rgba(255,255,255,0.38) !important;
+    border-color: rgba(190,210,255,0.75) !important;
+}
+
+html:not(.dark) body .site-shell.courses-page .courses-library-panel > div {
+    background-color: transparent;
+}
+
+
+
+
+/* COURSES PAGE - SAME GRADIENT AS HERO IMAGE BACKGROUND */
+
+html:not(.dark) body main.site-shell.courses-page {
+    background: linear-gradient(
+        110deg,
+        #5b9cf5 0%,
+        #667eea 48%,
+        #895cf6 100%
+    ) !important;
+    background-color: #667eea !important;
+    background-image: linear-gradient(
+        110deg,
+        #5b9cf5 0%,
+        #667eea 48%,
+        #895cf6 100%
+    ) !important;
+    min-height: 100vh;
+}
+
+/* All Courses page content sections */
+html:not(.dark) body main.site-shell.courses-page > section:not(.hero-image-section) {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+/* Courses content panel */
+html:not(.dark) body main.site-shell.courses-page .courses-library-panel {
+    background: rgba(255,255,255,0.13) !important;
+    background-color: rgba(255,255,255,0.13) !important;
+    border: 1px solid rgba(255,255,255,0.40) !important;
+    box-shadow: 0 20px 60px rgba(35,45,110,0.12) !important;
+    backdrop-filter: blur(16px);
+}
+
+/* Empty state and learning cards */
+html:not(.dark) body main.site-shell.courses-page .courses-empty-state,
+html:not(.dark) body main.site-shell.courses-page .courses-library-panel ~ div > div {
+    background: rgba(255,255,255,0.16) !important;
+    background-color: rgba(255,255,255,0.16) !important;
+    border-color: rgba(255,255,255,0.4) !important;
+}
+
+/* Preserve dark theme */
+html.dark body main.site-shell.courses-page {
+    background: linear-gradient(
+        120deg,
+        #0c1730 0%,
+        #171b46 50%,
+        #321b63 100%
+    ) !important;
+}
+
+
+/* COURSES PAGE - SAME GRADIENT AS HERO IMAGE BACKGROUND */
+
+html:not(.dark) body main.site-shell.courses-page {
+    background: linear-gradient(
+        110deg,
+        #5b9cf5 0%,
+        #667eea 48%,
+        #895cf6 100%
+    ) !important;
+    background-color: #667eea !important;
+    background-image: linear-gradient(
+        110deg,
+        #5b9cf5 0%,
+        #667eea 48%,
+        #895cf6 100%
+    ) !important;
+    min-height: 100vh;
+}
+
+/* All Courses page content sections */
+html:not(.dark) body main.site-shell.courses-page > section:not(.hero-image-section) {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+/* Courses content panel */
+html:not(.dark) body main.site-shell.courses-page .courses-library-panel {
+    background: rgba(255,255,255,0.13) !important;
+    background-color: rgba(255,255,255,0.13) !important;
+    border: 1px solid rgba(255,255,255,0.40) !important;
+    box-shadow: 0 20px 60px rgba(35,45,110,0.12) !important;
+    backdrop-filter: blur(16px);
+}
+
+/* Empty state and learning cards */
+html:not(.dark) body main.site-shell.courses-page .courses-empty-state,
+html:not(.dark) body main.site-shell.courses-page .courses-library-panel ~ div > div {
+    background: rgba(255,255,255,0.16) !important;
+    background-color: rgba(255,255,255,0.16) !important;
+    border-color: rgba(255,255,255,0.4) !important;
+}
+
+/* Preserve dark theme */
+html.dark body main.site-shell.courses-page {
+    background: linear-gradient(
+        120deg,
+        #0c1730 0%,
+        #171b46 50%,
+        #321b63 100%
+    ) !important;
+}
+
+
+/* COURSES PAGE - DISTINCT BOX COLORS */
+
+/* Main My Courses panel */
+html:not(.dark) .courses-page .courses-library-panel {
+    background: rgba(239, 246, 255, 0.94) !important;
+    background-color: rgba(239, 246, 255, 0.94) !important;
+    border: 1px solid #c7dcff !important;
+    box-shadow: 0 20px 50px rgba(30, 64, 175, 0.13) !important;
+}
+
+/* No courses empty-state box */
+html:not(.dark) .courses-page .courses-empty-state {
+    background: linear-gradient(135deg, #dbeafe, #e0e7ff) !important;
+    border: 1px solid #bfdbfe !important;
+    box-shadow: 0 8px 22px rgba(49, 87, 213, 0.08);
+}
+
+/* Choose a goal */
+html:not(.dark) .courses-page .courses-library-panel ~ div > div:nth-child(1) {
+    background: linear-gradient(135deg, #dbeafe, #bfdbfe) !important;
+    border: 1px solid #93c5fd !important;
+}
+
+/* Learn step by step */
+html:not(.dark) .courses-page .courses-library-panel ~ div > div:nth-child(2) {
+    background: linear-gradient(135deg, #ede9fe, #ddd6fe) !important;
+    border: 1px solid #c4b5fd !important;
+}
+
+/* Keep progressing */
+html:not(.dark) .courses-page .courses-library-panel ~ div > div:nth-child(3) {
+    background: linear-gradient(135deg, #ccfbf1, #d1fae5) !important;
+    border: 1px solid #99f6e4 !important;
+}
+
+/* Box text readability */
+html:not(.dark) .courses-page .courses-library-panel ~ div > div h3 {
+    color: #172554 !important;
+}
+
+html:not(.dark) .courses-page .courses-library-panel ~ div > div p {
+    color: #475569 !important;
+}
+
+/* Dark theme remains unchanged */
+html.dark .courses-page .courses-library-panel {
+    background: rgba(15, 23, 42, 0.88) !important;
+}
+
+
+/* ABOUT PAGE - THREE DISTINCT PASTEL LEARNING CARDS */
+
+html:not(.dark) .about-value-blue {
+    background: linear-gradient(135deg, #dcecff 0%, #c7ddff 100%) !important;
+    border-color: #b6d0fa !important;
+}
+
+html:not(.dark) .about-value-purple {
+    background: linear-gradient(135deg, #eee5ff 0%, #ddd0ff 100%) !important;
+    border-color: #d1c0fa !important;
+}
+
+html:not(.dark) .about-value-green {
+    background: linear-gradient(135deg, #dcfce9 0%, #c6f2df 100%) !important;
+    border-color: #b5e8d0 !important;
+}
+
+/* Keep card text readable */
+html:not(.dark) .about-value-card h3 {
+    color: #172554 !important;
+}
+
+html:not(.dark) .about-value-card p {
+    color: #475569 !important;
+}
+
+/* Preserve dark theme */
+html.dark .about-value-card {
+    background: #111a2d !important;
+    border-color: #26334b !important;
+}
+
+
+/* ABOUT VALUE CARDS - HIGH PRIORITY GRADIENTS */
+
+/* LIGHT THEME */
+html:not(.dark) body .about-value-card.about-value-blue {
+    background: linear-gradient(125deg, #A9CCFF 0%, #D0B9FF 100%) !important;
+    background-color: #A9CCFF !important;
+    border: 1px solid #A5BDF5 !important;
+}
+
+html:not(.dark) body .about-value-card.about-value-purple {
+    background: linear-gradient(125deg, #C3B5FF 0%, #E5BFFF 100%) !important;
+    background-color: #C3B5FF !important;
+    border: 1px solid #C2A9F0 !important;
+}
+
+html:not(.dark) body .about-value-card.about-value-green {
+    background: linear-gradient(125deg, #9FE5D0 0%, #B7D8FF 100%) !important;
+    background-color: #9FE5D0 !important;
+    border: 1px solid #9DDACF !important;
+}
+
+/* DARK THEME - DISTINCT DARK GRADIENTS */
+html.dark body .about-value-card.about-value-blue {
+    background: linear-gradient(125deg, #183B70 0%, #44316F 100%) !important;
+    border: 1px solid #46669D !important;
+}
+
+html.dark body .about-value-card.about-value-purple {
+    background: linear-gradient(125deg, #422B78 0%, #663B78 100%) !important;
+    border: 1px solid #76549D !important;
+}
+
+html.dark body .about-value-card.about-value-green {
+    background: linear-gradient(125deg, #164D49 0%, #244C79 100%) !important;
+    border: 1px solid #397B79 !important;
+}
+
+/* Text contrast in both themes */
+html:not(.dark) body .about-value-card h3 {
+    color: #172554 !important;
+}
+
+html:not(.dark) body .about-value-card p {
+    color: #243B61 !important;
+}
+
+html.dark body .about-value-card h3 {
+    color: #FFFFFF !important;
+}
+
+html.dark body .about-value-card p {
+    color: #DCE8FF !important;
+}
+
+
+/* ==========================================
+   ABOUT PAGE - STRONG GRADIENT VALUE CARDS
+   ========================================== */
+
+/* LIGHT THEME */
+html:not(.dark) .about-value-blue {
+    background: linear-gradient(135deg, #B4D3FF 0%, #8DB8F5 100%) !important;
+    background-color: #A8C9FA !important;
+    border: 1px solid #85B3F0 !important;
+    box-shadow: 0 12px 30px rgba(42, 91, 170, 0.16) !important;
+}
+
+html:not(.dark) .about-value-purple {
+    background: linear-gradient(135deg, #D3B8FF 0%, #AC8BEF 100%) !important;
+    background-color: #C4A5F5 !important;
+    border: 1px solid #A98AE8 !important;
+    box-shadow: 0 12px 30px rgba(105, 64, 170, 0.16) !important;
+}
+
+html:not(.dark) .about-value-green {
+    background: linear-gradient(135deg, #A8E7C8 0%, #72D4A6 100%) !important;
+    background-color: #91DDB9 !important;
+    border: 1px solid #70C99D !important;
+    box-shadow: 0 12px 30px rgba(35, 130, 85, 0.16) !important;
+}
+
+/* LIGHT THEME TEXT */
+html:not(.dark) .about-value-card h3 {
+    color: #14213D !important;
+}
+
+html:not(.dark) .about-value-card p {
+    color: #263B57 !important;
+}
+
+/* DARK THEME - DISTINCT GRADIENTS */
+html.dark .about-value-blue {
+    background: linear-gradient(135deg, #163B78 0%, #2459A5 100%) !important;
+    border: 1px solid #3974C3 !important;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.30) !important;
+}
+
+html.dark .about-value-purple {
+    background: linear-gradient(135deg, #45236F 0%, #7041A8 100%) !important;
+    border: 1px solid #875DC2 !important;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.30) !important;
+}
+
+html.dark .about-value-green {
+    background: linear-gradient(135deg, #124D43 0%, #19765B 100%) !important;
+    border: 1px solid #329778 !important;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.30) !important;
+}
+
+/* DARK THEME TEXT */
+html.dark .about-value-card h3,
+html.dark .about-value-card p {
+    color: #FFFFFF !important;
+}
+
+
+/* ===== DEFINITIVE ABOUT PAGE VALUE CARD GRADIENTS ===== */
+
+/* LIGHT THEME */
+html.light body .about-values-section article.about-value-card.about-value-blue {
+    background: linear-gradient(135deg, #8DB8F5 0%, #B6C9FF 55%, #C9B5F5 100%) !important;
+    background-color: #8DB8F5 !important;
+    border: 1px solid #729DE5 !important;
+    box-shadow: 0 14px 32px rgba(40, 80, 160, 0.20) !important;
+}
+
+html.light body .about-values-section article.about-value-card.about-value-purple {
+    background: linear-gradient(135deg, #B49AEF 0%, #C7A5ED 55%, #E0B7E9 100%) !important;
+    background-color: #B49AEF !important;
+    border: 1px solid #A98AD9 !important;
+    box-shadow: 0 14px 32px rgba(100, 60, 150, 0.20) !important;
+}
+
+html.light body .about-values-section article.about-value-card.about-value-green {
+    background: linear-gradient(135deg, #82D6B2 0%, #A1D9C5 55%, #A9C9EC 100%) !important;
+    background-color: #82D6B2 !important;
+    border: 1px solid #69C39B !important;
+    box-shadow: 0 14px 32px rgba(35, 120, 90, 0.20) !important;
+}
+
+/* DARK THEME */
+html.dark body .about-values-section article.about-value-card.about-value-blue {
+    background: linear-gradient(135deg, #163B78 0%, #2459A5 55%, #433A83 100%) !important;
+    border: 1px solid #527CC1 !important;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35) !important;
+}
+
+html.dark body .about-values-section article.about-value-card.about-value-purple {
+    background: linear-gradient(135deg, #45236F 0%, #7041A8 55%, #853D91 100%) !important;
+    border: 1px solid #9668C6 !important;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35) !important;
+}
+
+html.dark body .about-values-section article.about-value-card.about-value-green {
+    background: linear-gradient(135deg, #124D43 0%, #19765B 55%, #245B78 100%) !important;
+    border: 1px solid #399778 !important;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* TEXT CONTRAST */
+html.light body .about-values-section article.about-value-card h3 {
+    color: #14213D !important;
+}
+
+html.light body .about-values-section article.about-value-card p {
+    color: #263B57 !important;
+}
+
+html.dark body .about-values-section article.about-value-card h3 {
+    color: #FFFFFF !important;
+}
+
+html.dark body .about-values-section article.about-value-card p {
+    color: #E2E8F0 !important;
+}
+
+/* ===== END DEFINITIVE ABOUT PAGE GRADIENTS ===== */
+
+
+/* ===== COURSES FEATURE CARDS - MATCH ABOUT PAGE ===== */
+
+/* LIGHT THEME */
+html:not(.dark) body .courses-page .courses-feature-card:nth-child(1) {
+    background: linear-gradient(135deg, #8DB8F5 0%, #B6C9FF 55%, #C9B5F5 100%) !important;
+    border-color: #729DE5 !important;
+    box-shadow: 0 14px 32px rgba(40, 80, 160, 0.20) !important;
+}
+
+html:not(.dark) body .courses-page .courses-feature-card:nth-child(2) {
+    background: linear-gradient(135deg, #B49AEF 0%, #C7A5ED 55%, #E0B7E9 100%) !important;
+    border-color: #A98AD9 !important;
+    box-shadow: 0 14px 32px rgba(100, 60, 150, 0.20) !important;
+}
+
+html:not(.dark) body .courses-page .courses-feature-card:nth-child(3) {
+    background: linear-gradient(135deg, #82D6B2 0%, #A1D9C5 55%, #A9C9EC 100%) !important;
+    border-color: #69C39B !important;
+    box-shadow: 0 14px 32px rgba(35, 120, 90, 0.20) !important;
+}
+
+/* DARK THEME */
+html.dark body .courses-page .courses-feature-card:nth-child(1) {
+    background: linear-gradient(135deg, #163B78 0%, #2459A5 55%, #433A83 100%) !important;
+    border-color: #527CC1 !important;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35) !important;
+}
+
+html.dark body .courses-page .courses-feature-card:nth-child(2) {
+    background: linear-gradient(135deg, #45236F 0%, #7041A8 55%, #853D91 100%) !important;
+    border-color: #9668C6 !important;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35) !important;
+}
+
+html.dark body .courses-page .courses-feature-card:nth-child(3) {
+    background: linear-gradient(135deg, #124D43 0%, #19765B 55%, #245B78 100%) !important;
+    border-color: #399778 !important;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* CARD TEXT */
+html:not(.dark) body .courses-page .courses-feature-card h3 {
+    color: #14213D !important;
+}
+
+html:not(.dark) body .courses-page .courses-feature-card p {
+    color: #263B57 !important;
+}
+
+html.dark body .courses-page .courses-feature-card h3 {
+    color: #FFFFFF !important;
+}
+
+html.dark body .courses-page .courses-feature-card p {
+    color: #E2E8F0 !important;
+}
+
+/* ===== END COURSES FEATURE CARD GRADIENTS ===== */
+
+
+/* =========================================================
+   COURSES PAGE - FINAL BACKGROUND AND FEATURE CARD COLORS
+   ========================================================= */
+
+/* Page background - Light theme */
+html:not(.dark) body .courses-page {
+    background: linear-gradient(120deg, #eaf2ff 0%, #8eb5f4 48%, #9270f0 100%) !important;
+}
+
+/* Main library panel */
+html:not(.dark) body .courses-page .courses-library-panel {
+    background: rgba(235, 242, 255, 0.42) !important;
+    border: 1px solid rgba(255,255,255,0.55) !important;
+}
+
+/* Feature cards - Light theme */
+html:not(.dark) body .courses-page .courses-feature-card:nth-child(1) {
+    background: linear-gradient(135deg, #8DB8F5, #B6C9FF, #C9B5F5) !important;
+    border: 1px solid #729DE5 !important;
+    box-shadow: 0 14px 32px rgba(40,80,160,.22) !important;
+}
+
+html:not(.dark) body .courses-page .courses-feature-card:nth-child(2) {
+    background: linear-gradient(135deg, #B49AEF, #C7A5ED, #E0B7E9) !important;
+    border: 1px solid #A98AD9 !important;
+    box-shadow: 0 14px 32px rgba(100,60,150,.22) !important;
+}
+
+html:not(.dark) body .courses-page .courses-feature-card:nth-child(3) {
+    background: linear-gradient(135deg, #82D6B2, #A1D9C5, #A9C9EC) !important;
+    border: 1px solid #69C39B !important;
+    box-shadow: 0 14px 32px rgba(35,120,90,.22) !important;
+}
+
+/* Dark theme page */
+html.dark body .courses-page {
+    background: linear-gradient(120deg, #0c1730 0%, #171b46 50%, #321b63 100%) !important;
+}
+
+/* Feature cards - Dark theme */
+html.dark body .courses-page .courses-feature-card:nth-child(1) {
+    background: linear-gradient(135deg, #163B78, #2459A5, #433A83) !important;
+    border: 1px solid #527CC1 !important;
+    box-shadow: 0 14px 32px rgba(0,0,0,.35) !important;
+}
+
+html.dark body .courses-page .courses-feature-card:nth-child(2) {
+    background: linear-gradient(135deg, #45236F, #7041A8, #853D91) !important;
+    border: 1px solid #9668C6 !important;
+    box-shadow: 0 14px 32px rgba(0,0,0,.35) !important;
+}
+
+html.dark body .courses-page .courses-feature-card:nth-child(3) {
+    background: linear-gradient(135deg, #124D43, #19765B, #245B78) !important;
+    border: 1px solid #399778 !important;
+    box-shadow: 0 14px 32px rgba(0,0,0,.35) !important;
+}
+
+/* Card text */
+html:not(.dark) body .courses-page .courses-feature-card h3 {
+    color: #14213D !important;
+}
+
+html:not(.dark) body .courses-page .courses-feature-card p {
+    color: #263B57 !important;
+}
+
+html.dark body .courses-page .courses-feature-card h3 {
+    color: #FFFFFF !important;
+}
+
+html.dark body .courses-page .courses-feature-card p {
+    color: #E2E8F0 !important;
+}
+
+/* Feature icons */
+html.dark body .courses-page .courses-feature-card svg {
+    color: #C4B5FD !important;
+}
+
+
+/* =========================================================
+   COURSES PAGE - FINAL BACKGROUND AND FEATURE CARD COLORS
+   ========================================================= */
+
+/* Page background - Light theme */
+html:not(.dark) body .courses-page {
+    background: linear-gradient(120deg, #eaf2ff 0%, #8eb5f4 48%, #9270f0 100%) !important;
+}
+
+/* Main library panel */
+html:not(.dark) body .courses-page .courses-library-panel {
+    background: rgba(235, 242, 255, 0.42) !important;
+    border: 1px solid rgba(255,255,255,0.55) !important;
+}
+
+/* Feature cards - Light theme */
+html:not(.dark) body .courses-page .courses-feature-card:nth-child(1) {
+    background: linear-gradient(135deg, #8DB8F5, #B6C9FF, #C9B5F5) !important;
+    border: 1px solid #729DE5 !important;
+    box-shadow: 0 14px 32px rgba(40,80,160,.22) !important;
+}
+
+html:not(.dark) body .courses-page .courses-feature-card:nth-child(2) {
+    background: linear-gradient(135deg, #B49AEF, #C7A5ED, #E0B7E9) !important;
+    border: 1px solid #A98AD9 !important;
+    box-shadow: 0 14px 32px rgba(100,60,150,.22) !important;
+}
+
+html:not(.dark) body .courses-page .courses-feature-card:nth-child(3) {
+    background: linear-gradient(135deg, #82D6B2, #A1D9C5, #A9C9EC) !important;
+    border: 1px solid #69C39B !important;
+    box-shadow: 0 14px 32px rgba(35,120,90,.22) !important;
+}
+
+/* Dark theme page */
+html.dark body .courses-page {
+    background: linear-gradient(120deg, #0c1730 0%, #171b46 50%, #321b63 100%) !important;
+}
+
+/* Feature cards - Dark theme */
+html.dark body .courses-page .courses-feature-card:nth-child(1) {
+    background: linear-gradient(135deg, #163B78, #2459A5, #433A83) !important;
+    border: 1px solid #527CC1 !important;
+    box-shadow: 0 14px 32px rgba(0,0,0,.35) !important;
+}
+
+html.dark body .courses-page .courses-feature-card:nth-child(2) {
+    background: linear-gradient(135deg, #45236F, #7041A8, #853D91) !important;
+    border: 1px solid #9668C6 !important;
+    box-shadow: 0 14px 32px rgba(0,0,0,.35) !important;
+}
+
+html.dark body .courses-page .courses-feature-card:nth-child(3) {
+    background: linear-gradient(135deg, #124D43, #19765B, #245B78) !important;
+    border: 1px solid #399778 !important;
+    box-shadow: 0 14px 32px rgba(0,0,0,.35) !important;
+}
+
+/* Card text */
+html:not(.dark) body .courses-page .courses-feature-card h3 {
+    color: #14213D !important;
+}
+
+html:not(.dark) body .courses-page .courses-feature-card p {
+    color: #263B57 !important;
+}
+
+html.dark body .courses-page .courses-feature-card h3 {
+    color: #FFFFFF !important;
+}
+
+html.dark body .courses-page .courses-feature-card p {
+    color: #E2E8F0 !important;
+}
+
+/* Feature icons */
+html.dark body .courses-page .courses-feature-card svg {
+    color: #C4B5FD !important;
+}
+
+
+/* =====================================================
+   FINAL OVERRIDE - COURSES FEATURE CARDS
+   ===================================================== */
+
+/* LIGHT THEME */
+html:not(.dark) body main.site-shell.courses-page .courses-feature-card:nth-child(1) {
+    background: linear-gradient(135deg, #78A9ED 0%, #91A8F5 50%, #B09AEF 100%) !important;
+    background-color: #78A9ED !important;
+    border: 1px solid #668FDC !important;
+    box-shadow: 0 14px 32px rgba(40, 65, 150, 0.22) !important;
+}
+
+html:not(.dark) body main.site-shell.courses-page .courses-feature-card:nth-child(2) {
+    background: linear-gradient(135deg, #A78AE8 0%, #B78BE0 50%, #D29BD9 100%) !important;
+    background-color: #A78AE8 !important;
+    border: 1px solid #9878D1 !important;
+    box-shadow: 0 14px 32px rgba(100, 55, 150, 0.22) !important;
+}
+
+html:not(.dark) body main.site-shell.courses-page .courses-feature-card:nth-child(3) {
+    background: linear-gradient(135deg, #70C9A5 0%, #83CBB9 50%, #80B6DC 100%) !important;
+    background-color: #70C9A5 !important;
+    border: 1px solid #60B58F !important;
+    box-shadow: 0 14px 32px rgba(35, 120, 90, 0.22) !important;
+}
+
+/* DARK THEME */
+html.dark body main.site-shell.courses-page .courses-feature-card:nth-child(1) {
+    background: linear-gradient(135deg, #163F7A 0%, #245DAA 50%, #433C8B 100%) !important;
+    background-color: #163F7A !important;
+    border: 1px solid #527CC1 !important;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.4) !important;
+}
+
+html.dark body main.site-shell.courses-page .courses-feature-card:nth-child(2) {
+    background: linear-gradient(135deg, #482675 0%, #7042A8 50%, #873F91 100%) !important;
+    background-color: #482675 !important;
+    border: 1px solid #9668C6 !important;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.4) !important;
+}
+
+html.dark body main.site-shell.courses-page .courses-feature-card:nth-child(3) {
+    background: linear-gradient(135deg, #125344 0%, #19765B 50%, #245F83 100%) !important;
+    background-color: #125344 !important;
+    border: 1px solid #399778 !important;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* TEXT AND ICONS */
+html:not(.dark) body main.site-shell.courses-page .courses-feature-card h3 {
+    color: #14213D !important;
+}
+
+html:not(.dark) body main.site-shell.courses-page .courses-feature-card p {
+    color: #263B57 !important;
+}
+
+html:not(.dark) body main.site-shell.courses-page .courses-feature-card svg {
+    color: #244FC0 !important;
+}
+
+html.dark body main.site-shell.courses-page .courses-feature-card h3 {
+    color: #FFFFFF !important;
+}
+
+html.dark body main.site-shell.courses-page .courses-feature-card p {
+    color: #E2E8F0 !important;
+}
+
+html.dark body main.site-shell.courses-page .courses-feature-card svg {
+    color: #C4B5FD !important;
+}
+
+/* =====================================================
+   END FINAL COURSES CARD OVERRIDE
+   ===================================================== */
+
+
+/* =====================================================
+   ABOUT PAGE - LEARNING JOURNEY TEXT CONTRAST FIX
+   Both light and dark themes
+===================================================== */
+
+/* LIGHT THEME */
+html:not(.dark) body .about-page > section:first-of-type .rounded-\[32px\] {
+    color: #172033 !important;
+}
+
+/* Journey label */
+html:not(.dark) body .about-page > section:first-of-type .rounded-\[32px\] > div:first-child span {
+    color: #2446ad !important;
+}
+
+/* Bottom three learning cards */
+html:not(.dark) body .about-page > section:first-of-type .grid.grid-cols-3 > div {
+    background: #ffffff !important;
+    border-color: #dbe4f5 !important;
+}
+
+html:not(.dark) body .about-page > section:first-of-type .grid.grid-cols-3 > div p {
+    color: #334155 !important;
+}
+
+html:not(.dark) body .about-page > section:first-of-type .grid.grid-cols-3 > div svg {
+    color: #3157D5 !important;
+    stroke: #3157D5 !important;
+}
+
+/* DARK THEME */
+html.dark body .about-page > section:first-of-type .rounded-\[32px\] {
+    color: #f8fafc !important;
+}
+
+/* Journey label */
+html.dark body .about-page > section:first-of-type .rounded-\[32px\] > div:first-child span {
+    color: #2446ad !important;
+}
+
+/* Bottom three learning cards */
+html.dark body .about-page > section:first-of-type .grid.grid-cols-3 > div {
+    background: #1e293b !important;
+    border-color: #475569 !important;
+}
+
+html.dark body .about-page > section:first-of-type .grid.grid-cols-3 > div p {
+    color: #e2e8f0 !important;
+}
+
+html.dark body .about-page > section:first-of-type .grid.grid-cols-3 > div svg {
+    color: #93c5fd !important;
+    stroke: #93c5fd !important;
+}
+
+/* Keep inner blue-purple panel text white in both themes */
+html body .about-page > section:first-of-type .rounded-2xl.bg-gradient-to-br h2,
+html body .about-page > section:first-of-type .rounded-2xl.bg-gradient-to-br p,
+html body .about-page > section:first-of-type .rounded-2xl.bg-gradient-to-br span {
+    color: #ffffff !important;
+}
+
+
+/* =====================================================
+   ABOUT - LEARNING JOURNEY CARD TEXT VISIBILITY
+===================================================== */
+
+/* Light theme */
+html:not(.dark) body .about-page .about-journey-card {
+    color: #172033 !important;
+}
+
+html:not(.dark) body .about-page .about-journey-label {
+    color: #1e40af !important;
+    background: #eff6ff !important;
+}
+
+html:not(.dark) body .about-page .about-journey-highlight {
+    background: #ffffff !important;
+    border: 1px solid #dbe4f5 !important;
+}
+
+html:not(.dark) body .about-page .about-journey-highlight-text {
+    color: #1e293b !important;
+}
+
+html:not(.dark) body .about-page .about-journey-icon {
+    color: #3157D5 !important;
+    stroke: #3157D5 !important;
+}
+
+/* Dark theme */
+html.dark body .about-page .about-journey-card {
+    color: #f8fafc !important;
+}
+
+html.dark body .about-page .about-journey-label {
+    color: #bfdbfe !important;
+    background: #1e3a8a !important;
+}
+
+html.dark body .about-page .about-journey-highlight {
+    background: #1e293b !important;
+    border: 1px solid #475569 !important;
+}
+
+html.dark body .about-page .about-journey-highlight-text {
+    color: #f8fafc !important;
+}
+
+html.dark body .about-page .about-journey-icon {
+    color: #93c5fd !important;
+    stroke: #93c5fd !important;
+}
+
+/* Preserve white text on the inner gradient panel */
+html body .about-page .about-journey-card > div.rounded-2xl.bg-gradient-to-br,
+html body .about-page .about-journey-card > div.rounded-2xl.bg-gradient-to-br h2,
+html body .about-page .about-journey-card > div.rounded-2xl.bg-gradient-to-br p,
+html body .about-page .about-journey-card > div.rounded-2xl.bg-gradient-to-br span {
+    color: #ffffff !important;
+}
+
+
+/* FINAL LIGHT THEME - ABOUT LEARNING JOURNEY TEXT */
+html:not(.dark) body main.site-shell.about-page
+.about-journey-card .about-journey-highlight
+.about-journey-highlight-text {
+    color: #172554 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    -webkit-text-fill-color: #172554 !important;
+}
+
+html:not(.dark) body main.site-shell.about-page
+.about-journey-card .about-journey-highlight {
+    background: #ffffff !important;
+    color: #172554 !important;
+}
+
+html:not(.dark) body main.site-shell.about-page
+.about-journey-card .about-journey-label {
+    color: #1e40af !important;
+    -webkit-text-fill-color: #1e40af !important;
+    background: #eff6ff !important;
+}
+
+
+/* LEARN SKILLS - SLIGHTLY DEEPER CATEGORY CARD COLORS */
+
+/* Light theme */
+html:not(.dark) body .learn-skills-page button.group:nth-child(1) {
+    background: linear-gradient(135deg, #C4CCFF, #B8A9F5) !important;
+}
+
+html:not(.dark) body .learn-skills-page button.group:nth-child(2) {
+    background: linear-gradient(135deg, #B5E8F5, #A9D5F5) !important;
+}
+
+html:not(.dark) body .learn-skills-page button.group:nth-child(3) {
+    background: linear-gradient(135deg, #B5F0D0, #A3E8C2) !important;
+}
+
+html:not(.dark) body .learn-skills-page button.group:nth-child(4) {
+    background: linear-gradient(135deg, #FFE0A8, #FFD39A) !important;
+}
+
+html:not(.dark) body .learn-skills-page button.group:nth-child(5) {
+    background: linear-gradient(135deg, #F5C8E2, #EFB8D9) !important;
+}
+
+html:not(.dark) body .learn-skills-page button.group:nth-child(6) {
+    background: linear-gradient(135deg, #BFD9F8, #B2C9F5) !important;
+}
+
+
+/* LEARN SKILLS - STRONGER PASTEL CATEGORY COLORS */
+html:not(.dark) body .learn-skills-page button.group:nth-child(1) {
+    background: linear-gradient(135deg, #AAB8F5, #9B91E8) !important;
+}
+
+html:not(.dark) body .learn-skills-page button.group:nth-child(2) {
+    background: linear-gradient(135deg, #91D8EB, #83C5E8) !important;
+}
+
+html:not(.dark) body .learn-skills-page button.group:nth-child(3) {
+    background: linear-gradient(135deg, #91E2B7, #7DD6A6) !important;
+}
+
+html:not(.dark) body .learn-skills-page button.group:nth-child(4) {
+    background: linear-gradient(135deg, #F6D18A, #EFC17A) !important;
+}
+
+html:not(.dark) body .learn-skills-page button.group:nth-child(5) {
+    background: linear-gradient(135deg, #EBAFD2, #E39BC5) !important;
+}
+
+html:not(.dark) body .learn-skills-page button.group:nth-child(6) {
+    background: linear-gradient(135deg, #A6C7F0, #92B5E8) !important;
+}
+
+
+/* LEARN SKILLS - DEEPER, RICH CATEGORY COLORS */
+html:not(.dark) body .learn-skills-page button.group:nth-child(1) {
+    background: linear-gradient(135deg, #8999E8, #8872D6) !important;
+    border-color: #7887D5 !important;
+}
+
+html:not(.dark) body .learn-skills-page button.group:nth-child(2) {
+    background: linear-gradient(135deg, #72C6DD, #66AEDD) !important;
+    border-color: #65B4D4 !important;
+}
+
+html:not(.dark) body .learn-skills-page button.group:nth-child(3) {
+    background: linear-gradient(135deg, #75D5A1, #5BC48B) !important;
+    border-color: #63C995 !important;
+}
+
+html:not(.dark) body .learn-skills-page button.group:nth-child(4) {
+    background: linear-gradient(135deg, #EFC16E, #E6A94F) !important;
+    border-color: #DDA94F !important;
+}
+
+html:not(.dark) body .learn-skills-page button.group:nth-child(5) {
+    background: linear-gradient(135deg, #DF9BC3, #D77FB1) !important;
+    border-color: #D58CB7 !important;
+}
+
+html:not(.dark) body .learn-skills-page button.group:nth-child(6) {
+    background: linear-gradient(135deg, #8DB5E9, #789CDE) !important;
+    border-color: #83A5DD !important;
+}
+
+
+/* LEARN SKILLS - FORCE CATEGORY CARD COLORS */
+html:not(.dark) body .learn-skills-page button.group:nth-of-type(1) {
+    background-image: linear-gradient(135deg, #8999E8, #8872D6) !important;
+    background-color: #8999E8 !important;
+}
+
+html:not(.dark) body .learn-skills-page button.group:nth-of-type(2) {
+    background-image: linear-gradient(135deg, #72C6DD, #66AEDD) !important;
+    background-color: #72C6DD !important;
+}
+
+html:not(.dark) body .learn-skills-page button.group:nth-of-type(3) {
+    background-image: linear-gradient(135deg, #75D5A1, #5BC48B) !important;
+    background-color: #75D5A1 !important;
+}
+
+html:not(.dark) body .learn-skills-page button.group:nth-of-type(4) {
+    background-image: linear-gradient(135deg, #EFC16E, #E6A94F) !important;
+    background-color: #EFC16E !important;
+}
+
+html:not(.dark) body .learn-skills-page button.group:nth-of-type(5) {
+    background-image: linear-gradient(135deg, #DF9BC3, #D77FB1) !important;
+    background-color: #DF9BC3 !important;
+}
+
+html:not(.dark) body .learn-skills-page button.group:nth-of-type(6) {
+    background-image: linear-gradient(135deg, #8DB5E9, #789CDE) !important;
+    background-color: #8DB5E9 !important;
+}
+
+
+/* =====================================================
+   LEARN SKILLS - CATEGORY CARDS
+   Correct selector: a.category-card
+===================================================== */
+
+html:not(.dark) body main.site-shell .category-section
+.category-grid > a.category-card:nth-child(1) {
+    background: linear-gradient(135deg, #6879D8, #7560C8) !important;
+    background-image: linear-gradient(135deg, #6879D8, #7560C8) !important;
+}
+
+html:not(.dark) body main.site-shell .category-section
+.category-grid > a.category-card:nth-child(2) {
+    background: linear-gradient(135deg, #4FAACB, #438FCB) !important;
+    background-image: linear-gradient(135deg, #4FAACB, #438FCB) !important;
+}
+
+html:not(.dark) body main.site-shell .category-section
+.category-grid > a.category-card:nth-child(3) {
+    background: linear-gradient(135deg, #48B982, #35A66E) !important;
+    background-image: linear-gradient(135deg, #48B982, #35A66E) !important;
+}
+
+html:not(.dark) body main.site-shell .category-section
+.category-grid > a.category-card:nth-child(4) {
+    background: linear-gradient(135deg, #DDA642, #CB8730) !important;
+    background-image: linear-gradient(135deg, #DDA642, #CB8730) !important;
+}
+
+html:not(.dark) body main.site-shell .category-section
+.category-grid > a.category-card:nth-child(5) {
+    background: linear-gradient(135deg, #CD78A8, #B95C91) !important;
+    background-image: linear-gradient(135deg, #CD78A8, #B95C91) !important;
+}
+
+html:not(.dark) body main.site-shell .category-section
+.category-grid > a.category-card:nth-child(6) {
+    background: linear-gradient(135deg, #648FD0, #5075BF) !important;
+    background-image: linear-gradient(135deg, #648FD0, #5075BF) !important;
+}
+
+
+/* LEARN SKILLS - LIGHTER RICH GRADIENT CATEGORY CARDS */
+
+html:not(.dark) body main.site-shell .category-section
+.category-grid > a.category-card:nth-child(1) {
+    background: linear-gradient(135deg, #8999E8 0%, #A18BE0 100%) !important;
+}
+
+html:not(.dark) body main.site-shell .category-section
+.category-grid > a.category-card:nth-child(2) {
+    background: linear-gradient(135deg, #76C6DF 0%, #83B8E9 100%) !important;
+}
+
+html:not(.dark) body main.site-shell .category-section
+.category-grid > a.category-card:nth-child(3) {
+    background: linear-gradient(135deg, #79D5A5 0%, #65C99B 100%) !important;
+}
+
+html:not(.dark) body main.site-shell .category-section
+.category-grid > a.category-card:nth-child(4) {
+    background: linear-gradient(135deg, #F0C477 0%, #E9AD68 100%) !important;
+}
+
+html:not(.dark) body main.site-shell .category-section
+.category-grid > a.category-card:nth-child(5) {
+    background: linear-gradient(135deg, #E3A3C8 0%, #D98DBB 100%) !important;
+}
+
+html:not(.dark) body main.site-shell .category-section
+.category-grid > a.category-card:nth-child(6) {
+    background: linear-gradient(135deg, #91B8E9 0%, #819FE0 100%) !important;
+}
+
+
+/* LEARN SKILLS - CLEAR VISIBLE GRADIENT EFFECT */
+
+html:not(.dark) body main.site-shell .category-section
+.category-grid > a.category-card:nth-child(1) {
+    background-color: transparent !important;
+    background-image: linear-gradient(115deg, #7188E8 0%, #B19AEF 100%) !important;
+}
+
+html:not(.dark) body main.site-shell .category-section
+.category-grid > a.category-card:nth-child(2) {
+    background-color: transparent !important;
+    background-image: linear-gradient(115deg, #48B9D9 0%, #A0D9F2 100%) !important;
+}
+
+html:not(.dark) body main.site-shell .category-section
+.category-grid > a.category-card:nth-child(3) {
+    background-color: transparent !important;
+    background-image: linear-gradient(115deg, #45BF89 0%, #A1E8BD 100%) !important;
+}
+
+html:not(.dark) body main.site-shell .category-section
+.category-grid > a.category-card:nth-child(4) {
+    background-color: transparent !important;
+    background-image: linear-gradient(115deg, #E9A83F 0%, #FFE0A0 100%) !important;
+}
+
+html:not(.dark) body main.site-shell .category-section
+.category-grid > a.category-card:nth-child(5) {
+    background-color: transparent !important;
+    background-image: linear-gradient(115deg, #D47EAE 0%, #F2B9D8 100%) !important;
+}
+
+html:not(.dark) body main.site-shell .category-section
+.category-grid > a.category-card:nth-child(6) {
+    background-color: transparent !important;
+    background-image: linear-gradient(115deg, #668FD6 0%, #A9C9F1 100%) !important;
+}
+
+
+/* LEARN SKILLS - LEARNING PATH JOB CARD GRADIENTS */
+
+/* Web Development - Blue / Purple */
+html:not(.dark) body main.site-shell .job-grid > article.job-card:nth-child(1) {
+    background-color: transparent !important;
+    background-image: linear-gradient(115deg, #7188E8 0%, #B19AEF 100%) !important;
+    border-color: #A5B5F0 !important;
+}
+
+/* Digital Marketing - Cyan / Sky Blue */
+html:not(.dark) body main.site-shell .job-grid > article.job-card:nth-child(2) {
+    background-color: transparent !important;
+    background-image: linear-gradient(115deg, #48B9D9 0%, #A0D9F2 100%) !important;
+    border-color: #A0D9F2 !important;
+}
+
+/* Artificial Intelligence - Green / Mint */
+html:not(.dark) body main.site-shell .job-grid > article.job-card:nth-child(3) {
+    background-color: transparent !important;
+    background-image: linear-gradient(115deg, #45BF89 0%, #A1E8BD 100%) !important;
+    border-color: #A1E8BD !important;
+}
+
+
+/* LEARN SKILLS - FINAL LEARNING PATH GRADIENT FIX */
+
+/* Card 1 - Web Development */
+html:not(.dark) .job-grid article.job-card:nth-of-type(1) {
+    background: linear-gradient(
+        115deg,
+        #7188E8 0%,
+        #B19AEF 100%
+    ) !important;
+    background-color: transparent !important;
+}
+
+/* Card 2 - Digital Marketing */
+html:not(.dark) .job-grid article.job-card:nth-of-type(2) {
+    background: linear-gradient(
+        115deg,
+        #48B9D9 0%,
+        #A0D9F2 100%
+    ) !important;
+    background-color: transparent !important;
+}
+
+/* Card 3 - Artificial Intelligence */
+html:not(.dark) .job-grid article.job-card:nth-of-type(3) {
+    background: linear-gradient(
+        115deg,
+        #45BF89 0%,
+        #A1E8BD 100%
+    ) !important;
+    background-color: transparent !important;
+}
+
+
+/* LEARN SKILLS - FEATURED LEARNING PATH GRADIENTS */
+
+/* Web Development */
+html:not(.dark) body .jobs-grid > article.job-card:nth-child(1) {
+    background: linear-gradient(115deg, #7188E8 0%, #B19AEF 100%) !important;
+    background-color: transparent !important;
+}
+
+/* Digital Marketing */
+html:not(.dark) body .jobs-grid > article.job-card:nth-child(2) {
+    background: linear-gradient(115deg, #48B9D9 0%, #A0D9F2 100%) !important;
+    background-color: transparent !important;
+}
+
+/* Artificial Intelligence */
+html:not(.dark) body .jobs-grid > article.job-card:nth-child(3) {
+    background: linear-gradient(115deg, #45BF89 0%, #A1E8BD 100%) !important;
+    background-color: transparent !important;
+}
+
+
+/* ABOUT / HOME - BENEFIT FEATURE GRADIENTS */
+
+/* 1. Learn digital knowledge - Blue to Purple */
+html:not(.dark) body .benefit-list > .benefit-item:nth-child(1) {
+    background: linear-gradient(115deg, #7188E8 0%, #B19AEF 100%) !important;
+    background-color: transparent !important;
+}
+
+/* 2. Practise with purpose - Cyan to Sky Blue */
+html:not(.dark) body .benefit-list > .benefit-item:nth-child(2) {
+    background: linear-gradient(115deg, #48B9D9 0%, #A0D9F2 100%) !important;
+    background-color: transparent !important;
+}
+
+/* 3. Create earning opportunities - Green to Mint */
+html:not(.dark) body .benefit-list > .benefit-item:nth-child(3) {
+    background: linear-gradient(115deg, #45BF89 0%, #A1E8BD 100%) !important;
+    background-color: transparent !important;
+}
+
+
+/* ABOUT / HOME - BENEFIT FEATURE GRADIENTS */
+
+/* 1. Learn digital knowledge - Blue to Purple */
+html:not(.dark) body .benefit-list > .benefit-item:nth-child(1) {
+    background: linear-gradient(115deg, #7188E8 0%, #B19AEF 100%) !important;
+    background-color: transparent !important;
+}
+
+/* 2. Practise with purpose - Cyan to Sky Blue */
+html:not(.dark) body .benefit-list > .benefit-item:nth-child(2) {
+    background: linear-gradient(115deg, #48B9D9 0%, #A0D9F2 100%) !important;
+    background-color: transparent !important;
+}
+
+/* 3. Create earning opportunities - Green to Mint */
+html:not(.dark) body .benefit-list > .benefit-item:nth-child(3) {
+    background: linear-gradient(115deg, #45BF89 0%, #A1E8BD 100%) !important;
+    background-color: transparent !important;
+}
+

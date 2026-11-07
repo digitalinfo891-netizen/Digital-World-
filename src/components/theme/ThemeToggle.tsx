@@ -1,19 +1,28 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { Monitor, Moon, Sun } from "lucide-react";
 
 export default function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
+  const { theme, resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   if (!mounted) {
-    return <span aria-hidden="true" className="theme-toggle-placeholder" />;
+    return (
+      <span
+        aria-hidden="true"
+        className="theme-toggle-placeholder"
+      />
+    );
   }
 
-  const isDark = theme === "dark";
+  const isDark = resolvedTheme === "dark";
+
   return (
     <button
       type="button"
@@ -22,7 +31,13 @@ export default function ThemeToggle() {
       aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
       title={`Switch to ${isDark ? "light" : "dark"} mode`}
     >
-      {isDark ? <Sun size={17} /> : theme === "system" ? <Monitor size={17} /> : <Moon size={17} />}
+      {theme === "system" ? (
+        <Monitor size={17} />
+      ) : isDark ? (
+        <Sun size={17} />
+      ) : (
+        <Moon size={17} />
+      )}
       <span>{isDark ? "Light" : "Dark"}</span>
     </button>
   );

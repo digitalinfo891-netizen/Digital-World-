@@ -108,7 +108,7 @@ export default function HomePage() {
           <div className="nav-links">
             <Link className="nav-link nav-active" href="/">Home</Link>
             <Link className="nav-link" href="/learn-skills">Learn Skills</Link>
-            <Link className="nav-link" href="/categories">Categories</Link>
+            <Link className="nav-link" href="/courses">Courses</Link>
             <Link className="nav-link" href="/about">About Us</Link>
           </div>
 
@@ -350,6 +350,7 @@ export default function HomePage() {
     </main>
   );
 }
+
 
 
 

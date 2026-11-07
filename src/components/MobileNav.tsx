@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { Menu, X, ArrowRight } from "lucide-react";
@@ -7,7 +7,7 @@ import ThemeToggle from "@/components/theme/ThemeToggle";
 const links = [
   { label: "Home", href: "/" },
   { label: "Learn Skills", href: "/learn-skills" },
-  { label: "Categories", href: "/categories" },
+  { label: "Courses", href: "/courses" },
   { label: "About Us", href: "/about" },
 ];
 
@@ -52,3 +52,11 @@ export default function MobileNav() {
     </div>
   );
 }
+
+
+
+
+
+
+
+

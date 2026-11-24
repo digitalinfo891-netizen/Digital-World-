@@ -1,4 +1,5 @@
-﻿import { SignJWT, jwtVerify } from "jose";
+﻿
+import { SignJWT, jwtVerify } from "jose";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { UserRole } from "@prisma/client";
@@ -39,7 +40,7 @@ export async function getCurrentUser() {
 
     if (!payload.sub) return null;
 
-    return await prisma.user.findFirst({
+    return await prisma.user.findUnique({
       where: {
         id: payload.sub,
         isActive: true,
@@ -83,4 +84,3 @@ export const sessionCookieOptions = {
   path: "/",
   maxAge: SESSION_SECONDS,
 };
-

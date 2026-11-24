@@ -1,5 +1,13 @@
+﻿
 import { NextResponse } from "next/server";
-import { PaymentStatus, UserRole } from "@prisma/client";
+import {
+  CourseAccessType,
+  CourseEnrollmentSource,
+  CourseEnrollmentStatus,
+  PaymentPurpose,
+  PaymentStatus,
+  UserRole,
+} from "@prisma/client";
 import { getCurrentUser } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { sendTelegramAlert, telegramTimestamp } from "@/lib/telegram";
@@ -10,7 +18,7 @@ export async function POST(request: Request) {
   if (!admin) {
     return NextResponse.json(
       { error: "Please sign in first." },
-      { status: 401 },
+      { status: 401 }
     );
   }
 
@@ -20,7 +28,7 @@ export async function POST(request: Request) {
   ) {
     return NextResponse.json(
       { error: "Admin access required." },
-      { status: 403 },
+      { status: 403 }
     );
   }
 
@@ -31,14 +39,14 @@ export async function POST(request: Request) {
   } catch {
     return NextResponse.json(
       { error: "Invalid JSON body." },
-      { status: 400 },
+      { status: 400 }
     );
   }
 
-  if (!body || typeof body !== "object") {
+  if (!body || typeof body !== "object" || Array.isArray(body)) {
     return NextResponse.json(
       { error: "Invalid request body." },
-      { status: 400 },
+      { status: 400 }
     );
   }
 
@@ -52,14 +60,14 @@ export async function POST(request: Request) {
   if (!paymentId || (action !== "confirm" && action !== "reject")) {
     return NextResponse.json(
       { error: "Provide a payment ID and action of confirm or reject." },
-      { status: 400 },
+      { status: 400 }
     );
   }
 
   if (adminNote.length > 1000) {
     return NextResponse.json(
       { error: "Admin note is too long." },
-      { status: 400 },
+      { status: 400 }
     );
   }
 
@@ -70,20 +78,46 @@ export async function POST(request: Request) {
       });
 
       if (!payment) {
-        return { error: "Payment not found.", httpStatus: 404 } as const;
+        return {
+          error: "Payment not found.",
+          httpStatus: 404,
+        } as const;
       }
 
+      // Idempotency: already confirmed payments must not grant access twice.
       if (payment.status === PaymentStatus.CONFIRMED) {
-        const entitlement = await tx.entitlement.findUnique({
-          where: { paymentId: payment.id },
-        });
+        if (payment.purpose === PaymentPurpose.LIFETIME_MEMBERSHIP) {
+          const entitlement = await tx.entitlement.findUnique({
+            where: { paymentId: payment.id },
+          });
 
-        if (entitlement && !entitlement.revokedAt) {
-          return {
-            message: "This payment is already confirmed and access is active.",
-            paymentId: payment.id,
-            paymentStatus: payment.status,
-          } as const;
+          if (entitlement && !entitlement.revokedAt) {
+            return {
+              message: "This membership payment is already confirmed and access is active.",
+              paymentId: payment.id,
+              paymentStatus: payment.status,
+            } as const;
+          }
+        }
+
+        if (
+          payment.purpose === PaymentPurpose.COURSE_PURCHASE &&
+          payment.courseId
+        ) {
+          const enrollment = await tx.courseEnrollment.findUnique({
+            where: { paymentId: payment.id },
+          });
+
+          if (
+            enrollment &&
+            enrollment.status !== CourseEnrollmentStatus.REVOKED
+          ) {
+            return {
+              message: "This course payment is already confirmed and enrollment exists.",
+              paymentId: payment.id,
+              paymentStatus: payment.status,
+            } as const;
+          }
         }
 
         return {
@@ -99,16 +133,7 @@ export async function POST(request: Request) {
         } as const;
       }
 
-      if (
-        action === "confirm" &&
-        (!payment.amount.equals(190) || payment.currency !== "INR")
-      ) {
-        return {
-          error: "Payment amount or currency does not match the 190 INR price.",
-          httpStatus: 409,
-        } as const;
-      }
-
+      // Rejection does not grant any access or rewards.
       if (action === "reject") {
         const rejectedCount = await tx.payment.updateMany({
           where: {
@@ -130,21 +155,101 @@ export async function POST(request: Request) {
           } as const;
         }
 
-        const rejected = { id: payment.id, status: PaymentStatus.REJECTED };
-        return { payment: rejected, message: "Payment rejected." } as const;
+        return {
+          payment: {
+            id: payment.id,
+            status: PaymentStatus.REJECTED,
+          },
+          message: "Payment rejected.",
+        } as const;
       }
 
-      const existingEntitlement = await tx.entitlement.findUnique({
-        where: { userId: payment.userId },
-      });
-
-      if (existingEntitlement && !existingEntitlement.revokedAt) {
+      // The amount is a snapshot stored when the payment was created.
+      // Do not compare against today's configured membership/course price.
+      if (
+        payment.currency !== "INR" ||
+        !payment.amount.gt(0)
+      ) {
         return {
-          error: "This learner already has active lifetime access.",
+          error: "Payment amount or currency is invalid. Verify the payment details.",
           httpStatus: 409,
         } as const;
       }
 
+      let courseTitle: string | null = null;
+
+      // Validate individual course purchases before confirming.
+      if (payment.purpose === PaymentPurpose.COURSE_PURCHASE) {
+        if (!payment.courseId) {
+          return {
+            error: "Course purchase is missing its course reference.",
+            httpStatus: 409,
+          } as const;
+        }
+
+        const course = await tx.course.findUnique({
+          where: { id: payment.courseId },
+          select: {
+            id: true,
+            title: true,
+            status: true,
+            accessType: true,
+          },
+        });
+
+        if (!course || course.status !== "PUBLISHED") {
+          return {
+            error: "The purchased course is unavailable or unpublished.",
+            httpStatus: 409,
+          } as const;
+        }
+
+        if (course.accessType !== CourseAccessType.PAID) {
+          return {
+            error: "This course is not configured for individual purchases.",
+            httpStatus: 409,
+          } as const;
+        }
+
+        courseTitle = course.title;
+
+        const existingEnrollment = await tx.courseEnrollment.findUnique({
+          where: {
+            userId_courseId: {
+              userId: payment.userId,
+              courseId: course.id,
+            },
+          },
+        });
+
+        if (
+          existingEnrollment &&
+          existingEnrollment.status !== CourseEnrollmentStatus.REVOKED
+        ) {
+          return {
+            error: "This learner already has an enrollment for this course.",
+            httpStatus: 409,
+          } as const;
+        }
+      } else if (payment.purpose === PaymentPurpose.LIFETIME_MEMBERSHIP) {
+        const existingEntitlement = await tx.entitlement.findUnique({
+          where: { userId: payment.userId },
+        });
+
+        if (existingEntitlement && !existingEntitlement.revokedAt) {
+          return {
+            error: "This learner already has active lifetime access.",
+            httpStatus: 409,
+          } as const;
+        }
+      } else {
+        return {
+          error: "Unsupported payment purpose.",
+          httpStatus: 409,
+        } as const;
+      }
+
+      // Atomically claim the payment for confirmation.
       const confirmedCount = await tx.payment.updateMany({
         where: {
           id: payment.id,
@@ -165,117 +270,210 @@ export async function POST(request: Request) {
         } as const;
       }
 
-      const confirmed = {
+      const confirmedPayment = {
         id: payment.id,
         userId: payment.userId,
         status: PaymentStatus.CONFIRMED,
+        purpose: payment.purpose,
+        amount: payment.amount.toString(),
+        currency: payment.currency,
       };
 
-      if (existingEntitlement) {
-        await tx.entitlement.update({
+      // LIFETIME MEMBERSHIP: grant lifetime entitlement.
+      if (payment.purpose === PaymentPurpose.LIFETIME_MEMBERSHIP) {
+        const existingEntitlement = await tx.entitlement.findUnique({
           where: { userId: payment.userId },
-          data: {
-            paymentId: payment.id,
-            grantedAt: new Date(),
-            revokedAt: null,
-            reason: "Lifetime access granted after verified 190 INR payment.",
-          },
-        });
-      } else {
-        await tx.entitlement.create({
-          data: {
-            userId: payment.userId,
-            paymentId: payment.id,
-            reason: "Lifetime access granted after verified 190 INR payment.",
-          },
-        });
-      }
-
-      // Award up to three referral bonuses per referring learner.
-      // Lock the referrer's row so concurrent confirmations cannot exceed the cap.
-      const learner = await tx.user.findUnique({
-        where: { id: payment.userId },
-        select: { referredById: true },
-      });
-
-      let referralPointsAwarded = false;
-      let referralLimitReached = false;
-
-      if (learner?.referredById && learner.referredById !== payment.userId) {
-        const existingReferralReward = await tx.rewardLedger.findUnique({
-          where: { referredUserId: payment.userId },
-          select: { id: true },
         });
 
-        if (!existingReferralReward) {
-          // PostgreSQL row lock serializes reward-cap checks for this referrer.
-          await tx.$queryRaw`SELECT "id" FROM "User" WHERE "id" = ${learner.referredById} FOR UPDATE`;
-
-          const successfulReferralRewards = await tx.rewardLedger.count({
-            where: {
-              userId: learner.referredById,
-              type: "REFERRAL_BONUS",
+        if (existingEntitlement) {
+          await tx.entitlement.update({
+            where: { userId: payment.userId },
+            data: {
+              paymentId: payment.id,
+              grantedAt: new Date(),
+              revokedAt: null,
+              reason: `Lifetime access granted after verified ${payment.amount.toString()} INR payment.`,
             },
           });
+        } else {
+          await tx.entitlement.create({
+            data: {
+              userId: payment.userId,
+              paymentId: payment.id,
+              reason: `Lifetime access granted after verified ${payment.amount.toString()} INR payment.`,
+            },
+          });
+        }
 
-          if (successfulReferralRewards < 3) {
-            await tx.rewardLedger.create({
-              data: {
+        // Referral bonuses apply only to lifetime membership purchases.
+        const learner = await tx.user.findUnique({
+          where: { id: payment.userId },
+          select: { referredById: true },
+        });
+
+        let referralPointsAwarded = false;
+        let referralLimitReached = false;
+
+        if (
+          learner?.referredById &&
+          learner.referredById !== payment.userId
+        ) {
+          const existingReferralReward = await tx.rewardLedger.findUnique({
+            where: { referredUserId: payment.userId },
+            select: { id: true },
+          });
+
+          if (!existingReferralReward) {
+            await tx.$queryRaw`
+              SELECT "id"
+              FROM "User"
+              WHERE "id" = ${learner.referredById}
+              FOR UPDATE
+            `;
+
+            const successfulReferralRewards = await tx.rewardLedger.count({
+              where: {
                 userId: learner.referredById,
-                points: 100,
                 type: "REFERRAL_BONUS",
-                description: "Reward for a referral's confirmed 190 INR payment.",
-                referredUserId: payment.userId,
-                paymentId: payment.id,
               },
             });
 
-            referralPointsAwarded = true;
-          } else {
-            referralLimitReached = true;
+            if (successfulReferralRewards < 3) {
+              await tx.rewardLedger.create({
+                data: {
+                  userId: learner.referredById,
+                  points: 100,
+                  type: "REFERRAL_BONUS",
+                  description: `Reward for a referral's confirmed lifetime membership payment.`,
+                  referredUserId: payment.userId,
+                  paymentId: payment.id,
+                },
+              });
+
+              referralPointsAwarded = true;
+            } else {
+              referralLimitReached = true;
+            }
           }
         }
+
+        return {
+          payment: confirmedPayment,
+          message: "Payment confirmed and lifetime entitlement granted.",
+          referralPointsAwarded,
+          referralLimitReached,
+          notification: {
+            userId: payment.userId,
+            paymentId: payment.id,
+            purpose: payment.purpose,
+            amount: payment.amount.toString(),
+            currency: payment.currency,
+            courseTitle: null,
+          },
+        } as const;
       }
 
+      // COURSE PURCHASE: create enrollment, never lifetime entitlement.
+      if (payment.purpose === PaymentPurpose.COURSE_PURCHASE) {
+        const existingEnrollment = await tx.courseEnrollment.findUnique({
+          where: {
+            userId_courseId: {
+              userId: payment.userId,
+              courseId: payment.courseId!,
+            },
+          },
+        });
+
+        if (existingEnrollment) {
+          await tx.courseEnrollment.update({
+            where: { id: existingEnrollment.id },
+            data: {
+              paymentId: payment.id,
+              source: CourseEnrollmentSource.PURCHASE,
+              status: CourseEnrollmentStatus.ACTIVE,
+              enrolledAt: new Date(),
+              completedAt: null,
+              revokedAt: null,
+            },
+          });
+        } else {
+          await tx.courseEnrollment.create({
+            data: {
+              userId: payment.userId,
+              courseId: payment.courseId!,
+              paymentId: payment.id,
+              source: CourseEnrollmentSource.PURCHASE,
+              status: CourseEnrollmentStatus.ACTIVE,
+            },
+          });
+        }
+
+        return {
+          payment: confirmedPayment,
+          message: "Course payment confirmed and course enrollment activated.",
+          notification: {
+            userId: payment.userId,
+            paymentId: payment.id,
+            purpose: payment.purpose,
+            amount: payment.amount.toString(),
+            currency: payment.currency,
+            courseTitle,
+          },
+        } as const;
+      }
 
       return {
-        payment: confirmed,
-        message: "Payment confirmed and lifetime entitlement granted.",
-        referralPointsAwarded,
-        referralLimitReached,
+        error: "Unsupported payment purpose.",
+        httpStatus: 409,
       } as const;
     });
 
     if ("error" in result) {
       return NextResponse.json(
         { error: result.error },
-        { status: result.httpStatus },
+        { status: result.httpStatus }
       );
     }
 
-    if ("payment" in result && result.payment && "userId" in result.payment && result.payment.status === PaymentStatus.CONFIRMED) {
+    // Send notifications only after the database transaction succeeds.
+    if ("notification" in result && result.notification) {
+      const notification = result.notification;
+
       try {
         const learner = await prisma.user.findUnique({
-          where: { id: result.payment.userId },
-          select: { name: true, email: true, phoneE164: true },
+          where: { id: notification.userId },
+          select: {
+            name: true,
+            email: true,
+            phoneE164: true,
+          },
         });
 
+        const isMembership =
+          notification.purpose === PaymentPurpose.LIFETIME_MEMBERSHIP;
+
         void sendTelegramAlert([
-          "💳 DIGITAL WORLD — PAYMENT CONFIRMED",
+          "ðŸ’³ DIGITAL WORLD â€” PAYMENT CONFIRMED",
           "",
           `Member: ${learner?.name || "Member"}`,
           `Mobile: ${learner?.phoneE164 || "Not available"}`,
           `Email: ${learner?.email || "Not provided"}`,
-          "Amount: 190 INR",
-          `Payment ID: ${result.payment.id}`,
-          "Status: Confirmed",
-          "Access: Lifetime access granted",
+          `Amount: ${notification.amount} ${notification.currency}`,
+          `Payment ID: ${notification.paymentId}`,
+          `Purpose: ${isMembership ? "Lifetime Membership" : "Course Purchase"}`,
+          ...(notification.courseTitle
+            ? [`Course: ${notification.courseTitle}`]
+            : []),
+          `Access: ${isMembership ? "Lifetime access granted" : "Course enrollment activated"}`,
           `Time: ${telegramTimestamp()}`,
         ].join("\n"));
 
-        if ("referralPointsAwarded" in result && result.referralPointsAwarded) {
+        if (
+          "referralPointsAwarded" in result &&
+          result.referralPointsAwarded
+        ) {
           const reward = await prisma.rewardLedger.findUnique({
-            where: { referredUserId: result.payment.userId },
+            where: { referredUserId: notification.userId },
             select: { points: true, userId: true },
           });
 
@@ -286,19 +484,19 @@ export async function POST(request: Request) {
                 select: { name: true },
               }),
               prisma.user.findUnique({
-                where: { id: result.payment.userId },
+                where: { id: notification.userId },
                 select: { name: true },
               }),
             ]);
 
             void sendTelegramAlert([
-              "🎁 DIGITAL WORLD — REFERRAL REWARD AWARDED",
+              "ðŸŽ DIGITAL WORLD â€” REFERRAL REWARD AWARDED",
               "",
               `Sponsor: ${sponsor?.name || "Member"}`,
               `Referred member: ${referredMember?.name || "Member"}`,
               `Reward points: ${reward.points}`,
               "Status: Awarded",
-              `Payment ID: ${result.payment.id}`,
+              `Payment ID: ${notification.paymentId}`,
               `Time: ${telegramTimestamp()}`,
             ].join("\n"));
           }
@@ -306,18 +504,21 @@ export async function POST(request: Request) {
       } catch {
         console.error("[Telegram] Could not prepare payment/reward alerts.");
       }
+
+      const { notification: _notification, ...response } = result;
+      return NextResponse.json(response);
     }
 
     return NextResponse.json(result);
-  } catch {
-    console.error("Admin payment review failed.");
+  } catch (error) {
+    console.error("Admin payment review failed:", error);
 
     return NextResponse.json(
       {
         error:
           "Unable to process payment. Check its current status and try again if appropriate.",
       },
-      { status: 409 },
+      { status: 409 }
     );
   }
 }

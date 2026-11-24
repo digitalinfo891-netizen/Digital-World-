@@ -54,6 +54,14 @@ enum RewardLedgerType {
   REFERRAL_BONUS
   REDEMPTION
   ADMIN_ADJUSTMENT
+  POINTS_TO_USDT
+}
+
+enum UsdtWithdrawalStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  COMPLETED
 }
 
 enum RewardRedemptionStatus {
@@ -79,15 +87,22 @@ model User {
   referralCode  String?   @unique
   referredById  String?
 
-  payments     Payment[]
-  entitlement  Entitlement?
-  progress     LessonProgress[]
-  quizAttempts QuizAttempt[]
-  submissions  ProjectSubmission[]
-  referrer     User?               @relation("UserReferrals", fields: [referredById], references: [id], onDelete: SetNull)
-  referrals    User[]              @relation("UserReferrals")
-  rewardLedger RewardLedger[]
-  redemptions  RewardRedemption[]
+  payments           Payment[]
+  entitlement        Entitlement?
+  progress           LessonProgress[]
+  quizAttempts       QuizAttempt[]
+  submissions        ProjectSubmission[]
+  referrer           User?               @relation("UserReferrals", fields: [referredById], references: [id], onDelete: SetNull)
+  referrals          User[]              @relation("UserReferrals")
+  rewardLedger       RewardLedger[]
+  redemptions        RewardRedemption[]
+  usdtWallet         UsdtWallet?
+  conversions        RewardConversion[]
+  usdtLedger         UsdtLedger[]
+  withdrawals        UsdtWithdrawal[]
+  enrollments        CourseEnrollment[]
+  certificates       Certificate[]       @relation("CertificateRecipient")
+  certificatesIssued Certificate[]       @relation("CertificateIssuer")
 }
 
 model Payment {
@@ -110,8 +125,12 @@ model Payment {
   verifiedBy     String?
   verifiedAt     DateTime?
 
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+  purpose          PaymentPurpose    @default(LIFETIME_MEMBERSHIP)
+  courseId         String?
+  course           Course?           @relation(fields: [courseId], references: [id], onDelete: SetNull)
+  courseEnrollment CourseEnrollment?
 
   user        User         @relation(fields: [userId], references: [id])
   entitlement Entitlement?
@@ -141,9 +160,11 @@ model RewardLedger {
   referredUserId String?          @unique
   paymentId      String?          @unique
   redemptionId   String?          @unique
+  conversionId   String?          @unique
   createdAt      DateTime         @default(now())
 
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user       User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  conversion RewardConversion? @relation("RewardLedgerConversion", fields: [conversionId], references: [id], onDelete: Restrict)
 
   @@index([userId, createdAt])
 }
@@ -168,15 +189,22 @@ model RewardRedemption {
 }
 
 model Course {
-  id          String       @id @default(cuid())
-  title       String
-  slug        String       @unique
-  description String
-  thumbnail   String?
-  status      CourseStatus @default(DRAFT)
-  sortOrder   Int          @default(0)
-  createdAt   DateTime     @default(now())
-  updatedAt   DateTime     @updatedAt
+  id                 String           @id @default(cuid())
+  title              String
+  slug               String           @unique
+  description        String
+  thumbnail          String?
+  status             CourseStatus     @default(DRAFT)
+  sortOrder          Int              @default(0)
+  createdAt          DateTime         @default(now())
+  updatedAt          DateTime         @updatedAt
+  accessType         CourseAccessType @default(MEMBERSHIP)
+  price              Decimal?         @db.Decimal(18, 8)
+  certificateEnabled Boolean          @default(false)
+
+  payments     Payment[]
+  enrollments  CourseEnrollment[]
+  certificates Certificate[]
 
   modules CourseModule[]
 }
@@ -189,6 +217,50 @@ model CourseModule {
 
   course  Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
   lessons Lesson[]
+}
+
+model CourseEnrollment {
+  id          String                 @id @default(cuid())
+  userId      String
+  courseId    String
+  paymentId   String?                @unique
+  source      CourseEnrollmentSource
+  status      CourseEnrollmentStatus @default(ACTIVE)
+  enrolledAt  DateTime               @default(now())
+  completedAt DateTime?
+  revokedAt   DateTime?
+
+  user    User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  course  Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  payment Payment? @relation(fields: [paymentId], references: [id], onDelete: Restrict)
+
+  @@unique([userId, courseId])
+  @@index([userId, status])
+  @@index([courseId, status])
+}
+
+model PlatformSetting {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     Json
+  updatedAt DateTime @updatedAt
+}
+
+model Certificate {
+  id                String    @id @default(cuid())
+  userId            String
+  courseId          String
+  certificateNumber String    @unique
+  issuedById        String
+  issuedAt          DateTime  @default(now())
+  revokedAt         DateTime?
+
+  user     User   @relation("CertificateRecipient", fields: [userId], references: [id], onDelete: Restrict)
+  course   Course @relation(fields: [courseId], references: [id], onDelete: Restrict)
+  issuedBy User   @relation("CertificateIssuer", fields: [issuedById], references: [id], onDelete: Restrict)
+
+  @@unique([userId, courseId])
+  @@index([courseId, issuedAt])
 }
 
 model Lesson {
@@ -299,4 +371,96 @@ model AuditLog {
 
   @@index([entityType, entityId])
   @@index([createdAt])
+}
+
+model UsdtWallet {
+  id        String   @id @default(cuid())
+  userId    String   @unique
+  network   String   @default("BEP20")
+  address   String
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([address])
+}
+
+model RewardConversion {
+  id            String   @id @default(cuid())
+  userId        String
+  points        Int
+  pointsPerUsdt Int      @default(100)
+  usdtAmount    Decimal  @db.Decimal(18, 8)
+  status        String   @default("COMPLETED")
+  createdAt     DateTime @default(now())
+
+  user         User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  usdtLedger   UsdtLedger?   @relation("UsdtConversionLedger")
+  rewardLedger RewardLedger? @relation("RewardLedgerConversion")
+
+  @@index([userId, createdAt])
+}
+
+model UsdtLedger {
+  id           String   @id @default(cuid())
+  userId       String
+  amount       Decimal  @db.Decimal(18, 8)
+  type         String
+  description  String
+  conversionId String?  @unique
+  withdrawalId String?  @unique
+  createdAt    DateTime @default(now())
+
+  user       User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  withdrawal UsdtWithdrawal?   @relation("UsdtWithdrawalLedger", fields: [withdrawalId], references: [id], onDelete: Restrict)
+  conversion RewardConversion? @relation("UsdtConversionLedger", fields: [conversionId], references: [id], onDelete: Restrict)
+
+  @@index([userId, createdAt])
+}
+
+model UsdtWithdrawal {
+  id              String               @id @default(cuid())
+  userId          String
+  walletAddress   String
+  network         String               @default("BEP20")
+  amount          Decimal              @db.Decimal(18, 8)
+  status          UsdtWithdrawalStatus @default(PENDING)
+  adminNote       String?
+  reviewedBy      String?
+  reviewedAt      DateTime?
+  transactionHash String?              @unique
+  completedAt     DateTime?
+  createdAt       DateTime             @default(now())
+  updatedAt       DateTime             @updatedAt
+
+  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  ledgerEntry UsdtLedger? @relation("UsdtWithdrawalLedger")
+
+  @@index([userId, status])
+  @@index([status, createdAt])
+}
+
+enum PaymentPurpose {
+  LIFETIME_MEMBERSHIP
+  COURSE_PURCHASE
+}
+
+enum CourseAccessType {
+  FREE
+  MEMBERSHIP
+  PAID
+}
+
+enum CourseEnrollmentSource {
+  FREE
+  MEMBERSHIP
+  PURCHASE
+}
+
+enum CourseEnrollmentStatus {
+  ACTIVE
+  COMPLETED
+  REVOKED
 }

@@ -8753,3 +8753,2189 @@ html.dark .dw-redeem-page [class*="border-slate-"] {
 }
 
 /* END DARK MODE CONTRAST FIX */
+
+
+/* =========================================================
+   DIGITAL WORLD COURSE DETAIL - CONSOLIDATED THEME
+   Scoped exclusively to the course detail page
+========================================================= */
+
+/* Page background */
+html:not(.dark) body .dw-dashboard-content main.course-details-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #dceaff 0%, #e8eaff 52%, #eee5ff 100%) !important;
+  color: #172033 !important;
+}
+
+html.dark body .dw-dashboard-content main.course-details-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #080f20 0%, #111a35 52%, #21163d 100%) !important;
+  color: #f8fafc !important;
+}
+
+/* Hero - light theme */
+html:not(.dark) body .dw-dashboard-content main.course-details-page > section.course-details-hero {
+  background: linear-gradient(115deg, #2446ad 0%, #3157d5 50%, #7047d3 100%) !important;
+  background-color: #3157d5 !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 0 0 24px 24px;
+  box-shadow: 0 18px 45px rgba(36,70,173,.20);
+}
+
+html:not(.dark) body .dw-dashboard-content main.course-details-page > section.course-details-hero * {
+  color: #ffffff !important;
+}
+
+/* Hero - dark theme */
+html.dark body .dw-dashboard-content main.course-details-page > section.course-details-hero {
+  background: linear-gradient(115deg, #101f46 0%, #25245f 52%, #45216f 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid #475569;
+  border-radius: 0 0 24px 24px;
+}
+
+html.dark body .dw-dashboard-content main.course-details-page > section.course-details-hero * {
+  color: #ffffff !important;
+}
+
+/* Light theme curriculum panel */
+html:not(.dark) body .dw-dashboard-content main.course-details-page aside {
+  background: #ffffff !important;
+  color: #172033 !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 12px 35px rgba(31,55,105,.08);
+}
+
+html:not(.dark) body .dw-dashboard-content main.course-details-page aside > div:first-child {
+  background: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+
+html:not(.dark) body .dw-dashboard-content main.course-details-page aside h2 {
+  color: #0f172a !important;
+}
+
+html:not(.dark) body .dw-dashboard-content main.course-details-page aside > div:first-child p {
+  color: #64748b !important;
+}
+
+/* Module cards */
+html:not(.dark) body .dw-dashboard-content main.course-details-page aside .bg-slate-100 {
+  background: #f1f5f9 !important;
+}
+
+html:not(.dark) body .dw-dashboard-content main.course-details-page aside .bg-slate-100 p:first-child {
+  color: #2563eb !important;
+}
+
+html:not(.dark) body .dw-dashboard-content main.course-details-page aside .bg-slate-100 h3 {
+  color: #0f172a !important;
+}
+
+html:not(.dark) body .dw-dashboard-content main.course-details-page aside .bg-slate-100 p:last-child {
+  color: #64748b !important;
+}
+
+/* Lesson list */
+html:not(.dark) body .dw-dashboard-content main.course-details-page aside button {
+  color: #334155 !important;
+}
+
+html:not(.dark) body .dw-dashboard-content main.course-details-page aside button > span > span:first-child {
+  color: #334155 !important;
+}
+
+html:not(.dark) body .dw-dashboard-content main.course-details-page aside button > span > span:last-child {
+  color: #64748b !important;
+}
+
+html:not(.dark) body .dw-dashboard-content main.course-details-page aside button:hover {
+  background-color: #f1f5f9 !important;
+}
+
+html:not(.dark) body .dw-dashboard-content main.course-details-page aside button.bg-blue-50,
+html:not(.dark) body .dw-dashboard-content main.course-details-page aside button[class*="bg-blue-50"] {
+  background-color: #eff6ff !important;
+  color: #1d4ed8 !important;
+}
+
+/* Light theme lesson viewer */
+html:not(.dark) body .dw-dashboard-content main.course-details-page > section:not(.course-details-hero) > div > div {
+  color: #172033 !important;
+}
+
+html:not(.dark) body .dw-dashboard-content main.course-details-page > section:not(.course-details-hero) > div > div h2,
+html:not(.dark) body .dw-dashboard-content main.course-details-page > section:not(.course-details-hero) > div > div h3 {
+  color: #0f172a !important;
+}
+
+html:not(.dark) body .dw-dashboard-content main.course-details-page > section:not(.course-details-hero) > div > div p,
+html:not(.dark) body .dw-dashboard-content main.course-details-page > section:not(.course-details-hero) > div > div article {
+  color: #475569 !important;
+}
+
+/* Dark theme curriculum and viewer */
+html.dark body .dw-dashboard-content main.course-details-page aside,
+html.dark body .dw-dashboard-content main.course-details-page > section:not(.course-details-hero) > div > div {
+  background: #111c32 !important;
+  color: #f1f5f9 !important;
+  border-color: #334155 !important;
+}
+
+html.dark body .dw-dashboard-content main.course-details-page aside > div:first-child {
+  background: #111c32 !important;
+  border-color: #334155 !important;
+}
+
+html.dark body .dw-dashboard-content main.course-details-page aside .bg-slate-100,
+html.dark body .dw-dashboard-content main.course-details-page aside .bg-slate-800 {
+  background: #1e293b !important;
+}
+
+html.dark body .dw-dashboard-content main.course-details-page aside h2,
+html.dark body .dw-dashboard-content main.course-details-page aside h3,
+html.dark body .dw-dashboard-content main.course-details-page aside p,
+html.dark body .dw-dashboard-content main.course-details-page aside button,
+html.dark body .dw-dashboard-content main.course-details-page aside button span,
+html.dark body .dw-dashboard-content main.course-details-page > section:not(.course-details-hero) > div > div h2,
+html.dark body .dw-dashboard-content main.course-details-page > section:not(.course-details-hero) > div > div h3,
+html.dark body .dw-dashboard-content main.course-details-page > section:not(.course-details-hero) > div > div p {
+  color: #e2e8f0 !important;
+}
+
+html.dark body .dw-dashboard-content main.course-details-page aside button:hover {
+  background: #263650 !important;
+}
+
+html.dark body .dw-dashboard-content main.course-details-page aside button:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}
+
+/* Responsive hero */
+@media (max-width: 768px) {
+  .dw-dashboard-content main.course-details-page > section.course-details-hero {
+    padding: 24px 16px !important;
+    border-radius: 0 0 18px 18px;
+  }
+}
+
+/* END DIGITAL WORLD COURSE DETAIL - CONSOLIDATED THEME */
+
+/* COURSE CURRICULUM - LIGHT THEME LESSON ROW FIX */
+
+/* Keep inactive lesson list background white */
+html:not(.dark) body .dw-dashboard-content main.course-details-page aside .mt-2.space-y-1 {
+  background-color: #ffffff !important;
+}
+
+/* Inactive lesson rows */
+html:not(.dark) body .dw-dashboard-content main.course-details-page aside .mt-2.space-y-1 button:not([class*="bg-blue-50"]) {
+  background-color: #ffffff !important;
+  color: #334155 !important;
+}
+
+/* Inactive lesson titles and duration */
+html:not(.dark) body .dw-dashboard-content main.course-details-page aside .mt-2.space-y-1 button:not([class*="bg-blue-50"]) span {
+  color: #334155 !important;
+}
+
+/* Inactive lesson icons */
+html:not(.dark) body .dw-dashboard-content main.course-details-page aside .mt-2.space-y-1 button:not([class*="bg-blue-50"]) svg {
+  color: #64748b !important;
+  stroke: #64748b !important;
+}
+
+/* Inactive lesson hover */
+html:not(.dark) body .dw-dashboard-content main.course-details-page aside .mt-2.space-y-1 button:not([class*="bg-blue-50"]):hover {
+  background-color: #f1f5f9 !important;
+}
+
+/* Selected lesson */
+html:not(.dark) body .dw-dashboard-content main.course-details-page aside .mt-2.space-y-1 button[class*="bg-blue-50"] {
+  background-color: #eff6ff !important;
+  color: #1d4ed8 !important;
+  border: 1px solid #bfdbfe;
+}
+
+/* Selected lesson text and icon */
+html:not(.dark) body .dw-dashboard-content main.course-details-page aside .mt-2.space-y-1 button[class*="bg-blue-50"] span,
+html:not(.dark) body .dw-dashboard-content main.course-details-page aside .mt-2.space-y-1 button[class*="bg-blue-50"] svg {
+  color: #1d4ed8 !important;
+  stroke: #1d4ed8 !important;
+}
+
+/* END COURSE CURRICULUM LIGHT THEME FIX */
+
+/* UNIFORM COURSE MODULE BACKGROUNDS - LIGHT THEME */
+
+html:not(.dark) body .dw-dashboard-content main.course-details-page aside .bg-slate-100 {
+  background-color: #f1f5f9 !important;
+  background-image: none !important;
+  border-radius: 14px !important;
+}
+
+/* Keep all module headings consistent */
+html:not(.dark) body .dw-dashboard-content main.course-details-page aside .bg-slate-100 h3 {
+  color: #0f172a !important;
+}
+
+html:not(.dark) body .dw-dashboard-content main.course-details-page aside .bg-slate-100 p {
+  color: #64748b !important;
+}
+
+/* UNIFORM COURSE MODULE BACKGROUNDS - DARK THEME */
+
+html.dark body .dw-dashboard-content main.course-details-page aside .bg-slate-100,
+html.dark body .dw-dashboard-content main.course-details-page aside .bg-slate-800 {
+  background-color: #1e293b !important;
+  background-image: none !important;
+  border-radius: 14px !important;
+}
+
+html.dark body .dw-dashboard-content main.course-details-page aside .bg-slate-100 h3,
+html.dark body .dw-dashboard-content main.course-details-page aside .bg-slate-100 p,
+html.dark body .dw-dashboard-content main.course-details-page aside .bg-slate-800 h3,
+html.dark body .dw-dashboard-content main.course-details-page aside .bg-slate-800 p {
+  color: #e2e8f0 !important;
+}
+
+/* FINAL FIX: IDENTICAL MODULE CONTAINERS AND CARDS */
+
+/* Reset every module wrapper */
+html:not(.dark) body .dw-dashboard-content
+main.course-details-page aside
+[class*="max-h-"] > div.mb-4 {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  padding: 0 !important;
+}
+
+/* Give every module card exactly the same background */
+html:not(.dark) body .dw-dashboard-content
+main.course-details-page aside
+[class*="max-h-"] > div.mb-4 > div.rounded-xl.bg-slate-100 {
+  background: #f1f5f9 !important;
+  background-color: #f1f5f9 !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-radius: 14px !important;
+  box-shadow: none !important;
+}
+
+/* Consistent module text */
+html:not(.dark) body .dw-dashboard-content
+main.course-details-page aside
+[class*="max-h-"] > div.mb-4 > div.rounded-xl.bg-slate-100 h3 {
+  color: #0f172a !important;
+}
+
+html:not(.dark) body .dw-dashboard-content
+main.course-details-page aside
+[class*="max-h-"] > div.mb-4 > div.rounded-xl.bg-slate-100 p {
+  color: #64748b !important;
+}
+
+/* Dark theme: identical module backgrounds */
+html.dark body .dw-dashboard-content
+main.course-details-page aside
+[class*="max-h-"] > div.mb-4 {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+html.dark body .dw-dashboard-content
+main.course-details-page aside
+[class*="max-h-"] > div.mb-4 > div.rounded-xl.bg-slate-100 {
+  background: #1e293b !important;
+  background-color: #1e293b !important;
+  background-image: none !important;
+  border-radius: 14px !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+html.dark body .dw-dashboard-content
+main.course-details-page aside
+[class*="max-h-"] > div.mb-4 > div.rounded-xl.bg-slate-100 h3,
+html.dark body .dw-dashboard-content
+main.course-details-page aside
+[class*="max-h-"] > div.mb-4 > div.rounded-xl.bg-slate-100 p {
+  color: #e2e8f0 !important;
+}
+
+/* END FINAL MODULE CONTAINER FIX */
+
+/* DIGITAL WORLD - COURSES PAGE FINAL READABILITY FIX */
+html:not(.dark) body .courses-page .courses-availability-card {
+  background: #eff6ff !important;
+  border-color: #bfdbfe !important;
+  color: #172554 !important;
+}
+
+html:not(.dark) body .courses-page .courses-availability-label {
+  color: #1d4ed8 !important;
+}
+
+html:not(.dark) body .courses-page .courses-availability-count {
+  color: #172033 !important;
+}
+
+html.dark body .courses-page .courses-availability-card {
+  background: #263653 !important;
+  border-color: #475569 !important;
+  color: #f8fafc !important;
+}
+
+html.dark body .courses-page .courses-availability-label {
+  color: #bfdbfe !important;
+}
+
+html.dark body .courses-page .courses-availability-count {
+  color: #ffffff !important;
+}
+
+html.dark body .courses-page .courses-library-panel input[type="search"] {
+  background: #1e293b !important;
+  color: #f8fafc !important;
+  border-color: #64748b !important;
+}
+
+html.dark body .courses-page .courses-library-panel input[type="search"]::placeholder {
+  color: #cbd5e1 !important;
+  opacity: 1 !important;
+}
+
+/* Compact top spacing inside the authenticated dashboard */
+body .courses-page > section:first-child {
+  padding-top: 8px !important;
+}
+
+@media (min-width: 640px) {
+  body .courses-page > section:first-child {
+    padding-top: 12px !important;
+  }
+}
+/* END DIGITAL WORLD COURSES READABILITY FIX */
+/* =========================================================
+   DIGITAL WORLD - GLOBAL AUTHENTICATED WORKSPACE BACKGROUND
+   Shared by Dashboard, Courses and future dashboard pages
+========================================================= */
+
+/* LIGHT MODE */
+html:not(.dark) body .dw-dashboard-content {
+  min-height: calc(100vh - 76px);
+  background:
+    radial-gradient(
+      ellipse at 8% 8%,
+      rgba(255, 255, 255, 0.34) 0%,
+      transparent 32%
+    ),
+    radial-gradient(
+      ellipse at 92% 12%,
+      rgba(124, 58, 237, 0.38) 0%,
+      transparent 38%
+    ),
+    radial-gradient(
+      ellipse at 50% 100%,
+      rgba(37, 99, 235, 0.30) 0%,
+      transparent 45%
+    ),
+    linear-gradient(
+      120deg,
+      #3b82f6 0%,
+      #6366f1 48%,
+      #7c3aed 100%
+    ) !important;
+  background-attachment: fixed !important;
+}
+
+/* DARK MODE */
+html.dark body .dw-dashboard-content {
+  min-height: calc(100vh - 76px);
+  background:
+    radial-gradient(
+      ellipse at 8% 8%,
+      rgba(59, 130, 246, 0.22) 0%,
+      transparent 34%
+    ),
+    radial-gradient(
+      ellipse at 95% 12%,
+      rgba(124, 58, 237, 0.30) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      ellipse at 50% 100%,
+      rgba(30, 64, 175, 0.22) 0%,
+      transparent 45%
+    ),
+    linear-gradient(
+      120deg,
+      #0b1730 0%,
+      #171b46 52%,
+      #321b63 100%
+    ) !important;
+  background-attachment: fixed !important;
+}
+
+/* Remove individual page backgrounds so the shared gradient shows through */
+html body .dw-dashboard-content > main,
+html body .dw-dashboard-content > .site-shell,
+html body .dw-dashboard-content > main.site-shell.courses-page {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Preserve individual content cards and panels */
+html body .dw-dashboard-content .courses-library-panel,
+html body .dw-dashboard-content article,
+html body .dw-dashboard-content .rounded-xl,
+html body .dw-dashboard-content .rounded-2xl {
+  /* Keep component-level backgrounds controlled by their own styles */
+}
+
+/* END GLOBAL AUTHENTICATED WORKSPACE BACKGROUND */
+/* DIGITAL WORLD - LEARNING LIBRARY BLUE BORDER */
+
+html:not(.dark) body .dw-dashboard-content .courses-library-panel {
+  border: 1.5px solid #3b82f6 !important;
+  box-shadow:
+    0 0 0 1px rgba(59, 130, 246, 0.12),
+    0 20px 60px rgba(37, 99, 235, 0.12) !important;
+}
+
+html.dark body .dw-dashboard-content .courses-library-panel {
+  border: 1.5px solid #60a5fa !important;
+  box-shadow:
+    0 0 0 1px rgba(96, 165, 250, 0.16),
+    0 20px 60px rgba(59, 130, 246, 0.14) !important;
+}
+
+/* END LEARNING LIBRARY BLUE BORDER */
+
+/* =========================================================
+   DIGITAL WORLD - MATCH COURSES BACKGROUND TO DASHBOARD
+========================================================= */
+
+/* Light theme: same strong blue-violet workspace gradient */
+html:not(.dark) body .dw-dashboard-content:has(.courses-page) {
+  background:
+    radial-gradient(
+      ellipse at 8% 12%,
+      rgba(255, 255, 255, 0.16) 0%,
+      transparent 34%
+    ),
+    radial-gradient(
+      ellipse at 95% 10%,
+      rgba(124, 58, 237, 0.30) 0%,
+      transparent 42%
+    ),
+    linear-gradient(
+      115deg,
+      #60a5fa 0%,
+      #6366f1 55%,
+      #7c5ce7 100%
+    ) !important;
+}
+
+/* Keep the course page transparent over the shared gradient */
+html:not(.dark) body .dw-dashboard-content .courses-page {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Dark theme: preserve the matching dark workspace gradient */
+html.dark body .dw-dashboard-content:has(.courses-page) {
+  background:
+    radial-gradient(
+      ellipse at 8% 10%,
+      rgba(59, 130, 246, 0.20) 0%,
+      transparent 35%
+    ),
+    radial-gradient(
+      ellipse at 95% 10%,
+      rgba(124, 58, 237, 0.28) 0%,
+      transparent 42%
+    ),
+    linear-gradient(
+      115deg,
+      #0b1730 0%,
+      #171b46 55%,
+      #321b63 100%
+    ) !important;
+}
+
+html.dark body .dw-dashboard-content .courses-page {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Keep Learning Library panel and its blue border */
+html:not(.dark) body .dw-dashboard-content .courses-library-panel {
+  background: rgba(255, 255, 255, 0.90) !important;
+  border: 1.5px solid #3b82f6 !important;
+}
+
+html.dark body .dw-dashboard-content .courses-library-panel {
+  background: rgba(15, 23, 42, 0.90) !important;
+  border: 1.5px solid #60a5fa !important;
+}
+
+/* END MATCHED DASHBOARD / COURSES BACKGROUND */
+
+/* =========================================================
+   DIGITAL WORLD - UNIFIED BLUE/VIOLET GRADIENT
+   Dashboard, Courses and all authenticated pages
+========================================================= */
+
+/* LIGHT MODE */
+html:not(.dark) body .dw-dashboard-content {
+  background:
+    radial-gradient(
+      ellipse at 8% 12%,
+      rgba(255, 255, 255, 0.16) 0%,
+      transparent 34%
+    ),
+    radial-gradient(
+      ellipse at 95% 10%,
+      rgba(124, 58, 237, 0.30) 0%,
+      transparent 42%
+    ),
+    linear-gradient(
+      115deg,
+      #60a5fa 0%,
+      #6366f1 55%,
+      #7c5ce7 100%
+    ) !important;
+  background-attachment: fixed !important;
+}
+
+/* DARK MODE */
+html.dark body .dw-dashboard-content {
+  background:
+    radial-gradient(
+      ellipse at 8% 10%,
+      rgba(59, 130, 246, 0.20) 0%,
+      transparent 35%
+    ),
+    radial-gradient(
+      ellipse at 95% 10%,
+      rgba(124, 58, 237, 0.28) 0%,
+      transparent 42%
+    ),
+    linear-gradient(
+      115deg,
+      #0b1730 0%,
+      #171b46 55%,
+      #321b63 100%
+    ) !important;
+  background-attachment: fixed !important;
+}
+
+/* Keep authenticated page backgrounds transparent */
+html body .dw-dashboard-content > main,
+html body .dw-dashboard-content > .site-shell {
+  background-color: transparent !important;
+}
+
+/* END UNIFIED WORKSPACE GRADIENT */
+
+/* =========================================================
+   DIGITAL WORLD - FINAL DASHBOARD GRADIENT OVERRIDE
+   Match Dashboard welcome panel with Courses blue-violet theme
+========================================================= */
+
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content > main {
+  background: linear-gradient(
+    125deg,
+    #60a5fa 0%,
+    #4f6ee8 48%,
+    #7654e8 100%
+  ) !important;
+  color: #ffffff !important;
+}
+
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content .welcome-banner {
+  background: linear-gradient(
+    115deg,
+    #2446ad 0%,
+    #3157d5 48%,
+    #7047d3 100%
+  ) !important;
+  border: 1.5px solid rgba(255,255,255,.55) !important;
+  box-shadow:
+    0 0 0 1px rgba(59,130,246,.15),
+    0 20px 55px rgba(37,99,235,.22) !important;
+}
+
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content .welcome-banner h1,
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content .welcome-banner h2,
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content .welcome-banner p,
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content .welcome-banner span {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Preserve readable account information card */
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content .account-status-panel {
+  background: #ffffff !important;
+  border: 1px solid #bfdbfe !important;
+  color: #172554 !important;
+}
+
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content .account-status-panel * {
+  color: #172554 !important;
+  -webkit-text-fill-color: #172554 !important;
+}
+
+/* Preserve workspace cards and their individual colors */
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content .dashboard-cards > article {
+  border-radius: 18px;
+  color: #172554 !important;
+}
+
+/* Dashboard action buttons */
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content .welcome-banner a.bg-white {
+  background: #ffffff !important;
+  color: #2446ad !important;
+  -webkit-text-fill-color: #2446ad !important;
+}
+
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content .welcome-banner a.border {
+  background: rgba(255,255,255,.12) !important;
+  border-color: rgba(255,255,255,.65) !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Dark theme remains unchanged */
+html.dark body .dw-dashboard-shell .dw-dashboard-content > main {
+  background: linear-gradient(
+    125deg,
+    #101b3b 0%,
+    #263f8e 52%,
+    #45216f 100%
+  ) !important;
+}
+
+/* =========================================================
+   DIGITAL WORLD - FINAL LIGHT THEME DASHBOARD POLISH
+========================================================= */
+
+/* Rich blue-purple gradient across the dashboard */
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content > main {
+  background: linear-gradient(
+    125deg,
+    #60a5fa 0%,
+    #4f6ee8 48%,
+    #7654e8 100%
+  ) !important;
+}
+
+/* Gradient welcome and workspace container */
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content .welcome-banner {
+  background: linear-gradient(
+    120deg,
+    #2446ad 0%,
+    #3157d5 48%,
+    #7047d3 100%
+  ) !important;
+}
+
+/* Workspace cards: force readable dark text */
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content
+.welcome-banner .dashboard-cards > article,
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content
+.welcome-banner .dashboard-cards > article * {
+  color: #172554 !important;
+  -webkit-text-fill-color: #172554 !important;
+}
+
+/* Card descriptions */
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content
+.welcome-banner .dashboard-cards > article p {
+  color: #334155 !important;
+  -webkit-text-fill-color: #334155 !important;
+}
+
+/* Card secondary labels */
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content
+.welcome-banner .dashboard-cards > article span {
+  color: #475569 !important;
+  -webkit-text-fill-color: #475569 !important;
+}
+
+/* Links inside workspace cards */
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content
+.welcome-banner .dashboard-cards > article a {
+  color: #1d4ed8 !important;
+  -webkit-text-fill-color: #1d4ed8 !important;
+}
+
+/* Blue action buttons retain white text */
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content
+.welcome-banner .dashboard-cards > article a.bg-blue-700,
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content
+.welcome-banner .dashboard-cards > article a.bg-blue-700 * {
+  background-color: #1d4ed8 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Referral and reward information panels */
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content
+.welcome-banner .dashboard-cards > article .bg-blue-50,
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content
+.welcome-banner .dashboard-cards > article .bg-slate-50,
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content
+.welcome-banner .dashboard-cards > article .bg-white {
+  color: #172554 !important;
+}
+
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content
+.welcome-banner .dashboard-cards > article .bg-blue-50 *,
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content
+.welcome-banner .dashboard-cards > article .bg-slate-50 *,
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content
+.welcome-banner .dashboard-cards > article .bg-white * {
+  color: #172554 !important;
+  -webkit-text-fill-color: #172554 !important;
+}
+
+/* Learner/Admin role badge */
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content
+.welcome-banner section > div > span {
+  color: #172554 !important;
+  -webkit-text-fill-color: #172554 !important;
+}
+
+/* Keep account status panel readable */
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content
+.welcome-banner .account-status-panel,
+html:not(.dark) body .dw-dashboard-shell .dw-dashboard-content
+.welcome-banner .account-status-panel * {
+  background-color: #ffffff;
+  color: #172554 !important;
+  -webkit-text-fill-color: #172554 !important;
+}
+
+/* =========================================================
+   DIGITAL WORLD - LEARNING PROGRESS PAGE THEME
+========================================================= */
+
+/* LIGHT MODE - Strong blue gradient */
+html:not(.dark) body .dw-progress-page .dw-progress-panel {
+  background: linear-gradient(
+    125deg,
+    #2563eb 0%,
+    #3b5ee8 48%,
+    #7654e8 100%
+  ) !important;
+  border-color: rgba(255,255,255,.55) !important;
+  box-shadow: 0 24px 65px rgba(30,64,175,.22) !important;
+}
+
+html:not(.dark) body .dw-progress-page .dw-progress-label {
+  background: rgba(255,255,255,.16) !important;
+  border-color: rgba(255,255,255,.40) !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+html:not(.dark) body .dw-progress-page .dw-progress-title,
+html:not(.dark) body .dw-progress-page .dw-progress-description {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Light-theme metric cards */
+html:not(.dark) body .dw-progress-page .dw-progress-metric {
+  background: #ffffff !important;
+  border-color: #bfdbfe !important;
+}
+
+html:not(.dark) body .dw-progress-page .dw-progress-metric-label {
+  color: #475569 !important;
+  -webkit-text-fill-color: #475569 !important;
+}
+
+html:not(.dark) body .dw-progress-page .dw-progress-metric-value {
+  color: #172554 !important;
+  -webkit-text-fill-color: #172554 !important;
+}
+
+/* Light-theme information notice */
+html:not(.dark) body .dw-progress-page .dw-progress-notice {
+  background: rgba(255,255,255,.94) !important;
+  border-color: #bfdbfe !important;
+  color: #334155 !important;
+  -webkit-text-fill-color: #334155 !important;
+}
+
+/* DARK MODE - Deep blue and violet */
+html.dark body .dw-progress-page .dw-progress-panel {
+  background: linear-gradient(
+    125deg,
+    #101b3b 0%,
+    #263f8e 52%,
+    #45216f 100%
+  ) !important;
+  border-color: rgba(147,197,253,.30) !important;
+  box-shadow: 0 24px 65px rgba(0,0,0,.30) !important;
+}
+
+html.dark body .dw-progress-page .dw-progress-label {
+  background: rgba(96,165,250,.12) !important;
+  border-color: rgba(96,165,250,.35) !important;
+  color: #bfdbfe !important;
+  -webkit-text-fill-color: #bfdbfe !important;
+}
+
+html.dark body .dw-progress-page .dw-progress-title,
+html.dark body .dw-progress-page .dw-progress-description {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Dark-theme metric cards */
+html.dark body .dw-progress-page .dw-progress-metric {
+  background: #17243e !important;
+  border-color: rgba(147,197,253,.25) !important;
+}
+
+html.dark body .dw-progress-page .dw-progress-metric-label {
+  color: #cbd5e1 !important;
+  -webkit-text-fill-color: #cbd5e1 !important;
+}
+
+html.dark body .dw-progress-page .dw-progress-metric-value {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Dark-theme information notice */
+html.dark body .dw-progress-page .dw-progress-notice {
+  background: rgba(15,23,42,.78) !important;
+  border-color: rgba(147,197,253,.20) !important;
+  color: #cbd5e1 !important;
+  -webkit-text-fill-color: #cbd5e1 !important;
+}
+
+/* END LEARNING PROGRESS THEME */
+
+/* =========================================================
+   PROGRESS METRICS - INDIVIDUAL CARD COLORS
+========================================================= */
+
+/* LIGHT MODE */
+
+/* 1. Courses completed - Blue */
+html:not(.dark) body .dw-progress-page .dw-progress-metric:nth-child(1) {
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe) !important;
+  border-color: #93c5fd !important;
+}
+
+/* 2. Lessons completed - Teal */
+html:not(.dark) body .dw-progress-page .dw-progress-metric:nth-child(2) {
+  background: linear-gradient(135deg, #ccfbf1, #99f6e4) !important;
+  border-color: #5eead4 !important;
+}
+
+/* 3. Overall progress - Purple */
+html:not(.dark) body .dw-progress-page .dw-progress-metric:nth-child(3) {
+  background: linear-gradient(135deg, #ede9fe, #ddd6fe) !important;
+  border-color: #c4b5fd !important;
+}
+
+/* Light mode text */
+html:not(.dark) body .dw-progress-page .dw-progress-metric-label {
+  color: #334155 !important;
+  -webkit-text-fill-color: #334155 !important;
+}
+
+html:not(.dark) body .dw-progress-page .dw-progress-metric-value {
+  color: #172554 !important;
+  -webkit-text-fill-color: #172554 !important;
+}
+
+/* DARK MODE */
+
+/* 1. Courses completed - Deep blue */
+html.dark body .dw-progress-page .dw-progress-metric:nth-child(1) {
+  background: linear-gradient(135deg, #172f59, #1e40af) !important;
+  border-color: #3b82f6 !important;
+}
+
+/* 2. Lessons completed - Deep teal */
+html.dark body .dw-progress-page .dw-progress-metric:nth-child(2) {
+  background: linear-gradient(135deg, #123b3a, #115e59) !important;
+  border-color: #14b8a6 !important;
+}
+
+/* 3. Overall progress - Deep purple */
+html.dark body .dw-progress-page .dw-progress-metric:nth-child(3) {
+  background: linear-gradient(135deg, #35205f, #4c1d95) !important;
+  border-color: #8b5cf6 !important;
+}
+
+/* Dark mode text */
+html.dark body .dw-progress-page .dw-progress-metric-label {
+  color: #e2e8f0 !important;
+  -webkit-text-fill-color: #e2e8f0 !important;
+}
+
+html.dark body .dw-progress-page .dw-progress-metric-value {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Smooth card transitions */
+.dw-progress-page .dw-progress-metric {
+  transition: background 250ms ease, border-color 250ms ease,
+    transform 250ms ease, box-shadow 250ms ease;
+}
+
+.dw-progress-page .dw-progress-metric:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.10);
+}
+
+/* PROGRESS CARDS - DARKER LIGHT MODE COLORS */
+
+html:not(.dark) body .dw-progress-page .dw-progress-metric:nth-child(1) {
+  background: linear-gradient(135deg, #93c5fd 0%, #60a5fa 100%) !important;
+  border: 1px solid #3b82f6 !important;
+}
+
+html:not(.dark) body .dw-progress-page .dw-progress-metric:nth-child(2) {
+  background: linear-gradient(135deg, #5eead4 0%, #2dd4bf 100%) !important;
+  border: 1px solid #14b8a6 !important;
+}
+
+html:not(.dark) body .dw-progress-page .dw-progress-metric:nth-child(3) {
+  background: linear-gradient(135deg, #c4b5fd 0%, #a78bfa 100%) !important;
+  border: 1px solid #8b5cf6 !important;
+}
+
+/* Maintain strong text contrast */
+html:not(.dark) body .dw-progress-page .dw-progress-metric-label {
+  color: #172554 !important;
+  -webkit-text-fill-color: #172554 !important;
+}
+
+html:not(.dark) body .dw-progress-page .dw-progress-metric-value {
+  color: #111c45 !important;
+  -webkit-text-fill-color: #111c45 !important;
+}
+
+
+/* My Account: match Learning Progress dark-mode gradient */
+html.dark body .dw-account-page .dw-account-panel {
+  background: linear-gradient(125deg, #101b3b 0%, #263f8e 52%, #45216f 100%) !important;
+  border-color: rgba(147, 197, 253, 0.30) !important;
+}
+
+/* DIGITAL WORLD PAYMENT PAGE - THEME CONTRAST FIX */
+
+/* Main payment panel */
+html.dark body .dw-payment-page .dw-payment-panel {
+  background: #111827 !important;
+  border-color: #64748b !important;
+  color: #f8fafc !important;
+}
+
+html:not(.dark) body .dw-payment-page .dw-payment-panel {
+  background: #ffffff !important;
+  color: #172554 !important;
+}
+
+/* Main title and description */
+html.dark body .dw-payment-page .dw-payment-panel h1 {
+  color: #f8fafc !important;
+}
+
+html.dark body .dw-payment-page .dw-payment-panel > p {
+  color: #cbd5e1 !important;
+}
+
+/* Price card: always light background with dark readable text */
+html body .dw-payment-page .dw-payment-price-card {
+  background: #f8fafc !important;
+  color: #172554 !important;
+}
+
+html body .dw-payment-page .dw-payment-price-card p,
+html body .dw-payment-page .dw-payment-price-card span,
+html body .dw-payment-page .dw-payment-price-card strong {
+  color: #172554 !important;
+}
+
+/* Payment details and form labels in dark mode */
+html.dark body .dw-payment-page .dw-payment-panel .border-slate-200 {
+  border-color: #475569 !important;
+}
+
+html.dark body .dw-payment-page .dw-payment-panel label,
+html.dark body .dw-payment-page .dw-payment-panel .text-slate-500,
+html.dark body .dw-payment-page .dw-payment-panel .text-slate-600 {
+  color: #cbd5e1 !important;
+}
+
+html.dark body .dw-payment-page .dw-payment-panel input {
+  background: #f8fafc !important;
+  color: #172554 !important;
+  border-color: #94a3b8 !important;
+}
+
+html.dark body .dw-payment-page .dw-payment-panel input::placeholder {
+  color: #64748b !important;
+}
+
+/* Payment request information */
+html.dark body .dw-payment-page .dw-payment-panel .font-mono,
+html.dark body .dw-payment-page .dw-payment-panel .font-semibold {
+  color: #f8fafc;
+}
+
+/* Status messages */
+html.dark body .dw-payment-page .dw-payment-panel [role="status"] {
+  background: #334155 !important;
+  color: #f8fafc !important;
+}
+
+/* Dashboard link */
+html.dark body .dw-payment-page .dw-payment-panel > a {
+  color: #a5b4fc !important;
+}
+
+
+/* FINAL FIX: force visible price-card text in dark mode */
+html.dark body .dw-dashboard-shell .dw-dashboard-content .dw-payment-page .dw-payment-panel .dw-payment-price-card,
+html.dark body .dw-dashboard-shell .dw-dashboard-content .dw-payment-page .dw-payment-panel .dw-payment-price-card * {
+  color: #172554 !important;
+  -webkit-text-fill-color: #172554 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  text-shadow: none !important;
+}
+
+html.dark body .dw-dashboard-shell .dw-dashboard-content .dw-payment-page .dw-payment-panel .dw-payment-price-card {
+  background-color: #f8fafc !important;
+  filter: none !important;
+}
+
+
+/* DIGITAL WORLD ACTIVITY PAGE - LIGHT AND DARK CONTRAST */
+
+/* Light mode */
+html:not(.dark) body .dw-activity-page .dw-activity-panel {
+  background: linear-gradient(135deg, #fff1f2 0%, #ffffff 100%) !important;
+  color: #172554 !important;
+}
+
+html:not(.dark) body .dw-activity-page .dw-activity-panel h1,
+html:not(.dark) body .dw-activity-page .dw-activity-panel h2 {
+  color: #172554 !important;
+}
+
+html:not(.dark) body .dw-activity-page .dw-activity-panel p {
+  color: #475569;
+}
+
+html:not(.dark) body .dw-activity-page .dw-activity-card {
+  background: #ffffff !important;
+  border-color: #fecdd3 !important;
+}
+
+/* Dark mode */
+html.dark body .dw-activity-page .dw-activity-panel {
+  background: linear-gradient(135deg, #101b3b 0%, #263f8e 52%, #45216f 100%) !important;
+  color: #f8fafc !important;
+  border: 1px solid rgba(147, 197, 253, 0.30);
+}
+
+html.dark body .dw-activity-page .dw-activity-panel h1,
+html.dark body .dw-activity-page .dw-activity-panel h2 {
+  color: #ffffff !important;
+}
+
+html.dark body .dw-activity-page .dw-activity-panel > p {
+  color: #e2e8f0 !important;
+}
+
+html.dark body .dw-activity-page .dw-activity-panel .text-rose-700 {
+  color: #fda4af !important;
+}
+
+html.dark body .dw-activity-page .dw-activity-card {
+  background: #172554 !important;
+  border-color: #64748b !important;
+}
+
+html.dark body .dw-activity-page .dw-activity-card h2 {
+  color: #ffffff !important;
+}
+
+html.dark body .dw-activity-page .dw-activity-card p {
+  color: #cbd5e1 !important;
+}
+
+/* DIGITAL WORLD REWARDS - LEARNING PROGRESS DARK THEME MATCH */
+
+html.dark body .dw-rewards-wallet {
+  background: linear-gradient(125deg, #101b3b 0%, #263f8e 52%, #45216f 100%) !important;
+  color: #f8fafc !important;
+}
+
+/* Rewards hero */
+html.dark body .dw-rewards-wallet > div > header {
+  background: linear-gradient(125deg, #101b3b 0%, #263f8e 52%, #45216f 100%) !important;
+  border: 1px solid rgba(147, 197, 253, 0.30) !important;
+  color: #ffffff !important;
+}
+
+html.dark body .dw-rewards-wallet > div > header p {
+  color: #e2e8f0 !important;
+}
+
+/* Redeem button - visible label */
+html.dark body .dw-rewards-wallet > div > header a {
+  background: #ffffff !important;
+  color: #172554 !important;
+  -webkit-text-fill-color: #172554 !important;
+}
+
+/* Section headings */
+html.dark body .dw-rewards-wallet h2 {
+  color: #ffffff !important;
+}
+
+html.dark body .dw-rewards-wallet section > div > p {
+  color: #cbd5e1 !important;
+}
+
+/* Four reward metric cards */
+html.dark body .dw-rewards-wallet section:first-of-type > div.grid > article:nth-child(1) {
+  background: linear-gradient(135deg, #1e3a8a, #1e40af) !important;
+  border-color: #60a5fa !important;
+}
+
+html.dark body .dw-rewards-wallet section:first-of-type > div.grid > article:nth-child(2) {
+  background: linear-gradient(135deg, #115e59, #134e4a) !important;
+  border-color: #2dd4bf !important;
+}
+
+html.dark body .dw-rewards-wallet section:first-of-type > div.grid > article:nth-child(3) {
+  background: linear-gradient(135deg, #4c1d95, #581c87) !important;
+  border-color: #a78bfa !important;
+}
+
+html.dark body .dw-rewards-wallet section:first-of-type > div.grid > article:nth-child(4) {
+  background: linear-gradient(135deg, #78350f, #713f12) !important;
+  border-color: #fbbf24 !important;
+}
+
+/* All metric card text */
+html.dark body .dw-rewards-wallet section:first-of-type > div.grid > article p {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Summary and history panels */
+html.dark body .dw-rewards-wallet section:not(:first-of-type) article,
+html.dark body .dw-rewards-wallet section:not(:first-of-type) {
+  background-color: #172554 !important;
+  border-color: #475569 !important;
+  color: #f8fafc !important;
+}
+
+html.dark body .dw-rewards-wallet section:not(:first-of-type) p,
+html.dark body .dw-rewards-wallet section:not(:first-of-type) h3 {
+  color: #e2e8f0 !important;
+}
+
+html.dark body .dw-rewards-wallet section:not(:first-of-type) article .text-emerald-300,
+html.dark body .dw-rewards-wallet section:not(:first-of-type) article .text-red-300 {
+  color: inherit !important;
+}
+
+/* Empty states */
+html.dark body .dw-rewards-wallet .border-dashed {
+  background: #1e293b !important;
+  border-color: #64748b !important;
+}
+
+html.dark body .dw-rewards-wallet .border-dashed p {
+  color: #e2e8f0 !important;
+}
+
+/* Bottom navigation links */
+html.dark body .dw-rewards-wallet > div > div:last-child a {
+  background: #172554 !important;
+  color: #ffffff !important;
+  border-color: #64748b !important;
+}
+
+
+/* =========================================================
+   DIGITAL WORLD - GLOBAL ADMIN PANEL TEXT CONTRAST
+   Applies to every page inside AdminShell only.
+   ========================================================= */
+
+/* Shared sidebar and header: permanently dark navy */
+html:not(.dark) body .digital-admin-shell aside,
+html:not(.dark) body .digital-admin-shell header,
+html.dark body .digital-admin-shell aside,
+html.dark body .digital-admin-shell header {
+  color: #f8fafc;
+}
+
+/* Keep navigation and account information readable */
+html:not(.dark) body .digital-admin-shell aside :is(
+  p, span, a, small, strong, svg
+),
+html:not(.dark) body .digital-admin-shell header :is(
+  p, span, a, small, strong, svg
+),
+html.dark body .digital-admin-shell aside :is(
+  p, span, a, small, strong, svg
+),
+html.dark body .digital-admin-shell header :is(
+  p, span, a, small, strong, svg
+) {
+  color: #f8fafc;
+}
+
+/* Main workspace default text */
+html:not(.dark) body .digital-admin-content {
+  color: #172033;
+}
+
+html.dark body .digital-admin-content {
+  color: #f1f5f9;
+}
+
+/* Light cards: dark text in both themes */
+html body .digital-admin-content .bg-white,
+html body .digital-admin-content .bg-white :is(
+  h1, h2, h3, h4, p, span, strong, small, label
+) {
+  color: #172033;
+}
+
+/* Light slate surfaces */
+html body .digital-admin-content .bg-slate-50,
+html body .digital-admin-content .bg-slate-50 :is(
+  h1, h2, h3, h4, p, span, strong, small, label
+) {
+  color: #172033;
+}
+
+/* Dark cards and panels */
+html.dark body .digital-admin-content .bg-slate-800,
+html.dark body .digital-admin-content .bg-slate-900,
+html.dark body .digital-admin-content .bg-gray-800 {
+  color: #f8fafc;
+}
+
+html.dark body .digital-admin-content .bg-slate-800 :is(
+  h1, h2, h3, h4, p, span, strong, small, label
+),
+html.dark body .digital-admin-content .bg-slate-900 :is(
+  h1, h2, h3, h4, p, span, strong, small, label
+),
+html.dark body .digital-admin-content .bg-gray-800 :is(
+  h1, h2, h3, h4, p, span, strong, small, label
+) {
+  color: #f8fafc;
+}
+
+/* Inputs and placeholders */
+.digital-admin-content input,
+.digital-admin-content textarea,
+.digital-admin-content select {
+  color: #172033;
+  background-color: #ffffff;
+}
+
+.digital-admin-content input::placeholder,
+.digital-admin-content textarea::placeholder {
+  color: #64748b;
+  opacity: 1;
+}
+
+/* Preserve white text on colored action buttons */
+.digital-admin-content .bg-blue-600,
+.digital-admin-content .bg-blue-700,
+.digital-admin-content .bg-emerald-600,
+.digital-admin-content .bg-emerald-700,
+.digital-admin-content .bg-red-600,
+.digital-admin-content .bg-red-700,
+.digital-admin-content .bg-slate-900 {
+  color: #ffffff;
+}
+
+.digital-admin-content .bg-blue-600 *,
+.digital-admin-content .bg-blue-700 *,
+.digital-admin-content .bg-emerald-600 *,
+.digital-admin-content .bg-emerald-700 *,
+.digital-admin-content .bg-red-600 *,
+.digital-admin-content .bg-red-700 *,
+.digital-admin-content .bg-slate-900 * {
+  color: inherit;
+}
+
+/* Status badges retain their individual colors */
+.digital-admin-content [class*="text-emerald-"],
+.digital-admin-content [class*="text-red-"],
+.digital-admin-content [class*="text-amber-"],
+.digital-admin-content [class*="text-blue-"],
+.digital-admin-content [class*="text-violet-"] {
+  -webkit-text-fill-color: currentColor;
+}
+
+/* =========================================================
+   END GLOBAL ADMIN CONTRAST FIX
+   ========================================================= */
+/* =====================================================
+   ADMIN SIDEBAR AND HEADER - BOTH THEMES
+   ===================================================== */
+
+html body .digital-admin-shell aside,
+html body .digital-admin-shell header {
+  background-color: #10213a !important;
+  color: #ffffff !important;
+}
+
+html body .digital-admin-shell aside *,
+html body .digital-admin-shell header * {
+  color: #f8fafc;
+}
+
+/* Keep active navigation readable */
+html body .digital-admin-shell aside a[aria-current="page"],
+html body .digital-admin-shell aside a[aria-current="page"] * {
+  color: #ffffff !important;
+}
+
+/* =====================================================
+   USDT WITHDRAWAL - DARK MODE
+   ===================================================== */
+
+html.dark body .digital-admin-content {
+  background: linear-gradient(
+    135deg,
+    #0b1220 0%,
+    #111c36 55%,
+    #24143d 100%
+  ) !important;
+}
+
+html.dark body .digital-admin-content .usdt-withdrawal-manager {
+  color: #f8fafc !important;
+}
+
+/* Main USDT heading and description */
+html.dark body .digital-admin-content h1,
+html.dark body .digital-admin-content h2,
+html.dark body .digital-admin-content h3 {
+  color: #f8fafc !important;
+}
+
+html.dark body .digital-admin-content p {
+  color: #cbd5e1;
+}
+
+/* Withdrawal cards and panels */
+html.dark body .digital-admin-content .usdt-withdrawal-manager article,
+html.dark body .digital-admin-content .usdt-withdrawal-manager section,
+html.dark body .digital-admin-content .usdt-withdrawal-manager .bg-white {
+  background: #17243b !important;
+  border-color: #475569 !important;
+  color: #f8fafc !important;
+}
+
+/* Text inside dark USDT panels */
+html.dark body .digital-admin-content .usdt-withdrawal-manager article *,
+html.dark body .digital-admin-content .usdt-withdrawal-manager section *,
+html.dark body .digital-admin-content .usdt-withdrawal-manager .bg-white * {
+  color: #f1f5f9;
+}
+
+/* Inputs */
+html.dark body .digital-admin-content .usdt-withdrawal-manager input,
+html.dark body .digital-admin-content .usdt-withdrawal-manager textarea,
+html.dark body .digital-admin-content .usdt-withdrawal-manager select {
+  background: #0f172a !important;
+  color: #f8fafc !important;
+  border-color: #64748b !important;
+}
+
+/* Empty state */
+html.dark body .digital-admin-content .usdt-withdrawal-manager .bg-slate-50 {
+  background: #0f172a !important;
+  color: #e2e8f0 !important;
+}
+
+/* Admin Home button */
+html.dark body .digital-admin-content a[href="/admin"] {
+  background: #334155 !important;
+  color: #ffffff !important;
+  border-color: #64748b !important;
+}
+
+/* Action buttons */
+html.dark body .digital-admin-content .usdt-withdrawal-manager button.bg-blue-700,
+html.dark body .digital-admin-content .usdt-withdrawal-manager button.bg-emerald-700,
+html.dark body .digital-admin-content .usdt-withdrawal-manager button.bg-red-700 {
+  color: #ffffff !important;
+}
+
+/* =====================================================
+   END ADMIN THEME FIX
+   ===================================================== */
+/* ==========================================
+   DIGITAL WORLD ADMIN - TEXT VISIBILITY FIX
+   ========================================== */
+
+/* Permanent dark sidebar */
+html body .digital-admin-shell aside,
+html body .digital-admin-shell aside * {
+  color: #f8fafc !important;
+}
+
+/* Permanent dark top navigation */
+html body .digital-admin-shell > header,
+html body .digital-admin-shell > header * {
+  color: #f8fafc !important;
+}
+
+/* Sidebar active and hover navigation */
+html body .digital-admin-shell aside a {
+  color: #f8fafc !important;
+}
+
+html body .digital-admin-shell aside a:hover {
+  color: #ffffff !important;
+}
+
+/* Sidebar secondary labels */
+html body .digital-admin-shell aside small {
+  color: #cbd5e1 !important;
+}
+
+/* USDT page heading */
+html body .usdt-withdrawal-page > header h1 {
+  color: #ffffff !important;
+}
+
+html body .usdt-withdrawal-page > header > div > p {
+  color: #e2e8f0 !important;
+}
+
+/* USDT page eyebrow text */
+html body .usdt-withdrawal-page > header > div > p:first-child {
+  color: #34d399 !important;
+}
+
+/* Keep Admin Home button readable */
+html body .usdt-withdrawal-page > header > a {
+  color: #334155 !important;
+  background-color: #ffffff !important;
+}
+
+html.dark body .usdt-withdrawal-page > header > a {
+  color: #ffffff !important;
+  background-color: #1e293b !important;
+}
+
+/* User profile information in sidebar */
+html body .digital-admin-shell aside .text-slate-600,
+html body .digital-admin-shell aside .text-slate-500 {
+  color: #cbd5e1 !important;
+}
+
+
+
+/* ==========================================
+   DIGITAL WORLD ADMIN BLUE LIGHT THEME
+   ========================================== */
+
+html:not(.dark) body .digital-admin-shell .admin-sidebar-bg {
+  background: linear-gradient(180deg,#2446ad,#3157d5 55%,#405fce) !important;
+  border-color: #526fe8 !important;
+}
+
+html:not(.dark) body .digital-admin-shell .admin-sidebar-bg,
+html:not(.dark) body .digital-admin-shell .admin-sidebar-bg * {
+  color: #ffffff !important;
+}
+
+html:not(.dark) body .digital-admin-shell .admin-sidebar-bg .text-slate-400,
+html:not(.dark) body .digital-admin-shell .admin-sidebar-bg .text-slate-500,
+html:not(.dark) body .digital-admin-shell .admin-sidebar-bg .text-slate-300 {
+  color: #dbeafe !important;
+}
+
+html:not(.dark) body .digital-admin-shell .admin-sidebar-bg .bg-slate-700\/70 {
+  background: rgba(255,255,255,.15) !important;
+}
+
+html:not(.dark) body .digital-admin-shell .admin-topbar-bg {
+  background: linear-gradient(90deg,#2446ad,#3157d5,#526fe8) !important;
+  border-color: #526fe8 !important;
+}
+
+html:not(.dark) body .digital-admin-shell .admin-topbar-bg,
+html:not(.dark) body .digital-admin-shell .admin-topbar-bg * {
+  color: #ffffff !important;
+}
+
+html:not(.dark) body .digital-admin-shell .admin-workspace {
+  background: linear-gradient(135deg,#dcecff,#e8f1ff 55%,#eeeaff) !important;
+  color: #172033 !important;
+}
+
+html:not(.dark) body .usdt-withdrawal-page > header {
+  background: linear-gradient(100deg,#c6dcff,#d9e5ff,#e5dfff);
+  border: 1px solid #c1d5f5;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+html:not(.dark) body .usdt-withdrawal-page > header h1 {
+  color: #172b52 !important;
+}
+
+html:not(.dark) body .usdt-withdrawal-page > header p {
+  color: #334155 !important;
+}
+
+html:not(.dark) body .usdt-withdrawal-page > header p:first-child {
+  color: #2446ad !important;
+}
+
+html:not(.dark) body .usdt-withdrawal-page > header a {
+  background: #3157d5 !important;
+  color: #ffffff !important;
+  border-color: #3157d5 !important;
+}
+
+html:not(.dark) body .usdt-withdrawal-manager {
+  color: #172033 !important;
+}
+
+html:not(.dark) body .usdt-withdrawal-manager article,
+html:not(.dark) body .usdt-withdrawal-manager section,
+html:not(.dark) body .usdt-withdrawal-manager .bg-white {
+  background: #ffffff !important;
+  border-color: #d5e2f3 !important;
+}
+
+html:not(.dark) body .usdt-withdrawal-manager article *,
+html:not(.dark) body .usdt-withdrawal-manager section * {
+  color: #172033;
+}
+
+html:not(.dark) body .usdt-withdrawal-manager button.bg-blue-700,
+html:not(.dark) body .usdt-withdrawal-manager button.bg-emerald-700,
+html:not(.dark) body .usdt-withdrawal-manager button.bg-red-700 {
+  color: #ffffff !important;
+}
+
+/* DARK MODE */
+html.dark body .digital-admin-shell .admin-sidebar-bg {
+  background: #10213a !important;
+}
+
+html.dark body .digital-admin-shell .admin-topbar-bg {
+  background: rgba(16,33,58,.95) !important;
+}
+
+html.dark body .digital-admin-shell .admin-workspace {
+  background: linear-gradient(135deg,#172b52,#28235e,#482078) !important;
+}
+
+/* ==========================================
+   ADMIN DASHBOARD - DARK MODE CONTRAST FIX
+   ========================================== */
+
+html.dark body .admin-dashboard > section:first-child {
+  background: linear-gradient(120deg, #172b52, #202b50, #30245b) !important;
+  border-color: #475569 !important;
+}
+
+html.dark body .admin-dashboard > section:first-child > div > div:last-child {
+  background: #1e293b !important;
+  border-color: #64748b !important;
+}
+
+html.dark body .admin-dashboard > section:first-child h1 {
+  color: #ffffff !important;
+}
+
+html.dark body .admin-dashboard > section:first-child p {
+  color: #dbeafe !important;
+}
+
+html.dark body .admin-dashboard > section:first-child svg {
+  color: #93c5fd !important;
+}
+
+/* Module cards */
+html.dark body .admin-dashboard a[href="/admin/payments"],
+html.dark body .admin-dashboard a[href="/admin/rewards/usdt"] {
+  background: linear-gradient(145deg, #172b52, #1e3158) !important;
+  border-color: #475569 !important;
+  color: #f8fafc !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,.25) !important;
+}
+
+html.dark body .admin-dashboard a[href="/admin/payments"] h3,
+html.dark body .admin-dashboard a[href="/admin/rewards/usdt"] h3 {
+  color: #ffffff !important;
+}
+
+html.dark body .admin-dashboard a[href="/admin/payments"] p,
+html.dark body .admin-dashboard a[href="/admin/rewards/usdt"] p {
+  color: #cbd5e1 !important;
+}
+
+html.dark body .admin-dashboard a[href="/admin/payments"] p:last-child,
+html.dark body .admin-dashboard a[href="/admin/rewards/usdt"] p:last-child {
+  color: #93c5fd !important;
+}
+
+html.dark body .admin-dashboard a[href="/admin/payments"] span,
+html.dark body .admin-dashboard a[href="/admin/rewards/usdt"] span {
+  background: #263d69 !important;
+  color: #bfdbfe !important;
+}
+
+html.dark body .admin-dashboard a[href="/admin/payments"] svg,
+html.dark body .admin-dashboard a[href="/admin/rewards/usdt"] svg {
+  color: #bfdbfe !important;
+}
+
+html.dark body .admin-dashboard a[href="/admin/payments"]:hover,
+html.dark body .admin-dashboard a[href="/admin/rewards/usdt"]:hover {
+  background: linear-gradient(145deg, #203c70, #29396b) !important;
+  border-color: #60a5fa !important;
+}
+
+html.dark body .admin-dashboard > section:nth-child(2) h2 {
+  color: #ffffff !important;
+}
+
+html.dark body .admin-dashboard > section:nth-child(2) p {
+  color: #cbd5e1 !important;
+}
+
+/* ==========================================
+   END ADMIN DASHBOARD DARK MODE FIX
+   ========================================== */
+
+/* ==========================================
+   PAYMENT VERIFICATION - THEME FIX
+   ========================================== */
+
+/* LIGHT MODE */
+html:not(.dark) body .payment-verification-page > header {
+  background: linear-gradient(110deg, #c6dcff, #d9e5ff, #e5dfff) !important;
+  border: 1px solid #c1d5f5 !important;
+}
+
+html:not(.dark) body .payment-verification-page > header h1 {
+  color: #172b52 !important;
+}
+
+html:not(.dark) body .payment-verification-page > header p {
+  color: #334155 !important;
+}
+
+html:not(.dark) body .payment-review-empty,
+html:not(.dark) body .payment-review-card {
+  background: #ffffff !important;
+  border-color: #d5e2f3 !important;
+}
+
+html:not(.dark) body .payment-review-empty h2,
+html:not(.dark) body .payment-review-card h2,
+html:not(.dark) body .payment-review-card p,
+html:not(.dark) body .payment-review-card label {
+  color: #172033 !important;
+}
+
+html:not(.dark) body .payment-review-card .bg-slate-50 {
+  background: #f1f5f9 !important;
+}
+
+html:not(.dark) body .payment-review-card textarea {
+  background: #ffffff !important;
+  color: #172033 !important;
+  border-color: #cbd5e1 !important;
+}
+
+/* DARK MODE */
+html.dark body .payment-verification-page > header {
+  background: linear-gradient(110deg, #172b52, #202b50, #30245b) !important;
+  border-color: #475569 !important;
+}
+
+html.dark body .payment-verification-page > header h1,
+html.dark body .payment-verification-page > header p {
+  color: #f8fafc !important;
+}
+
+html.dark body .payment-review-empty,
+html.dark body .payment-review-card {
+  background: #172b52 !important;
+  border-color: #475569 !important;
+}
+
+html.dark body .payment-review-empty h2,
+html.dark body .payment-review-empty p,
+html.dark body .payment-review-card h2,
+html.dark body .payment-review-card p,
+html.dark body .payment-review-card label {
+  color: #f1f5f9 !important;
+}
+
+html.dark body .payment-review-card .bg-slate-50 {
+  background: #0f172a !important;
+}
+
+html.dark body .payment-review-card textarea {
+  background: #0f172a !important;
+  color: #f8fafc !important;
+  border-color: #64748b !important;
+}
+
+html.dark body .payment-review-card button {
+  color: #ffffff !important;
+}
+
+/* END PAYMENT VERIFICATION THEME FIX */
+
+/* ==========================================
+   PAYMENT VERIFICATION - DARK MODE FINAL FIX
+   ========================================== */
+
+/* Empty payment state */
+html.dark body .payment-review-empty,
+.dark body .payment-review-empty,
+body.dark .payment-review-empty {
+  background: #172b52 !important;
+  background-color: #172b52 !important;
+  border: 1px solid #475569 !important;
+  color: #f8fafc !important;
+}
+
+/* Empty state heading and description */
+html.dark body .payment-review-empty h2,
+html.dark body .payment-review-empty p,
+.dark body .payment-review-empty h2,
+.dark body .payment-review-empty p,
+body.dark .payment-review-empty h2,
+body.dark .payment-review-empty p {
+  color: #f1f5f9 !important;
+}
+
+/* Payment cards */
+html.dark body .payment-review-card,
+.dark body .payment-review-card,
+body.dark .payment-review-card {
+  background: #172b52 !important;
+  background-color: #172b52 !important;
+  border-color: #475569 !important;
+  color: #f8fafc !important;
+}
+
+/* All payment card text */
+html.dark body .payment-review-card h2,
+html.dark body .payment-review-card p,
+html.dark body .payment-review-card label,
+.dark body .payment-review-card h2,
+.dark body .payment-review-card p,
+.dark body .payment-review-card label,
+body.dark .payment-review-card h2,
+body.dark .payment-review-card p,
+body.dark .payment-review-card label {
+  color: #e2e8f0 !important;
+}
+
+/* Payment details panel */
+html.dark body .payment-review-card .bg-slate-50,
+.dark body .payment-review-card .bg-slate-50,
+body.dark .payment-review-card .bg-slate-50 {
+  background: #0f172a !important;
+  background-color: #0f172a !important;
+}
+
+/* Transaction values */
+html.dark body .payment-review-card .font-mono,
+html.dark body .payment-review-card .break-all,
+.dark body .payment-review-card .font-mono,
+.dark body .payment-review-card .break-all,
+body.dark .payment-review-card .font-mono,
+body.dark .payment-review-card .break-all {
+  color: #f8fafc !important;
+}
+
+/* Admin note */
+html.dark body .payment-review-card textarea,
+.dark body .payment-review-card textarea,
+body.dark .payment-review-card textarea {
+  background: #0f172a !important;
+  color: #ffffff !important;
+  border-color: #64748b !important;
+}
+
+/* END PAYMENT DARK MODE FINAL FIX */
+
+/* ==========================================
+   ADMIN MODULE CARDS - BLUE THEME BOTH MODES
+   ========================================== */
+
+/* LIGHT MODE */
+html:not(.dark) body .admin-dashboard a[href="/admin/payments"],
+html:not(.dark) body .admin-dashboard a[href="/admin/rewards/usdt"] {
+  background: linear-gradient(145deg, #2446ad, #3157d5) !important;
+  border: 1px solid #496ce0 !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 24px rgba(36,70,173,.20) !important;
+}
+
+/* DARK MODE */
+html.dark body .admin-dashboard a[href="/admin/payments"],
+html.dark body .admin-dashboard a[href="/admin/rewards/usdt"] {
+  background: linear-gradient(145deg, #10213a, #1b3260) !important;
+  border: 1px solid #405b88 !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 28px rgba(0,0,0,.30) !important;
+}
+
+/* Both themes - headings */
+html body .admin-dashboard a[href="/admin/payments"] h3,
+html body .admin-dashboard a[href="/admin/rewards/usdt"] h3 {
+  color: #ffffff !important;
+}
+
+/* Both themes - descriptions */
+html body .admin-dashboard a[href="/admin/payments"] p,
+html body .admin-dashboard a[href="/admin/rewards/usdt"] p {
+  color: #e2eaff !important;
+}
+
+/* Both themes - action links */
+html body .admin-dashboard a[href="/admin/payments"] p:last-child,
+html body .admin-dashboard a[href="/admin/rewards/usdt"] p:last-child {
+  color: #bfdbfe !important;
+}
+
+/* Icon containers */
+html body .admin-dashboard a[href="/admin/payments"] span,
+html body .admin-dashboard a[href="/admin/rewards/usdt"] span {
+  background: rgba(255,255,255,.15) !important;
+  color: #ffffff !important;
+}
+
+/* Icons */
+html body .admin-dashboard a[href="/admin/payments"] svg,
+html body .admin-dashboard a[href="/admin/rewards/usdt"] svg {
+  color: #dbeafe !important;
+}
+
+/* Hover */
+html:not(.dark) body .admin-dashboard a[href="/admin/payments"]:hover,
+html:not(.dark) body .admin-dashboard a[href="/admin/rewards/usdt"]:hover {
+  background: linear-gradient(145deg, #3157d5, #426bea) !important;
+}
+
+html.dark body .admin-dashboard a[href="/admin/payments"]:hover,
+html.dark body .admin-dashboard a[href="/admin/rewards/usdt"]:hover {
+  background: linear-gradient(145deg, #1b3260, #29477c) !important;
+}
+
+/* END ADMIN MODULE CARD THEME */
+
+/* ==========================================
+   USDT WITHDRAWAL - BLUE CARDS BOTH THEMES
+   ========================================== */
+
+/* LIGHT MODE - STATISTICS */
+html:not(.dark) body .usdt-withdrawal-manager > section:first-child > article {
+  background: linear-gradient(145deg, #2446ad, #3157d5) !important;
+  border: 1px solid #496ce0 !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 22px rgba(36,70,173,.20) !important;
+}
+
+/* DARK MODE - STATISTICS */
+html.dark body .usdt-withdrawal-manager > section:first-child > article {
+  background: linear-gradient(145deg, #10213a, #1b3260) !important;
+  border: 1px solid #405b88 !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,.30) !important;
+}
+
+/* Statistics text and numbers */
+html body .usdt-withdrawal-manager > section:first-child > article,
+html body .usdt-withdrawal-manager > section:first-child > article * {
+  color: #ffffff !important;
+}
+
+/* WITHDRAWAL REQUESTS MAIN PANEL - LIGHT */
+html:not(.dark) body .usdt-withdrawal-manager > section:nth-child(2) {
+  background: linear-gradient(145deg, #2446ad, #3157d5) !important;
+  border: 1px solid #496ce0 !important;
+  color: #ffffff !important;
+}
+
+/* WITHDRAWAL REQUESTS MAIN PANEL - DARK */
+html.dark body .usdt-withdrawal-manager > section:nth-child(2) {
+  background: linear-gradient(145deg, #10213a, #1b3260) !important;
+  border: 1px solid #405b88 !important;
+  color: #ffffff !important;
+}
+
+/* Main panel heading and description */
+html body .usdt-withdrawal-manager > section:nth-child(2) h2,
+html body .usdt-withdrawal-manager > section:nth-child(2) > div:first-child p {
+  color: #ffffff !important;
+}
+
+/* Empty state */
+html body .usdt-withdrawal-manager > section:nth-child(2) > p.mt-5 {
+  background: #172b52 !important;
+  color: #ffffff !important;
+  border: 1px solid #526fe8 !important;
+}
+
+/* Filter buttons */
+html body .usdt-withdrawal-manager > section:nth-child(2) button {
+  border-color: rgba(255,255,255,.45) !important;
+  color: #ffffff !important;
+}
+
+html body .usdt-withdrawal-manager > section:nth-child(2) button:hover {
+  background: rgba(255,255,255,.15) !important;
+}
+
+/* Active filter */
+html body .usdt-withdrawal-manager > section:nth-child(2) button.bg-slate-900 {
+  background: #0f172a !important;
+  color: #ffffff !important;
+}
+
+/* Individual withdrawal records */
+html body .usdt-withdrawal-manager > section:nth-child(2) article {
+  background: rgba(15,23,42,.55) !important;
+  border-color: rgba(255,255,255,.25) !important;
+  color: #ffffff !important;
+}
+
+/* Record text */
+html body .usdt-withdrawal-manager > section:nth-child(2) article h3,
+html body .usdt-withdrawal-manager > section:nth-child(2) article p,
+html body .usdt-withdrawal-manager > section:nth-child(2) article label {
+  color: #f1f5f9 !important;
+}
+
+/* Record details */
+html body .usdt-withdrawal-manager > section:nth-child(2) article .bg-slate-50 {
+  background: #0f172a !important;
+}
+
+/* Inputs */
+html body .usdt-withdrawal-manager input,
+html body .usdt-withdrawal-manager textarea {
+  background: #ffffff !important;
+  color: #172033 !important;
+  border-color: #cbd5e1 !important;
+}
+
+html.dark body .usdt-withdrawal-manager input,
+html.dark body .usdt-withdrawal-manager textarea {
+  background: #0f172a !important;
+  color: #ffffff !important;
+  border-color: #64748b !important;
+}
+
+/* Keep action buttons readable */
+html body .usdt-withdrawal-manager button.bg-blue-700,
+html body .usdt-withdrawal-manager button.bg-emerald-700 {
+  color: #ffffff !important;
+}
+
+html body .usdt-withdrawal-manager button.border-red-300 {
+  background: #ffffff !important;
+  color: #b91c1c !important;
+}
+
+/* END USDT BLUE CARD THEME */
+
+
+/* USERS PAGE FINAL THEME COLORS */
+
+html body .users-management-page > section.grid article,
+html body .users-management-page > section.grid article * {
+  color: #ffffff !important;
+}
+
+html body .users-management-page > section.grid article {
+  background: linear-gradient(135deg, #2446ad, #172b52) !important;
+  border-color: #496ce0 !important;
+}
+
+/* LIGHT MODE */
+html:not(.dark) body .users-management-page section.rounded-2xl,
+html:not(.dark) body .users-management-page section.overflow-hidden {
+  background-color: #ffffff !important;
+  border-color: #d5e0ef !important;
+  color: #172033 !important;
+}
+
+html:not(.dark) body .users-management-page input,
+html:not(.dark) body .users-management-page select {
+  background: #f8fafc !important;
+  color: #172033 !important;
+  border-color: #cbd5e1 !important;
+}
+
+html:not(.dark) body .users-management-page table thead {
+  background: #eef3fa !important;
+  color: #172033 !important;
+}
+
+/* DARK MODE */
+html.dark body .users-management-page section.rounded-2xl,
+html.dark body .users-management-page section.overflow-hidden {
+  background: #14233d !important;
+  border-color: #3b506f !important;
+  color: #f8fafc !important;
+}
+
+html.dark body .users-management-page input,
+html.dark body .users-management-page select {
+  background: #1c304d !important;
+  color: #f8fafc !important;
+  border-color: #506585 !important;
+}
+
+html.dark body .users-management-page input::placeholder {
+  color: #aabbd2 !important;
+}
+
+html.dark body .users-management-page table thead {
+  background: #203653 !important;
+  color: #ffffff !important;
+}
+
+html.dark body .users-management-page table tbody {
+  color: #e2e8f0 !important;
+}
+
+html.dark body .users-management-page table tbody tr {
+  background: #14233d !important;
+  border-color: #344b69 !important;
+}
+
+html.dark body .users-management-page table tbody tr:hover {
+  background: #203653 !important;
+}
+
+html.dark body .users-management-page h1,
+html.dark body .users-management-page h2,
+html.dark body .users-management-page th,
+html.dark body .users-management-page td {
+  color: #f1f5f9 !important;
+}
+
+html.dark body .users-management-page p {
+  color: #cbd5e1;
+}
+
+html.dark body .users-management-page .text-emerald-600 {
+  color: #34d399 !important;
+}
+
+html.dark body .users-management-page .text-red-500 {
+  color: #f87171 !important;
+}
+
+html.dark body .users-management-page button[aria-label="Previous page"],
+html.dark body .users-management-page button[aria-label="Next page"] {
+  background: #1c304d !important;
+  border-color: #506585 !important;
+  color: #ffffff !important;
+}
+
+/* END USERS PAGE FINAL THEME COLORS */
+
+
+/* COURSES ADMIN HERO TEXT VISIBILITY FIX */
+.courses-admin-page .courses-admin-hero { background: #10233f !important; color: #ffffff !important; }
+.courses-admin-page .courses-admin-hero h1 { color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; }
+.courses-admin-page .courses-admin-hero p { color: #e2e8f0 !important; -webkit-text-fill-color: #e2e8f0 !important; }
+
+
+/* COURSES ADMIN - LIGHT THEME COLORS */
+html:not(.dark) .courses-admin-page .courses-admin-hero { background: linear-gradient(120deg,#ffffff 0%,#eaf2ff 55%,#e8eaff 100%) !important; border-color: #cbdcf5 !important; color: #172554 !important; }
+html:not(.dark) .courses-admin-page .courses-admin-hero h1 { color: #172554 !important; -webkit-text-fill-color: #172554 !important; }
+html:not(.dark) .courses-admin-page .courses-admin-hero p { color: #334155 !important; -webkit-text-fill-color: #334155 !important; }
+html:not(.dark) .courses-admin-page .courses-admin-hero p:first-child { color: #2563eb !important; -webkit-text-fill-color: #2563eb !important; }
+
+
+/* COURSES ADMIN - DARK THEME MATCH WITH USERS PAGE */
+html.dark .courses-admin-page > div > section > div, html.dark .courses-admin-page > div > section, html.dark .courses-admin-page article { background: #132844 !important; border-color: #31558b !important; color: #f8fafc !important; }
+html.dark .courses-admin-page > div > section:first-child > div { background: linear-gradient(135deg,#244a9b,#18345f) !important; border-color: #416bd0 !important; }
+html.dark .courses-admin-page h2, html.dark .courses-admin-page h3, html.dark .courses-admin-page strong { color: #f8fafc !important; }
+html.dark .courses-admin-page p, html.dark .courses-admin-page span { color: #cbd5e1; }
+html.dark .courses-admin-page input, html.dark .courses-admin-page select, html.dark .courses-admin-page textarea { background: #1e3553 !important; border-color: #496486 !important; color: #f8fafc !important; }
+html.dark .courses-admin-page input::placeholder, html.dark .courses-admin-page textarea::placeholder { color: #a8bad0 !important; }
+html.dark .courses-admin-page button:not(.bg-blue-600) { border-color: #496486; }
+html.dark .courses-admin-page article { box-shadow: 0 8px 24px rgba(0,0,0,.15); }
+
+
+/* COURSES ADMIN - DARK MODE TEXT CONTRAST FIX */
+html.dark .courses-admin-page h1, html.dark .courses-admin-page h2, html.dark .courses-admin-page h3, html.dark .courses-admin-page strong { color: #f8fafc !important; -webkit-text-fill-color: #f8fafc !important; }
+html.dark .courses-admin-page p { color: #cbd5e1 !important; -webkit-text-fill-color: #cbd5e1 !important; }
+html.dark .courses-admin-page > div > section:first-child > div p:last-child { color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; }
+html.dark .courses-admin-page article h3, html.dark .courses-admin-page article strong { color: #f8fafc !important; -webkit-text-fill-color: #f8fafc !important; }
+html.dark .courses-admin-page article p { color: #cbd5e1 !important; -webkit-text-fill-color: #cbd5e1 !important; }
+html.dark .courses-admin-page article .text-xs { color: #a9bdd8 !important; -webkit-text-fill-color: #a9bdd8 !important; }
+html.dark .courses-admin-page label { color: #e2e8f0 !important; }
+html.dark .courses-admin-page input, html.dark .courses-admin-page select, html.dark .courses-admin-page textarea { color: #f8fafc !important; -webkit-text-fill-color: #f8fafc !important; }
+
+/* REFERRALS ADMIN - LIGHT AND DARK THEME FIX */
+html:not(.dark) body .referrals-management-page > section:not(.grid) { background:#ffffff !important; border-color:#d5e0ef !important; color:#172033 !important; }
+html:not(.dark) body .referrals-management-page > section.grid > article { background:linear-gradient(135deg,#2446ad,#172b52) !important; border-color:#496ce0 !important; color:#ffffff !important; }
+html body .referrals-management-page > section.grid > article * { color:#ffffff !important; }
+html:not(.dark) body .referrals-management-page input, html:not(.dark) body .referrals-management-page select { background:#f8fafc !important; color:#172033 !important; border-color:#cbd5e1 !important; }
+html:not(.dark) body .referrals-management-page table thead { background:#eef3fa !important; color:#172033 !important; }
+html:not(.dark) body .referrals-management-page table tbody tr { background:#ffffff !important; border-color:#e2e8f0 !important; }
+html:not(.dark) body .referrals-management-page table tbody td { color:#334155 !important; }
+html:not(.dark) body .referrals-management-page table tbody td p { color:#64748b !important; }
+html:not(.dark) body .referrals-management-page table tbody td p.font-bold, html:not(.dark) body .referrals-management-page table tbody td p.font-semibold { color:#172033 !important; }
+html.dark body .referrals-management-page > section:not(.grid) { background:#14233d !important; border-color:#3b506f !important; color:#f8fafc !important; }
+html.dark body .referrals-management-page > section.grid > article { background:linear-gradient(135deg,#10213a,#1b3260) !important; border-color:#405b88 !important; color:#ffffff !important; }
+html.dark body .referrals-management-page > section.grid > article * { color:#ffffff !important; }
+html.dark body .referrals-management-page input, html.dark body .referrals-management-page select { background:#1c304d !important; color:#f8fafc !important; border-color:#506585 !important; }
+html.dark body .referrals-management-page input::placeholder { color:#aabbd2 !important; }
+html.dark body .referrals-management-page table thead { background:#203653 !important; color:#ffffff !important; }
+html.dark body .referrals-management-page table tbody tr { background:#14233d !important; border-color:#344b69 !important; }
+html.dark body .referrals-management-page table tbody tr:hover { background:#203653 !important; }
+html.dark body .referrals-management-page table tbody td { color:#e2e8f0 !important; }
+html.dark body .referrals-management-page table tbody td p { color:#cbd5e1 !important; }
+html.dark body .referrals-management-page h1, html.dark body .referrals-management-page h2 { color:#f8fafc !important; }
+html.dark body .referrals-management-page button[aria-label="Previous page"], html.dark body .referrals-management-page button[aria-label="Next page"] { background:#1c304d !important; border-color:#506585 !important; color:#ffffff !important; }
+/* END REFERRALS ADMIN THEME FIX */

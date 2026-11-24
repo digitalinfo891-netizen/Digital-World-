@@ -1,7 +1,6 @@
 ﻿import { PaymentStatus, UserRole } from "@prisma/client";
 import { requireRole } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
-import LogoutButton from "@/components/auth/LogoutButton";
 import PaymentReviewList from "@/components/admin/PaymentReviewList";
 
 export const instant = false;
@@ -37,21 +36,17 @@ export default async function AdminPaymentsPage() {
   }));
 
   return (
-    <main className="min-h-screen bg-slate-50 p-6 md:p-10">
-      <div className="mx-auto max-w-6xl">
-        <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
-          <div>
-            <h1 className="text-3xl font-bold text-slate-900">
-              Payment Verification
-            </h1>
-            <p className="mt-2 text-slate-600">
-              Review submitted payment references before granting lifetime access.
-            </p>
-          </div>
-          <LogoutButton />
-        </div>
-        <PaymentReviewList initialPayments={items} />
-      </div>
-    </main>
+    <div className="payment-verification-page mx-auto max-w-7xl space-y-6">
+      <header className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800">
+        <h1 className="text-3xl font-bold text-slate-900 dark:text-white">
+          Payment Verification
+        </h1>
+        <p className="mt-2 text-slate-600 dark:text-slate-300">
+          Review submitted payment references before granting lifetime access.
+        </p>
+      </header>
+
+      <PaymentReviewList initialPayments={items} />
+    </div>
   );
 }

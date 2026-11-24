@@ -1,5 +1,5 @@
-import PageThemeToggle from "@/components/theme/PageThemeToggle";
-import Link from "next/link";
+
+
 import ReferralMemberCard from "@/components/dashboard/ReferralMemberCard";
 import { requireUser } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
@@ -61,12 +61,6 @@ export default async function RewardsPage() {
 
   return (
     <main className="dw-referral-page mx-auto min-h-screen max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-      <PageThemeToggle />
-
-      <Link
-        href="/dashboard"
-        className="text-sm font-semibold text-emerald-700 hover:underline"
-      >← Back to Dashboard</Link>
 
       <header className="mt-6 rounded-3xl bg-gradient-to-br from-emerald-900 via-emerald-700 to-teal-700 p-6 text-white shadow-lg sm:p-8">
         <p className="text-xs font-bold uppercase tracking-widest text-emerald-100">
